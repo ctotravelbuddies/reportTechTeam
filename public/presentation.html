@@ -279,6 +279,57 @@
       padding-top: clamp(1rem, 8vh, 4rem);
     }
 
+    .cover-travel-illustration {
+      position: relative;
+      width: min(100%, 560px);
+      height: 150px;
+      margin: clamp(2rem, 6vh, 4rem) auto 0;
+      color: #0066d6;
+      opacity: 0.88;
+    }
+
+    .cover-travel-illustration .travel-route {
+      stroke-dasharray: 8 12;
+      animation: route-drift 8s linear infinite;
+    }
+
+    .cover-travel-illustration .travel-plane {
+      transform-origin: 50% 50%;
+      animation: plane-float 3.5s ease-in-out infinite;
+    }
+
+    .cover-travel-illustration .travel-dot {
+      animation: destination-pulse 2.4s ease-in-out infinite;
+    }
+
+    .cover-travel-illustration .travel-dot:nth-of-type(2) {
+      animation-delay: 0.8s;
+    }
+
+    .cover-travel-illustration .travel-dot:nth-of-type(3) {
+      animation-delay: 1.6s;
+    }
+
+    @keyframes route-drift {
+      to { stroke-dashoffset: -80; }
+    }
+
+    @keyframes plane-float {
+      0%, 100% { transform: translateY(0) rotate(-8deg); }
+      50% { transform: translateY(-7px) rotate(-3deg); }
+    }
+
+    @keyframes destination-pulse {
+      0%, 100% { opacity: 0.55; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.18); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cover-travel-illustration * {
+        animation: none !important;
+      }
+    }
+
     body.theme-bright .slide-page[data-title="Master Visual Roadmap (Gantt)"] > div:first-child {
       max-width: 1500px;
       padding-top: 0;
@@ -530,6 +581,24 @@
             Technology Project Planning<br>
             <span class="text-[#0066d6]">September 2026 – January 2027</span>
           </h1>
+
+          <div class="cover-travel-illustration" aria-label="Ilustrasi perjalanan Travel Buddies">
+            <svg viewBox="0 0 560 150" role="img" aria-hidden="true" class="w-full h-full">
+              <path class="travel-route" d="M58 108 C150 28, 246 126, 338 58 S458 28, 514 78" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <circle class="travel-dot" cx="58" cy="108" r="7" fill="#ffffff" stroke="currentColor" stroke-width="3"/>
+              <circle class="travel-dot" cx="338" cy="58" r="7" fill="#ffffff" stroke="currentColor" stroke-width="3"/>
+              <circle class="travel-dot" cx="514" cy="78" r="7" fill="#ffffff" stroke="currentColor" stroke-width="3"/>
+              <g class="travel-plane" transform="translate(250 66)">
+                <path d="M0 10L38 0L27 14L38 22L0 16L10 12Z" fill="currentColor"/>
+                <path d="M14 11L24 7L20 13Z" fill="#ffffff" opacity="0.85"/>
+              </g>
+              <g transform="translate(28 104)" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round">
+                <rect x="0" y="7" width="22" height="22" rx="4"/>
+                <path d="M6 7V3a5 5 0 0 1 10 0v4M5 29v5M17 29v5"/>
+              </g>
+              <path d="M506 66h18v12h-18zM510 66v-5h10v5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
 
         </div>
 
