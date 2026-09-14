@@ -496,6 +496,88 @@
       line-height: 1.55;
     }
 
+    /* Keep slide geometry identical in dark and bright modes. */
+    .slide-page[data-slide="1"] > div:first-child {
+      justify-content: flex-start;
+      padding-top: clamp(1rem, 8vh, 4rem);
+    }
+
+    .slide-page:not([data-slide="1"]) > div:first-child {
+      max-width: 1500px;
+      padding-top: 0;
+    }
+
+    .slide-page:not([data-slide="1"]) > div:first-child > div:first-child {
+      margin-bottom: 1rem;
+    }
+
+    .slide-page:not([data-slide="1"]) h2 {
+      font-size: clamp(1.45rem, 2.4vw, 2.2rem);
+    }
+
+    .slide-page:not([data-slide="1"]) .clean-card {
+      padding: 1rem;
+    }
+
+    .slide-page:not([data-slide="1"]) > div:first-child > div:last-child {
+      margin-top: 0.5rem;
+    }
+
+    .slide-page[data-title="Master Visual Roadmap (Gantt)"] > div:first-child > div:nth-child(2) > div {
+      min-height: 2.2rem;
+    }
+
+    .slide-page[data-title="Master Visual Roadmap (Gantt)"] > div:first-child > div:nth-child(2) {
+      padding: 1rem;
+    }
+
+    .slide-page[data-title="Master Visual Roadmap (Gantt)"] > div:first-child > div:nth-child(2) > div:not(:first-child) {
+      min-height: 3.6rem;
+    }
+
+    .slide-page[data-title="Master Visual Roadmap (Gantt)"] > div:first-child > div:nth-child(2) > div > div:first-child {
+      padding-left: 0.5rem;
+    }
+
+    .slide-page[data-title="Master Visual Roadmap (Gantt)"] > div:first-child > div:nth-child(2) > div > div:first-child span:first-child {
+      font-size: 0.82rem;
+    }
+
+    .slide-page[data-title="Master Visual Roadmap (Gantt)"] > div:first-child > div:nth-child(2) > div > div:first-child span:last-child {
+      font-size: 0.7rem;
+      margin-top: 0.2rem;
+    }
+
+    .slide-page[data-title="Master Visual Roadmap (Gantt)"] > div:first-child > div:nth-child(2) > div > div:not(:first-child) > div {
+      height: 1.8rem;
+      font-size: 0.68rem;
+    }
+
+    .slide-page[data-title="Risk Assessment & Mitigation"] > div:first-child > div:nth-child(2) {
+      max-height: none;
+      overflow: visible;
+      padding: 1rem;
+    }
+
+    .slide-page[data-title="Risk Assessment & Mitigation"] > div:first-child > div:nth-child(2) > div {
+      gap: 0.75rem;
+    }
+
+    .slide-page[data-title="Risk Assessment & Mitigation"] > div:first-child > div:nth-child(2) > div > div {
+      min-height: 7.5rem;
+      padding: 1rem;
+      border-radius: 12px;
+    }
+
+    .slide-page[data-title="Risk Assessment & Mitigation"] > div:first-child > div:nth-child(2) > div > div > div > div:first-child {
+      gap: 1rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .slide-page[data-title="Risk Assessment & Mitigation"] > div:first-child > div:nth-child(2) > div > div > div > p {
+      line-height: 1.45;
+    }
+
     body.theme-bright header select,
     body.theme-bright header button,
     body.theme-bright header > div > div {
