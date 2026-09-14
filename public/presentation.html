@@ -330,6 +330,46 @@
       }
     }
 
+    .slide-page:not([data-slide="1"])::after {
+      content: "";
+      position: absolute;
+      right: clamp(1rem, 4vw, 4rem);
+      bottom: clamp(2.75rem, 7vh, 5rem);
+      width: clamp(150px, 18vw, 260px);
+      height: clamp(80px, 10vw, 130px);
+      pointer-events: none;
+      opacity: 0.34;
+      background: no-repeat center / contain
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 130' fill='none'%3E%3Cpath d='M18 96c28-46 63-51 91-20s56 37 76 9 35-39 57-44' stroke='%230066d6' stroke-width='2.5' stroke-linecap='round' stroke-dasharray='6 9'/%3E%3Ccircle cx='18' cy='96' r='7' fill='%23fff' stroke='%230066d6' stroke-width='2.5'/%3E%3Ccircle cx='185' cy='85' r='6' fill='%23fff' stroke='%230066d6' stroke-width='2.5'/%3E%3Cpath d='m218 39 22-8-8 10 8 7-22-4 6-3z' fill='%230066d6'/%3E%3Cpath d='M42 87V75h12v12M44 75v-5h8v5' stroke='%230066d6' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E");
+      animation: ambient-travel-float 7s ease-in-out infinite;
+    }
+
+    .slide-page[data-slide="2"]::after,
+    .slide-page[data-slide="5"]::after,
+    .slide-page[data-slide="8"]::after {
+      left: clamp(1rem, 4vw, 4rem);
+      right: auto;
+      transform: scaleX(-1);
+    }
+
+    .slide-page[data-slide="3"]::after,
+    .slide-page[data-slide="6"]::after,
+    .slide-page[data-slide="9"]::after {
+      opacity: 0.24;
+      filter: hue-rotate(18deg);
+    }
+
+    @keyframes ambient-travel-float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .slide-page::after {
+        animation: none;
+      }
+    }
+
     body.theme-bright .slide-page[data-title="Master Visual Roadmap (Gantt)"] > div:first-child {
       max-width: 1500px;
       padding-top: 0;
