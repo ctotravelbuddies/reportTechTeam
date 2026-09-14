@@ -88,7 +88,7 @@
 
     /* Bright / Light Mode Theme Tokens */
     body.theme-bright {
-      background-color: #f1f5f9;
+      background-color: #ffffff;
       color: #0f172a;
     }
     body.theme-bright header,
@@ -137,7 +137,7 @@
       background-color: #f8fafc !important;
     }
     body.theme-bright .bg-\[\#0f182c\] {
-      background-color: #f1f5f9 !important;
+      background-color: #ffffff !important;
     }
     body.theme-bright .bg-\[\#0a1120\]\/40 {
       background-color: #e2e8f0 !important;
@@ -197,7 +197,7 @@
       color: #334155 !important;
     }
     body.theme-bright .alloc-tab-btn:not(.bg-\[\#0066d6\]):hover {
-      background-color: #f1f5f9 !important;
+      background-color: #f8fafc !important;
     }
 
     /* Gantt Preparation Striped Bar in Bright Mode */
@@ -219,7 +219,7 @@
     }
   </style>
 </head>
-<body class="antialiased h-screen w-screen overflow-hidden flex flex-col justify-between bg-[#080d1a] theme-dark transition-colors duration-200">
+<body class="antialiased h-screen w-screen overflow-hidden flex flex-col justify-between bg-white theme-bright transition-colors duration-200">
 
   <!-- Top Executive Header -->
   <header class="h-12 sm:h-14 border-b border-[#1c2b48] bg-[#0a1120] px-4 md:px-8 flex items-center justify-between shrink-0 select-none z-20 transition-colors duration-200">
@@ -266,13 +266,13 @@
 
       <!-- Bright / Dark Mode Toggle Button -->
       <button id="btnThemeToggle" title="Ganti Mode Warna (Dark / Bright)" class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#0f182c] hover:bg-[#162442] border border-[#1c2b48] text-slate-300 transition text-xs font-semibold">
-        <svg id="themeDarkIcon" class="w-3.5 h-3.5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg id="themeDarkIcon" class="w-3.5 h-3.5 text-amber-400 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
         </svg>
-        <svg id="themeBrightIcon" class="w-3.5 h-3.5 text-blue-400 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg id="themeBrightIcon" class="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
         </svg>
-        <span id="themeModeText" class="hidden md:inline">Bright</span>
+        <span id="themeModeText" class="hidden md:inline">Dark</span>
       </button>
 
       <div class="flex items-center gap-1 ml-1">
@@ -1402,19 +1402,19 @@
     const themeBrightIcon = document.getElementById('themeBrightIcon');
     const themeModeText = document.getElementById('themeModeText');
 
-    let currentTheme = 'dark';
+    let currentTheme = 'bright';
 
     function toggleTheme() {
       if (currentTheme === 'dark') {
         currentTheme = 'bright';
         document.body.classList.remove('theme-dark', 'bg-[#080d1a]');
-        document.body.classList.add('theme-bright', 'bg-[#f1f5f9]');
+        document.body.classList.add('theme-bright', 'bg-white');
         if (themeDarkIcon) themeDarkIcon.classList.add('hidden');
         if (themeBrightIcon) themeBrightIcon.classList.remove('hidden');
         if (themeModeText) themeModeText.textContent = 'Dark';
       } else {
         currentTheme = 'dark';
-        document.body.classList.remove('theme-bright', 'bg-[#f1f5f9]');
+        document.body.classList.remove('theme-bright', 'bg-white');
         document.body.classList.add('theme-dark', 'bg-[#080d1a]');
         if (themeDarkIcon) themeDarkIcon.classList.remove('hidden');
         if (themeBrightIcon) themeBrightIcon.classList.add('hidden');
