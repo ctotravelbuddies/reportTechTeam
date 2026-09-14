@@ -658,7 +658,7 @@
 
         <div class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-2 flex justify-between items-center shrink-0">
           <span>Travel Buddies — Technology Project Planning | Sep 2026 – Jan 2027</span>
-          <span>Slide 2 / 9</span>
+          <span>Slide 3 / 10</span>
         </div>
       </section>
 
@@ -793,7 +793,7 @@
 
         <div class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-2 flex justify-between items-center shrink-0">
           <span>Travel Buddies — Technology Project Planning | Sep 2026 – Jan 2027</span>
-          <span>Slide 3 / 9</span>
+          <span>Slide 2 / 10</span>
         </div>
       </section>
 
@@ -898,7 +898,7 @@
 
         <div class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-2 flex justify-between items-center shrink-0">
           <span>Travel Buddies — Technology Project Planning | Sep 2026 – Jan 2027</span>
-          <span>Slide 4 / 9</span>
+          <span>Slide 4 / 10</span>
         </div>
       </section>
 
@@ -989,7 +989,7 @@
 
         <div class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-2 flex justify-between items-center shrink-0">
           <span>Travel Buddies — Technology Project Planning | Sep 2026 – Jan 2027</span>
-          <span>Slide 5 / 9</span>
+          <span>Slide 5 / 10</span>
         </div>
       </section>
 
@@ -1026,7 +1026,7 @@
 
         <div class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-2 flex justify-between items-center shrink-0">
           <span>Travel Buddies — Technology Project Planning | Sep 2026 – Jan 2027</span>
-          <span>Slide 6 / 9</span>
+          <span>Slide 6 / 10</span>
         </div>
       </section>
 
@@ -1111,7 +1111,7 @@
 
         <div class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-2 flex justify-between items-center shrink-0">
           <span>Travel Buddies — Technology Project Planning | Sep 2026 – Jan 2027</span>
-          <span>Slide 7 / 9</span>
+          <span>Slide 7 / 10</span>
         </div>
       </section>
 
@@ -1218,7 +1218,7 @@
 
         <div class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-2 flex justify-between items-center shrink-0">
           <span>Travel Buddies — Technology Project Planning | Sep 2026 – Jan 2027</span>
-          <span>Slide 8 / 9</span>
+          <span>Slide 8 / 10</span>
         </div>
       </section>
 
@@ -1474,6 +1474,13 @@
 
       html += `</tbody></table>`;
       container.innerHTML = html;
+    }
+
+    const slidesContainerForOrder = document.getElementById('slidesContainer');
+    const teamSlide = document.querySelector('[data-title="Team Structure & Capacity"]');
+    const roadmapSlide = document.querySelector('[data-title="Master Visual Roadmap (Gantt)"]');
+    if (slidesContainerForOrder && teamSlide && roadmapSlide) {
+      slidesContainerForOrder.insertBefore(roadmapSlide, teamSlide);
     }
 
     const slides = Array.from(document.querySelectorAll('.slide-page'));
