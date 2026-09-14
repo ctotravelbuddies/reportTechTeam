@@ -218,17 +218,17 @@
       background-color: rgba(0, 0, 0, 0.2);
     }
 
-    /* Subtle branded watermark inspired by the presentation reference */
+    /* Branded watermark inspired by the presentation reference */
     .brand-watermark {
       position: fixed;
       inset: auto 0 32px;
-      height: 92px;
+      height: 140px;
       pointer-events: none;
       z-index: 5;
-      opacity: 0.2;
+      opacity: 0.3;
       background:
-        linear-gradient(to top, rgba(0, 102, 214, 0.12), transparent 70%),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 180' preserveAspectRatio='none'%3E%3Cpath fill='%2394a3b8' d='M0 180V145h34v-22h18v22h15v-42h25v42h12v-60h24v60h14v-28h23v28h14V96h27v49h15v-18h18v18h14v-77h20v77h14v-36h29v36h16v-55h19v55h18v-91h21v91h16v-33h28v33h16v-67h23v67h19v-25h17v25h15v-52h28v52h18v-79h18v79h14v-38h26v38h15v-58h21v58h18v-96h22v96h18v-45h19v45h17v-67h24v67h17v-29h19v29h18v-54h25v54h17v-73h20v73h16v-42h28v42h16v-61h21v61h19v-90h22v90h17v-34h22v34h18v-59h24v59h17v-46h20v46h16v-75h23v75h17v-33h19v33h18v-52h25v52h17v-40h20v40h15v-65h24v65h18v-29h25v29h16v-52h22v52h19v-42h22v42h18v-58h24v58h18v-44h19v44h18v-67h24v67h18v-33h20v33h17v-55h26v55h18v-37h24v37h18v-48h22v48h18v-75h25v75h20v-29h18v29h25v35Z'/%3E%3C/svg%3E") bottom center / 100% 86px no-repeat;
+        linear-gradient(to top, rgba(0, 102, 214, 0.18), transparent 72%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 180' preserveAspectRatio='none'%3E%3Cpath fill='%2394a3b8' d='M0 180V145h34v-22h18v22h15v-42h25v42h12v-60h24v60h14v-28h23v28h14V96h27v49h15v-18h18v18h14v-77h20v77h14v-36h29v36h16v-55h19v55h18v-91h21v91h16v-33h28v33h16v-67h23v67h19v-25h17v25h15v-52h28v52h18v-79h18v79h14v-38h26v38h15v-58h21v58h18v-96h22v96h18v-45h19v45h17v-67h24v67h17v-29h19v29h18v-54h25v54h17v-73h20v73h16v-42h28v42h16v-61h21v61h19v-90h22v90h17v-34h22v34h18v-59h24v59h17v-46h20v46h16v-75h23v75h17v-33h19v33h18v-52h25v52h17v-40h20v40h15v-65h24v65h18v-29h25v29h16v-52h22v52h19v-42h22v42h18v-58h24v58h18v-44h19v44h18v-67h24v67h18v-33h20v33h17v-55h26v55h18v-37h24v37h18v-48h22v48h18v-75h25v75h20v-29h18v29h25v35Z'/%3E%3C/svg%3E") bottom center / 100% 132px no-repeat;
     }
 
     .brand-watermark::after {
@@ -236,13 +236,13 @@
       position: absolute;
       left: 0;
       bottom: 0;
-      height: 18px;
-      width: 250px;
-      padding: 2px 10px;
+      height: 24px;
+      width: 310px;
+      padding: 4px 14px;
       box-sizing: border-box;
       background: #0066d6;
       color: #ffffff;
-      font-size: 9px;
+      font-size: 11px;
       font-weight: 800;
       letter-spacing: 0.02em;
       clip-path: polygon(0 0, 100% 0, 92% 100%, 0 100%);
