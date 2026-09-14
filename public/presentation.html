@@ -370,6 +370,31 @@
       }
     }
 
+    .slide-page.slide-enter-forward {
+      animation: slide-enter-forward 520ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .slide-page.slide-enter-backward {
+      animation: slide-enter-backward 520ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    @keyframes slide-enter-forward {
+      from { opacity: 0; transform: translateX(42px) scale(0.985); filter: blur(3px); }
+      to { opacity: 1; transform: translateX(0) scale(1); filter: blur(0); }
+    }
+
+    @keyframes slide-enter-backward {
+      from { opacity: 0; transform: translateX(-42px) scale(0.985); filter: blur(3px); }
+      to { opacity: 1; transform: translateX(0) scale(1); filter: blur(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .slide-page.slide-enter-forward,
+      .slide-page.slide-enter-backward {
+        animation: none;
+      }
+    }
+
     body.theme-bright .slide-page[data-title="Master Visual Roadmap (Gantt)"] > div:first-child {
       max-width: 1500px;
       padding-top: 0;
@@ -1737,11 +1762,18 @@
 
     function goToSlide(num) {
       if (num < 1 || num > totalSlides) return;
+      const direction = num >= currentSlide ? 'forward' : 'backward';
       currentSlide = num;
 
       slides.forEach((slide, idx) => {
         if (idx + 1 === currentSlide) {
+          slide.classList.remove('slide-enter-forward', 'slide-enter-backward');
           slide.classList.remove('hidden');
+          void slide.offsetWidth;
+          slide.classList.add(`slide-enter-${direction}`);
+          slide.addEventListener('animationend', () => {
+            slide.classList.remove('slide-enter-forward', 'slide-enter-backward');
+          }, { once: true });
         } else {
           slide.classList.add('hidden');
         }
