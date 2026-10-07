@@ -26,8 +26,8 @@ export default function Slide2AirlineTicketing() {
   const [iframeKey, setIframeKey] = useState<number>(0);
   const [iframeLoading, setIframeLoading] = useState<boolean>(true);
 
-  // Mobile fallback state
-  const [mobileImgError, setMobileImgError] = useState<boolean>(false);
+  // Mobile fallback state (default true to show dedicated native mobile placeholder)
+  const [mobileImgError, setMobileImgError] = useState<boolean>(true);
   const [agentImgError, setAgentImgError] = useState<boolean>(false);
 
   const reloadIframe = () => {
@@ -261,7 +261,7 @@ export default function Slide2AirlineTicketing() {
               </div>
 
               {/* Image Area with Fallback Placeholder */}
-              <div className="relative w-full h-48 sm:h-52 md:h-56 bg-slate-100 flex items-center justify-center overflow-hidden">
+              <div className="relative w-full h-48 sm:h-52 md:h-56 bg-slate-900/5 flex items-center justify-center overflow-hidden">
                 {!mobileImgError ? (
                   <img
                     src="/images/preview-mobile-app.png"
@@ -270,16 +270,35 @@ export default function Slide2AirlineTicketing() {
                     onError={() => setMobileImgError(true)}
                   />
                 ) : (
-                  <div className="p-4 text-center flex flex-col items-center justify-center text-slate-400 bg-slate-50 w-full h-full border-2 border-dashed border-slate-200">
-                    <div className="w-10 h-10 rounded-full bg-blue-50 text-[#0066d6] flex items-center justify-center mb-1.5 shadow-2xs">
-                      <ImageIcon className="w-5 h-5" />
+                  <div className="p-3.5 sm:p-4 text-center flex flex-col items-center justify-center bg-gradient-to-b from-slate-50 to-blue-50/50 w-full h-full border-2 border-dashed border-blue-200/80">
+                    <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-blue-50 border border-blue-200 text-[#0066d6] flex items-center justify-center mb-2 shadow-2xs">
+                      <Smartphone className="w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
-                    <span className="text-xs font-bold text-slate-700">
-                      Placeholder Screenshot Mobile Apps
+                    
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-100/60 text-[#0066d6] text-[10px] font-bold uppercase tracking-wider mb-1 border border-blue-200/60">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#0066d6] animate-pulse"></span>
+                      Native Smartphone Application
                     </span>
-                    <span className="text-[10px] text-slate-500 mt-0.5 max-w-xs">
-                      Simpan file gambar di: <code className="bg-white px-1 py-0.5 rounded border border-slate-200 text-[#0066d6] font-mono">/public/images/preview-mobile-app.png</code>
-                    </span>
+
+                    <h4 className="text-xs sm:text-sm font-extrabold text-slate-900 leading-snug">
+                      Preview Belum Tersedia di Browser (Khusus Mobile Apps)
+                    </h4>
+
+                    <p className="text-[11px] sm:text-xs text-slate-600 mt-1 max-w-md leading-relaxed px-2">
+                      Fitur ini tidak dapat dipratinjau langsung di web slide karena berjalan pada sistem operasi native smartphone. Pengujian alur booking dilakukan langsung melalui perangkat fisik (Build Internal APK / TestFlight).
+                    </p>
+
+                    <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mt-2 text-[10px] font-semibold text-slate-600">
+                      <span className="bg-white px-2 py-0.5 rounded-md border border-slate-200 shadow-2xs">
+                        📱 Android &amp; iOS Native
+                      </span>
+                      <span className="bg-white px-2 py-0.5 rounded-md border border-slate-200 shadow-2xs">
+                        🔍 Pengujian di Device Fisik
+                      </span>
+                      <span className="bg-white px-2 py-0.5 rounded-md border border-slate-200 shadow-2xs">
+                        ⚙️ Internal Build / APK
+                      </span>
+                    </div>
                   </div>
                 )}
               </div>

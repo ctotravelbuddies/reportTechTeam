@@ -69,21 +69,6 @@ export default function SlideOpening({ onNext, goToSlide }: SlideOpeningProps) {
               </div>
             </div>
           </div>
-
-          {/* Bottom Bar: Responsive stacked on mobile, inline on desktop */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-2 text-white text-[11px] sm:text-xs md:text-sm pt-2">
-            <span className="font-medium text-white/85 drop-shadow-sm bg-black/30 backdrop-blur-xs px-3 py-1 rounded-full border border-white/15 text-center">
-              Fondasi Sistem Andal • Bisnis &amp; Operasional Terpantau
-            </span>
-            <button
-              type="button"
-              onClick={handleNext}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-white font-bold bg-white/25 hover:bg-white/40 active:scale-95 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/40 shadow-md transition-all cursor-pointer"
-            >
-              <span>Lanjut ke Slide 1</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
-          </div>
         </div>
       </div>
     </div>
