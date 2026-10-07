@@ -52,7 +52,7 @@ export default function Slide9CapacityAllocation() {
 
       {/* 2. Grid 2 Pilar Utama (Permintaan Divisi Lain vs Refactoring Proper) */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4 flex-1 min-h-0 mb-2.5 items-stretch">
-        
+
         {/* PILAR KIRI: Permintaan Strategi Baru dari Divisi Lain */}
         <div className="slide-card p-3.5 sm:p-4 flex flex-col justify-between border-t-4 border-t-[#0066d6] shadow-xs hover:shadow-md transition-all">
           <div>
@@ -251,21 +251,6 @@ export default function Slide9CapacityAllocation() {
           </div>
         </div>
 
-      </div>
-
-      {/* 3. Kesimpulan di Footer (Lugas & Mudah Dipahami) */}
-      <div className="slide-subcard p-2.5 sm:p-3 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs sm:text-[13px] shrink-0 border border-slate-200">
-        <div className="flex items-center gap-2.5 text-slate-700">
-          <Sparkles className="w-4 h-4 text-[#0066d6] shrink-0" />
-          <span className="font-black text-slate-900 shrink-0">Pesan Inti:</span>
-          <span className="leading-snug">
-            Q4 bukan jeda kerja, melainkan waktu krusial untuk memperkuat stabilitas sistem secara permanen sekaligus melayani kebutuhan ekspansi mendesak divisi Marketing dan Operasional.
-          </span>
-        </div>
-        <span className="inline-flex items-center gap-1.5 text-[#0066d6] font-black text-xs shrink-0">
-          <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-          Kokoh &amp; Terencana ✓
-        </span>
       </div>
     </div>
   );
