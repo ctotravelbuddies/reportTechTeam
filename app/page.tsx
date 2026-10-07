@@ -178,7 +178,7 @@ export default function PresentationPage() {
       </div>
 
       {/* Main Slide Viewport: Responsive scroll on mobile, strict presentation mode on desktop */}
-      <main className="flex-1 relative overflow-y-auto lg:overflow-hidden flex flex-col p-2 sm:p-4 md:p-6 min-h-0 bg-slate-50">
+      <main className="flex-1 relative overflow-y-auto lg:overflow-hidden flex flex-col p-2 sm:py-3 sm:px-4 md:py-2.5 md:px-5 min-h-0 bg-slate-50">
         <CurrentComponent onNext={nextSlide} goToSlide={goToSlide} />
       </main>
 

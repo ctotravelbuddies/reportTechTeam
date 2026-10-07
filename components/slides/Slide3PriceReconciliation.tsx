@@ -59,7 +59,7 @@ export default function Slide3PriceReconciliation() {
                 </span>
               </div>
 
-              <p className="text-xs sm:text-sm text-slate-700 leading-relaxed mb-3">
+              <p className="text-[13px] sm:text-[14.5px] text-slate-700 leading-relaxed mb-3">
                 Proses pengawasan dan pencocokan harga tiket pesawat secara otomatis untuk{' '}
                 <strong className="text-slate-900">
                   memastikan harga yang terbit dan ditagihkan 100% konsisten dengan persentase margin/komisi
@@ -68,43 +68,43 @@ export default function Slide3PriceReconciliation() {
               </p>
 
               {/* 3 Manfaat Kunci */}
-              <div className="space-y-2 text-xs sm:text-[13px] text-slate-700">
+              <div className="space-y-2 text-xs sm:text-[13.5px] text-slate-700">
                 <div className="flex items-start gap-2 bg-slate-50 p-2 sm:p-2.5 rounded-lg border border-slate-100">
                   <Percent className="w-4 h-4 text-[#0066d6] shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-slate-900 block font-bold">Validasi Persentase Margin</strong>
-                    <span>Menjamin selisih harga dasar (base fare) vs harga jual tidak melebihi atau kurang dari kesepakatan.</span>
+                    <strong className="text-slate-900 block font-extrabold text-xs sm:text-[13.5px]">Validasi Persentase Margin</strong>
+                    <span className="text-slate-600 text-xs sm:text-[12.5px] leading-snug block">Menjamin selisih harga dasar (base fare) vs harga jual tidak melebihi atau kurang dari kesepakatan.</span>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-2 bg-slate-50 p-2 sm:p-2.5 rounded-lg border border-slate-100">
                   <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-slate-900 block font-bold">Mencegah Kebocoran Pendapatan</strong>
-                    <span>Mendeteksi dini jika ada anomali tarif API partner sebelum issued tiket, mencegah kerugian transaksi.</span>
+                    <strong className="text-slate-900 block font-extrabold text-xs sm:text-[13.5px]">Mencegah Kebocoran Pendapatan</strong>
+                    <span className="text-slate-600 text-xs sm:text-[12.5px] leading-snug block">Mendeteksi dini jika ada anomali tarif API partner sebelum issued tiket, mencegah kerugian transaksi.</span>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-2 bg-slate-50 p-2 sm:p-2.5 rounded-lg border border-slate-100">
                   <SearchCheck className="w-4 h-4 text-[#0066d6] shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-slate-900 block font-bold">Audit Otomatis &amp; Transparan</strong>
-                    <span>Kedua belah pihak memiliki data referensi yang sama saat rekonsiliasi bulanan tanpa hitungan manual.</span>
+                    <strong className="text-slate-900 block font-extrabold text-xs sm:text-[13.5px]">Audit Otomatis &amp; Transparan</strong>
+                    <span className="text-slate-600 text-xs sm:text-[12.5px] leading-snug block">Kedua belah pihak memiliki data referensi yang sama saat rekonsiliasi bulanan tanpa hitungan manual.</span>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Tombol Aksi Buka Website Monitoring */}
-            <div className="pt-2.5 mt-2.5 border-t border-slate-100 flex items-center justify-between gap-2">
-              <span className="text-[11px] text-slate-500 font-medium truncate">
-                Domain: <strong className="text-slate-700">monitoring.travelbuddies.co.id</strong>
+            <div className="pt-2 mt-2 border-t border-slate-100 flex items-center justify-between gap-2">
+              <span className="text-xs text-slate-500 font-semibold truncate">
+                Domain: <strong className="text-slate-800">monitoring.travelbuddies.co.id</strong>
               </span>
               <a
                 href={monitoringUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0066d6] hover:bg-[#0052b3] text-white text-xs font-bold shadow-2xs hover:shadow transition-all shrink-0 cursor-pointer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0066d6] hover:bg-[#0052b3] text-white text-xs sm:text-sm font-extrabold shadow-2xs hover:shadow transition-all shrink-0 cursor-pointer"
               >
                 <span>Buka di Tab Baru</span>
                 <ExternalLink className="w-3.5 h-3.5" />
@@ -123,10 +123,10 @@ export default function Slide3PriceReconciliation() {
                   <BarChart3 className="w-4 h-4" />
                 </div>
                 <div>
-                  <h3 className="text-xs sm:text-sm font-extrabold text-slate-900 leading-tight">
+                  <h3 className="text-sm sm:text-base font-black text-slate-900 leading-tight">
                     Flight Price Monitoring &amp; Margin Comparator
                   </h3>
-                  <span className="text-[11px] text-[#0066d6] font-semibold block">
+                  <span className="text-xs text-[#0066d6] font-bold block">
                     Dashboard Komparasi Live Travel Buddies
                   </span>
                 </div>

@@ -27,13 +27,13 @@ export default function SlideClosingCover({ goToSlide }: SlideClosingCoverProps)
 
         {/* Top Floating Badge with Official Logo */}
         <div className="absolute top-3 left-3 sm:top-4 sm:left-6 z-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-white text-[10px] sm:text-xs font-extrabold tracking-wider uppercase border border-white/30 shadow-xs">
+          <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-white text-xs sm:text-sm font-extrabold tracking-wider uppercase border border-white/30 shadow-xs">
             <img
               src="/travelbuddies-logo.webp"
               alt="Travel Buddies Logo"
-              className="h-3.5 sm:h-4 w-auto object-contain"
+              className="h-4 sm:h-5 w-auto object-contain"
             />
-            <span className="w-1 h-3 bg-white/40 rounded-full"></span>
+            <span className="w-1 h-3.5 bg-white/40 rounded-full"></span>
             <span>Presentasi Selesai • Sesi Tanya Jawab</span>
           </div>
         </div>
@@ -43,10 +43,10 @@ export default function SlideClosingCover({ goToSlide }: SlideClosingCoverProps)
           <button
             type="button"
             onClick={handleRestart}
-            className="inline-flex items-center gap-2 text-white font-bold bg-white/25 hover:bg-white/40 active:scale-95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/40 shadow-md text-xs sm:text-sm transition-all cursor-pointer"
+            className="inline-flex items-center gap-2 text-white font-bold bg-white/25 hover:bg-white/40 active:scale-95 backdrop-blur-md px-4 py-2 rounded-full border border-white/40 shadow-md text-xs sm:text-sm md:text-base transition-all cursor-pointer"
             title="Kembali ke Slide Cover Utama"
           >
-            <RotateCcw className="w-3.5 h-3.5" />
+            <RotateCcw className="w-4 h-4" />
             <span>Kembali ke Awal</span>
           </button>
         </div>

@@ -57,7 +57,7 @@ export default function Slide1Overview() {
     },
     {
       id: 4,
-      title: 'Pantau Bisnis Real-Time',
+      title: 'Real-Time Report Dashboard',
       tag: 'Dashboard & Reporting',
       status: 'Selesai & Aktif',
       statusBadgeClass: 'bg-emerald-50 text-emerald-800 border-emerald-200',
@@ -96,10 +96,10 @@ export default function Slide1Overview() {
                       <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
                     <div>
-                      <h3 className="text-sm sm:text-base font-extrabold text-slate-900 leading-tight">
+                      <h3 className="text-base sm:text-lg font-black text-slate-900 leading-tight">
                         {item.title}
                       </h3>
-                      <span className="text-[11px] sm:text-xs font-semibold text-[#0066d6] block mt-0.5">
+                      <span className="text-xs sm:text-[13px] font-bold text-[#0066d6] block mt-0.5">
                         {item.tag}
                       </span>
                     </div>
@@ -108,7 +108,7 @@ export default function Slide1Overview() {
                   {/* Status Development: Simple, Clean & Distinct Colors */}
                   <div className="shrink-0 self-start sm:self-auto">
                     <span
-                      className={`inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-semibold border shadow-2xs ${item.statusBadgeClass}`}
+                      className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs sm:text-[13px] font-bold border shadow-2xs ${item.statusBadgeClass}`}
                     >
                       <span className={`w-2 h-2 rounded-full ${item.statusDotClass}`}></span>
                       Status: <strong className="font-extrabold">{item.status}</strong>
@@ -117,7 +117,7 @@ export default function Slide1Overview() {
                 </div>
 
                 {/* Poin Penjelasan yang Mudah Dipahami */}
-                <ul className="space-y-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                <ul className="space-y-2 text-[13px] sm:text-[14.5px] text-slate-700 leading-snug">
                   {item.points.map((pt, i) => (
                     <li key={i} className="flex items-start gap-2.5">
                       <CheckCircle2 className="w-4 h-4 text-[#0066d6] shrink-0 mt-0.5" />
@@ -128,11 +128,11 @@ export default function Slide1Overview() {
               </div>
 
               {/* Dampak Hasil di Bagian Bawah Kartu */}
-              <div className="mt-3.5 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <div className="mt-2.5 pt-2 border-t border-slate-100 flex items-center justify-between text-xs sm:text-[13px] text-slate-500">
                 <span className="font-semibold">
-                  Manfaat: <strong className="text-slate-800">{item.impact}</strong>
+                  Manfaat: <strong className="text-slate-900 font-extrabold">{item.impact}</strong>
                 </span>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#0066d6]"></span>
+                <span className="w-2 h-2 rounded-full bg-[#0066d6]"></span>
               </div>
             </div>
           );

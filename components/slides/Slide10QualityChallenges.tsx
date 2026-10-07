@@ -64,15 +64,15 @@ export default function Slide10QualityChallenges() {
                   <UserX className="w-4 h-4" />
                 </div>
                 <div>
-                  <h3 className="text-sm sm:text-base font-black text-slate-900 leading-tight">
+                  <h3 className="text-base sm:text-lg font-black text-slate-900 leading-tight">
                     1. Belum Ada Dedicated QA
                   </h3>
-                  <span className="text-[11px] font-semibold text-slate-400 block mt-0.5">
+                  <span className="text-xs font-bold text-slate-500 block mt-0.5">
                     Developer Menguji Fitur Mandiri
                   </span>
                 </div>
               </div>
-              <span className="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-rose-50 text-rose-700 border border-rose-200">
+              <span className="text-xs font-black px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 border border-rose-200">
                 Keterbatasan Tim
               </span>
             </div>
@@ -80,39 +80,39 @@ export default function Slide10QualityChallenges() {
             {/* Poin-Poin Ringkas */}
             <div className="space-y-2.5">
               <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200">
-                <div className="text-xs sm:text-[13px] font-bold text-slate-900 mb-0.5 flex items-center gap-1.5">
+                <div className="text-[13px] sm:text-sm font-black text-slate-900 mb-0.5 flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
                   <span>Developer Menguji Kodenya Sendiri</span>
                 </div>
-                <p className="text-xs text-slate-600 pl-3">
+                <p className="text-xs sm:text-[13px] text-slate-700 pl-3 leading-snug">
                   Developer cenderung memverifikasi alur standar (*happy path*) yang dipahami aman, sehingga skenario di luar alur normal berisiko terlewat.
                 </p>
               </div>
 
               <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200">
-                <div className="text-xs sm:text-[13px] font-bold text-slate-900 mb-0.5 flex items-center gap-1.5">
+                <div className="text-[13px] sm:text-sm font-black text-slate-900 mb-0.5 flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
                   <span>Kapasitas Terserap Target Rilis</span>
                 </div>
-                <p className="text-xs text-slate-600 pl-3">
+                <p className="text-xs sm:text-[13px] text-slate-700 pl-3 leading-snug">
                   Fokus tim tersita untuk mengejar deadline rilis fitur baru, sehingga waktu untuk uji regresi manual mendalam menjadi sangat terbatas.
                 </p>
               </div>
 
               <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200">
-                <div className="text-xs sm:text-[13px] font-bold text-slate-900 mb-0.5 flex items-center gap-1.5">
+                <div className="text-[13px] sm:text-sm font-black text-slate-900 mb-0.5 flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
                   <span>Ketiadaan Pengujian Skenario Ekstrem</span>
                 </div>
-                <p className="text-xs text-slate-600 pl-3">
+                <p className="text-xs sm:text-[13px] text-slate-700 pl-3 leading-snug">
                   Belum ada personel khusus yang bertugas mengeksplorasi skenario error dan mencari celah sistem sebelum rilis ke staging.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="pt-2.5 mt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-bold">
-            <span>Dampak: <strong className="text-rose-700">Skenario Tak Terduga Rentan Terlewat</strong></span>
+          <div className="pt-2 mt-2.5 border-t border-slate-100 flex items-center justify-between text-xs sm:text-[13px] text-slate-500 font-bold">
+            <span>Dampak: <strong className="text-rose-700 font-extrabold">Skenario Tak Terduga Rentan Terlewat</strong></span>
             <span className="w-2 h-2 rounded-full bg-rose-500"></span>
           </div>
         </div>
@@ -121,21 +121,21 @@ export default function Slide10QualityChallenges() {
         <div className="slide-card p-3.5 sm:p-4 flex flex-col justify-between border-t-4 border-t-[#0066d6] shadow-xs hover:shadow-md transition-all">
           <div>
             {/* Header Pilar */}
-            <div className="flex items-start justify-between pb-2 mb-3 border-b border-slate-100 gap-2">
+            <div className="flex items-start justify-between pb-2 mb-2.5 border-b border-slate-100 gap-2">
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 rounded-lg bg-blue-50 border border-blue-200 text-[#0066d6] flex items-center justify-center shrink-0 shadow-2xs">
                   <Bot className="w-4 h-4" />
                 </div>
                 <div>
-                  <h3 className="text-sm sm:text-base font-black text-slate-900 leading-tight">
+                  <h3 className="text-base sm:text-lg font-black text-slate-900 leading-tight">
                     2. AI Automation Testing
                   </h3>
-                  <span className="text-[11px] font-semibold text-slate-400 block mt-0.5">
+                  <span className="text-xs font-bold text-slate-500 block mt-0.5">
                     Langganan Tool Otomasi Bulanan
                   </span>
                 </div>
               </div>
-              <span className="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-blue-50 text-[#0066d6] border border-blue-200">
+              <span className="text-xs font-black px-2.5 py-0.5 rounded-full bg-blue-50 text-[#0066d6] border border-blue-200">
                 Mitigasi Saat Ini
               </span>
             </div>
@@ -143,39 +143,39 @@ export default function Slide10QualityChallenges() {
             {/* Poin-Poin Ringkas */}
             <div className="space-y-2.5">
               <div className="p-2.5 rounded-xl bg-blue-50/60 border border-blue-200">
-                <div className="text-xs sm:text-[13px] font-bold text-slate-900 mb-0.5 flex items-center gap-1.5">
+                <div className="text-[13px] sm:text-sm font-black text-slate-900 mb-0.5 flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#0066d6]"></span>
                   <span>Investasi Tool Otomasi AI</span>
                 </div>
-                <p className="text-xs text-slate-700 pl-3">
+                <p className="text-xs sm:text-[13px] text-slate-800 pl-3 leading-snug font-medium">
                   Berlangganan tools AI automation bulanan untuk memverifikasi alur aplikasi secara otomatis di setiap pembaruan kode.
                 </p>
               </div>
 
               <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200">
-                <div className="text-xs sm:text-[13px] font-bold text-slate-900 mb-0.5 flex items-center gap-1.5">
+                <div className="text-[13px] sm:text-sm font-black text-slate-900 mb-0.5 flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#0066d6]"></span>
                   <span>Efektif Memvalidasi Alur Utama</span>
                 </div>
-                <p className="text-xs text-slate-600 pl-3">
+                <p className="text-xs sm:text-[13px] text-slate-700 pl-3 leading-snug">
                   Sangat cepat memastikan validasi form, tombol transaksi, dan integrasi API berjalan tanpa error fatal.
                 </p>
               </div>
 
               <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200">
-                <div className="text-xs sm:text-[13px] font-bold text-slate-900 mb-0.5 flex items-center gap-1.5">
+                <div className="text-[13px] sm:text-sm font-black text-slate-900 mb-0.5 flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#0066d6]"></span>
                   <span>Keterbatasan Simulasi Otomasi</span>
                 </div>
-                <p className="text-xs text-slate-600 pl-3">
+                <p className="text-xs sm:text-[13px] text-slate-700 pl-3 leading-snug">
                   AI automation hanya menguji skenario terprogram, tidak dapat merefleksikan kondisi perangkat dan kendala riil di tangan user.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="pt-2.5 mt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-bold">
-            <span>Peran: <strong className="text-[#0066d6]">Penyaring Awal Alur Standar</strong></span>
+          <div className="pt-2 mt-2.5 border-t border-slate-100 flex items-center justify-between text-xs sm:text-[13px] text-slate-500 font-bold">
+            <span>Peran: <strong className="text-[#0066d6] font-extrabold">Penyaring Awal Alur Standar</strong></span>
             <span className="w-2 h-2 rounded-full bg-[#0066d6]"></span>
           </div>
         </div>
@@ -184,21 +184,21 @@ export default function Slide10QualityChallenges() {
         <div className="slide-card p-3.5 sm:p-4 flex flex-col justify-between border-t-4 border-t-amber-500 shadow-xs hover:shadow-md transition-all">
           <div>
             {/* Header Pilar */}
-            <div className="flex items-start justify-between pb-2 mb-3 border-b border-slate-100 gap-2">
+            <div className="flex items-start justify-between pb-2 mb-2.5 border-b border-slate-100 gap-2">
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 rounded-lg bg-amber-50 border border-amber-200 text-amber-700 flex items-center justify-center shrink-0 shadow-2xs">
                   <Smartphone className="w-4 h-4" />
                 </div>
                 <div>
-                  <h3 className="text-sm sm:text-base font-black text-slate-900 leading-tight">
+                  <h3 className="text-base sm:text-lg font-black text-slate-900 leading-tight">
                     3. Kompleksitas Lapangan &amp; User
                   </h3>
-                  <span className="text-[11px] font-semibold text-slate-400 block mt-0.5">
+                  <span className="text-xs font-bold text-slate-500 block mt-0.5">
                     Muncul dari Penggunaan Langsung
                   </span>
                 </div>
               </div>
-              <span className="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-200">
+              <span className="text-xs font-black px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-200">
                 Faktor Eksternal
               </span>
             </div>
@@ -206,39 +206,39 @@ export default function Slide10QualityChallenges() {
             {/* Poin-Poin Ringkas */}
             <div className="space-y-2.5">
               <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200">
-                <div className="text-xs sm:text-[13px] font-bold text-slate-900 mb-0.5 flex items-center gap-1.5">
+                <div className="text-[13px] sm:text-sm font-black text-slate-900 mb-0.5 flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
                   <span>Keberagaman Device &amp; Browser</span>
                 </div>
-                <p className="text-xs text-slate-600 pl-3">
+                <p className="text-xs sm:text-[13px] text-slate-700 pl-3 leading-snug">
                   Ratusan variasi tipe ponsel (Android versi lama, iOS, ukuran layar) dan in-app browser (Instagram/TikTok) yang merender tampilan secara berbeda.
                 </p>
               </div>
 
               <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200">
-                <div className="text-xs sm:text-[13px] font-bold text-slate-900 mb-0.5 flex items-center gap-1.5">
+                <div className="text-[13px] sm:text-sm font-black text-slate-900 mb-0.5 flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
                   <span>Sinyal Fluktuatif di Lokasi Pengguna</span>
                 </div>
-                <p className="text-xs text-slate-600 pl-3">
+                <p className="text-xs sm:text-[13px] text-slate-700 pl-3 leading-snug">
                   Koneksi internet setiap user berbeda dan fluktuatif tergantung lokasinya, dan tim tech belum meng-handle seluruh kemungkinan error saat jaringan drop atau tidak stabil.
                 </p>
               </div>
 
               <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200">
-                <div className="text-xs sm:text-[13px] font-bold text-slate-900 mb-0.5 flex items-center gap-1.5">
+                <div className="text-[13px] sm:text-sm font-black text-slate-900 mb-0.5 flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
                   <span>Skenario Penggunaan Riil di Lapangan</span>
                 </div>
-                <p className="text-xs text-slate-600 pl-3">
+                <p className="text-xs sm:text-[13px] text-slate-700 pl-3 leading-snug">
                   Aksi tak terduga seperti double-click saat halaman loading atau tombol back saat proses checkout baru terdeteksi saat digunakan langsung oleh pengguna.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="pt-2.5 mt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-bold">
-            <span>Karakteristik: <strong className="text-amber-700">Baru Teridentifikasi Saat Live</strong></span>
+          <div className="pt-2 mt-2.5 border-t border-slate-100 flex items-center justify-between text-xs sm:text-[13px] text-slate-500 font-bold">
+            <span>Karakteristik: <strong className="text-amber-700 font-extrabold">Baru Teridentifikasi Saat Live</strong></span>
             <span className="w-2 h-2 rounded-full bg-amber-500"></span>
           </div>
         </div>

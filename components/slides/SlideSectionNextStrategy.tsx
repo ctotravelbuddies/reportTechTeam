@@ -86,12 +86,12 @@ export default function SlideSectionNextStrategy({ onNext }: SlideSectionProps) 
         <div className="relative z-10 w-full h-full flex flex-col justify-between p-4 sm:p-8 lg:p-12">
           {/* Top Bar: Brand Pill Badge */}
           <div className="flex justify-between items-center w-full">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur-md text-white text-[11px] sm:text-xs font-bold uppercase tracking-wider border border-white/25 shadow-xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/15 backdrop-blur-md text-white text-xs sm:text-[13px] font-black uppercase tracking-wider border border-white/25 shadow-xs">
               <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
               Travel Buddies Indonesia • Strategic Roadmap
             </div>
 
-            <span className="text-white/80 text-xs font-bold hidden sm:inline tracking-wide bg-white/10 px-3 py-1 rounded-full border border-white/20">
+            <span className="text-white/90 text-xs sm:text-sm font-extrabold hidden sm:inline tracking-wide bg-white/10 px-3.5 py-1.5 rounded-full border border-white/20">
               Rencana Eksekusi • Kuartal 4 (Q4) 2026
             </span>
           </div>
@@ -103,29 +103,29 @@ export default function SlideSectionNextStrategy({ onNext }: SlideSectionProps) 
               <img
                 src="/travelbuddies-logo.webp"
                 alt="Travel Buddies Logo"
-                className="h-10 sm:h-14 md:h-16 w-auto object-contain drop-shadow-xl"
+                className="h-12 sm:h-16 md:h-20 w-auto object-contain drop-shadow-xl"
               />
             </div>
 
             {/* Giant NEXT STRATEGY Title */}
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-none mb-3 sm:mb-4 drop-shadow-lg">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-black text-white tracking-tight leading-none mb-3 sm:mb-4 drop-shadow-lg">
               NEXT STRATEGY
             </h1>
           </div>
 
           {/* Bottom Bar: Action Button to Continue */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-2.5 pt-2 border-t border-white/20">
-            <span className="text-[11px] sm:text-xs text-white/80 font-medium text-center sm:text-left">
+            <span className="text-xs sm:text-sm text-white/90 font-semibold text-center sm:text-left">
               Menuju Pembahasan Detail: Tahapan Milestone &amp; Jadwal Eksekusi
             </span>
 
             <button
               type="button"
               onClick={onNext}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-white font-bold bg-white/20 hover:bg-white/35 active:scale-95 backdrop-blur-md px-5 py-2 rounded-full border border-white/40 shadow-md transition-all cursor-pointer text-xs sm:text-sm"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-white font-black bg-white/20 hover:bg-white/35 active:scale-95 backdrop-blur-md px-6 py-2.5 rounded-full border border-white/40 shadow-md transition-all cursor-pointer text-xs sm:text-sm md:text-base"
             >
               <span>Lanjut ke Roadmap Milestone</span>
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
           </div>
         </div>

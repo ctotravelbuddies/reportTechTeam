@@ -56,10 +56,10 @@ export default function Slide2AirlineTicketing() {
                   <Globe className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div>
-                  <h3 className="text-sm sm:text-lg font-black text-slate-900 leading-tight">
+                  <h3 className="text-base sm:text-lg font-black text-slate-900 leading-tight">
                     Website Agent Travel Buddies
                   </h3>
-                  <span className="text-[11px] sm:text-xs font-semibold text-[#0066d6] block mt-0.5">
+                  <span className="text-xs sm:text-[13px] font-bold text-[#0066d6] block mt-0.5">
                     B2B Portal Ticketing &amp; Agent Management
                   </span>
                 </div>
@@ -67,7 +67,7 @@ export default function Slide2AirlineTicketing() {
 
               {/* Status Badge */}
               <div className="shrink-0 self-start sm:self-auto">
-                <span className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200 shadow-2xs">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs sm:text-[13px] font-bold bg-amber-50 text-amber-800 border border-amber-200 shadow-2xs">
                   <span className="w-2 h-2 rounded-full bg-amber-500"></span>
                   Status: <strong className="font-extrabold">Testing &amp; Rekonsiliasi</strong>
                 </span>
@@ -174,7 +174,7 @@ export default function Slide2AirlineTicketing() {
             </div>
 
             {/* Poin Kapabilitas */}
-            <ul className="space-y-1.5 text-xs sm:text-sm text-slate-700 leading-relaxed mb-3">
+            <ul className="space-y-2 text-[13px] sm:text-[14.5px] text-slate-800 leading-snug mb-3">
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#0066d6] shrink-0 mt-0.5" />
                 <span>
@@ -191,11 +191,11 @@ export default function Slide2AirlineTicketing() {
           </div>
 
           {/* Action Button: Direct URL Link & Expand */}
-          <div className="pt-2.5 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div className="pt-2 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <button
               type="button"
               onClick={() => setIsDemoExpanded(true)}
-              className="inline-flex items-center justify-center gap-1.5 text-xs font-bold text-[#0066d6] hover:text-[#004bb3] cursor-pointer py-1"
+              className="inline-flex items-center justify-center gap-1.5 text-xs sm:text-sm font-extrabold text-[#0066d6] hover:text-[#004bb3] cursor-pointer py-1"
             >
               <Maximize2 className="w-3.5 h-3.5" />
               <span>Perbesar Demo Layar Penuh</span>
@@ -205,7 +205,7 @@ export default function Slide2AirlineTicketing() {
               href={agentPortalUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0066d6] hover:bg-[#0052b3] text-white text-xs font-bold shadow-2xs hover:shadow transition-all shrink-0 cursor-pointer w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0066d6] hover:bg-[#0052b3] text-white text-xs sm:text-sm font-extrabold shadow-2xs hover:shadow transition-all shrink-0 cursor-pointer w-full sm:w-auto"
             >
               <span>Buka di Tab Baru</span>
               <ExternalLink className="w-3.5 h-3.5" />
@@ -223,10 +223,10 @@ export default function Slide2AirlineTicketing() {
                   <Smartphone className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div>
-                  <h3 className="text-sm sm:text-lg font-black text-slate-900 leading-tight">
+                  <h3 className="text-base sm:text-lg font-black text-slate-900 leading-tight">
                     Mobile Apps Travel Buddies
                   </h3>
-                  <span className="text-[11px] sm:text-xs font-semibold text-[#0066d6] block mt-0.5">
+                  <span className="text-xs sm:text-[13px] font-bold text-[#0066d6] block mt-0.5">
                     B2C Customer Mobile Booking Experience
                   </span>
                 </div>
@@ -234,7 +234,7 @@ export default function Slide2AirlineTicketing() {
 
               {/* Status Badge */}
               <div className="shrink-0 self-start sm:self-auto">
-                <span className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200 shadow-2xs">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs sm:text-[13px] font-bold bg-amber-50 text-amber-800 border border-amber-200 shadow-2xs">
                   <span className="w-2 h-2 rounded-full bg-amber-500"></span>
                   Status: <strong className="font-extrabold">Testing &amp; Rekonsiliasi</strong>
                 </span>
@@ -255,7 +255,7 @@ export default function Slide2AirlineTicketing() {
               </div>
 
               {/* Image Area with Fallback Placeholder */}
-              <div className="relative w-full h-48 sm:h-52 md:h-56 bg-slate-900/5 flex items-center justify-center overflow-hidden">
+              <div className="relative w-full h-44 sm:h-48 md:h-52 bg-slate-900/5 flex items-center justify-center overflow-hidden">
                 {!mobileImgError ? (
                   <img
                     src="/images/preview-mobile-app.png"
@@ -264,25 +264,25 @@ export default function Slide2AirlineTicketing() {
                     onError={() => setMobileImgError(true)}
                   />
                 ) : (
-                  <div className="p-3.5 sm:p-4 text-center flex flex-col items-center justify-center bg-gradient-to-b from-slate-50 to-blue-50/50 w-full h-full border-2 border-dashed border-blue-200/80">
-                    <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-blue-50 border border-blue-200 text-[#0066d6] flex items-center justify-center mb-2 shadow-2xs">
-                      <Smartphone className="w-5 h-5 sm:w-6 sm:h-6" />
+                  <div className="p-3 text-center flex flex-col items-center justify-center bg-gradient-to-b from-slate-50 to-blue-50/50 w-full h-full border-2 border-dashed border-blue-200/80">
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-blue-50 border border-blue-200 text-[#0066d6] flex items-center justify-center mb-1.5 shadow-2xs">
+                      <Smartphone className="w-5 h-5" />
                     </div>
 
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-100/60 text-[#0066d6] text-[10px] font-bold uppercase tracking-wider mb-1 border border-blue-200/60">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-100/60 text-[#0066d6] text-[10px] sm:text-[11px] font-black uppercase tracking-wider mb-1 border border-blue-200/60">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#0066d6] animate-pulse"></span>
                       Native Smartphone Application
                     </span>
 
-                    <h4 className="text-xs sm:text-sm font-extrabold text-slate-900 leading-snug">
+                    <h4 className="text-xs sm:text-[13px] font-black text-slate-900 leading-snug">
                       Preview Belum Tersedia di Browser (Khusus Mobile Apps)
                     </h4>
 
-                    <p className="text-[11px] sm:text-xs text-slate-600 mt-1 max-w-md leading-relaxed px-2">
+                    <p className="text-[11px] sm:text-xs text-slate-600 mt-1 max-w-md leading-snug px-2">
                       Fitur ini tidak dapat dipratinjau langsung di web slide karena berjalan pada sistem operasi native smartphone. Pengujian alur booking dilakukan langsung melalui perangkat fisik (Build Internal APK / TestFlight).
                     </p>
 
-                    <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mt-2 text-[10px] font-semibold text-slate-600">
+                    <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mt-2 text-[10px] font-bold text-slate-600">
                       <span className="bg-white px-2 py-0.5 rounded-md border border-slate-200 shadow-2xs">
                         📱 Android &amp; iOS Native
                       </span>
@@ -299,7 +299,7 @@ export default function Slide2AirlineTicketing() {
             </div>
 
             {/* Poin Kapabilitas */}
-            <ul className="space-y-1.5 text-xs sm:text-sm text-slate-700 leading-relaxed mb-3">
+            <ul className="space-y-2 text-[13px] sm:text-[14.5px] text-slate-800 leading-snug mb-3">
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#0066d6] shrink-0 mt-0.5" />
                 <span>
@@ -316,15 +316,15 @@ export default function Slide2AirlineTicketing() {
           </div>
 
           {/* Action Button: Direct URL Link */}
-          <div className="pt-2.5 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-            <span className="text-xs text-slate-500 font-medium truncate text-center sm:text-left">
-              Akses Aplikasi: <strong className="text-slate-700">{mobileAppUrl}</strong>
+          <div className="pt-2 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <span className="text-xs sm:text-[13px] text-slate-500 font-semibold truncate text-center sm:text-left">
+              Akses Aplikasi: <strong className="text-slate-800">{mobileAppUrl}</strong>
             </span>
             <a
               href={mobileAppUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-[#0066d6] text-[#0066d6] hover:bg-blue-50 text-xs font-bold shadow-2xs hover:shadow transition-all shrink-0 cursor-pointer w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-[#0066d6] text-[#0066d6] hover:bg-blue-50 text-xs sm:text-sm font-extrabold shadow-2xs hover:shadow transition-all shrink-0 cursor-pointer w-full sm:w-auto"
             >
               <span>Buka Tampilan Mobile</span>
               <ExternalLink className="w-3.5 h-3.5" />

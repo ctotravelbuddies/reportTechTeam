@@ -89,10 +89,10 @@ export default function Slide4LeadsDistribution() {
                   {st.num}
                 </div>
                 <div className="min-w-0">
-                  <div className="text-xs sm:text-[13px] font-extrabold text-slate-900 truncate">
+                  <div className="text-sm sm:text-[14.5px] font-black text-slate-900 truncate">
                     {st.title}
                   </div>
-                  <div className="text-[11px] font-medium text-slate-500 truncate">
+                  <div className="text-xs font-semibold text-slate-500 truncate">
                     {st.sub}
                   </div>
                 </div>
@@ -117,30 +117,30 @@ export default function Slide4LeadsDistribution() {
                     <div className="w-8 h-8 rounded-lg bg-blue-50 border border-blue-200 text-[#0066d6] flex items-center justify-center shrink-0">
                       <Icon className="w-4 h-4" />
                     </div>
-                    <span className="text-xs font-bold text-[#0066d6]">{item.tag}</span>
+                    <span className="text-xs sm:text-[13px] font-extrabold text-[#0066d6]">{item.tag}</span>
                   </div>
-                  <span className="w-2 h-2 rounded-full bg-emerald-500" title="Aktif"></span>
+                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" title="Aktif"></span>
                 </div>
 
-                <h3 className="text-sm font-black text-slate-900 mb-2.5 leading-snug">
+                <h3 className="text-base sm:text-lg font-black text-slate-900 mb-2 leading-snug">
                   {item.title}
                 </h3>
 
-                <ul className="space-y-2 text-xs sm:text-[13px] text-slate-700 leading-relaxed">
+                <ul className="space-y-2 text-[13px] sm:text-[14.5px] text-slate-700 leading-snug">
                   {item.points.map((pt, pIdx) => (
                     <li key={pIdx} className="flex items-start gap-2">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-[#0066d6] shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-[#0066d6] shrink-0 mt-0.5" />
                       <span>{pt}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="pt-2 mt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+              <div className="pt-2 mt-2.5 border-t border-slate-100 flex items-center justify-between text-xs sm:text-[13px] text-slate-500">
                 <span>
-                  Manfaat: <strong className="text-slate-800">{item.impact}</strong>
+                  Manfaat: <strong className="text-slate-900 font-extrabold">{item.impact}</strong>
                 </span>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#0066d6]"></span>
+                <span className="w-2 h-2 rounded-full bg-[#0066d6]"></span>
               </div>
             </div>
           );
@@ -148,15 +148,15 @@ export default function Slide4LeadsDistribution() {
       </div>
 
       {/* 3. Footer Bar Kesimpulan: Fokus Pengawasan & Kendali Mutu */}
-      <div className="slide-subcard p-2.5 sm:p-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs shrink-0 border border-slate-200">
+      <div className="slide-subcard p-2.5 sm:p-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs sm:text-[13px] shrink-0 border border-slate-200">
         <div className="flex items-center gap-2 text-slate-700">
           <Sparkles className="w-4 h-4 text-[#0066d6] shrink-0" />
-          <span className="font-bold text-slate-900">Kendali Manajemen:</span>
+          <span className="font-extrabold text-slate-900">Kendali Manajemen:</span>
           <span>
             Setiap prospek Private Trip kini terkontrol secara terstruktur dan termonitor 100%, menghilangkan risiko leads tercecer dan menjaga akuntabilitas tim.
           </span>
         </div>
-        <span className="text-[#0066d6] font-extrabold hidden sm:inline shrink-0">
+        <span className="text-[#0066d6] font-black hidden sm:inline shrink-0">
           Kendali &amp; Visibilitas 100% ✓
         </span>
       </div>

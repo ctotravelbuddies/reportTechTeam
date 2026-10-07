@@ -185,11 +185,11 @@ export default function Slide2Milestones() {
             <div className="hidden md:grid md:col-span-8 grid-cols-3 border border-slate-200 rounded-xl overflow-hidden divide-x divide-slate-200 bg-slate-100/90 shadow-2xs text-center">
               {months.map((m) => (
                 <div key={m.id} className="py-1.5 px-2">
-                  <div className="flex items-center justify-center gap-1.5 text-xs sm:text-sm font-black text-slate-900">
-                    <Calendar className="w-3.5 h-3.5 text-[#0066d6]" />
+                  <div className="flex items-center justify-center gap-1.5 text-sm sm:text-base font-black text-slate-900">
+                    <Calendar className="w-4 h-4 text-[#0066d6]" />
                     <span>{m.name}</span>
                   </div>
-                  <span className="text-[10px] font-bold text-[#0066d6] block mt-0.5">
+                  <span className="text-xs font-black text-[#0066d6] block mt-0.5">
                     {m.milestone}
                   </span>
                 </div>
@@ -201,7 +201,7 @@ export default function Slide2Milestones() {
           <div className="hidden md:grid grid-cols-12 gap-2.5 mb-2.5 items-center">
             <div className="col-span-4 flex items-center gap-2 px-1">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
-              <span className="text-[10px] font-black uppercase tracking-wider text-[#0066d6]">
+              <span className="text-xs font-black uppercase tracking-wider text-[#0066d6]">
                 Rute Penerbangan Q4
               </span>
             </div>
@@ -216,15 +216,15 @@ export default function Slide2Milestones() {
                 <div className="absolute inset-0 grid grid-cols-3 pointer-events-none items-center">
                   <div className="flex items-center justify-center gap-1">
                     <span className="w-2 h-2 rounded-full bg-emerald-500 ring-2 ring-emerald-200"></span>
-                    <span className="text-[9px] font-bold text-slate-500">Departure</span>
+                    <span className="text-[10px] font-extrabold text-slate-600">Departure</span>
                   </div>
                   <div className="flex items-center justify-center gap-1">
                     <span className="w-2 h-2 rounded-full bg-[#0066d6] ring-2 ring-blue-200"></span>
-                    <span className="text-[9px] font-bold text-slate-500">Cruising</span>
+                    <span className="text-[10px] font-extrabold text-slate-600">Cruising</span>
                   </div>
                   <div className="flex items-center justify-center gap-1">
                     <span className="w-2 h-2 rounded-full bg-[#25a7dd] ring-2 ring-sky-200"></span>
-                    <span className="text-[9px] font-bold text-slate-500">Arrival</span>
+                    <span className="text-[10px] font-extrabold text-slate-600">Arrival</span>
                   </div>
                 </div>
 
@@ -233,7 +233,7 @@ export default function Slide2Milestones() {
                   <div className="w-5 h-5 rounded-full bg-[#0066d6] text-white flex items-center justify-center shadow-md shadow-blue-500/30">
                     <Plane className="w-3 h-3 -rotate-45" />
                   </div>
-                  <span className="text-[8.5px] font-black px-1.5 py-0.2 rounded bg-white text-[#0066d6] border border-blue-200 shadow-2xs whitespace-nowrap">
+                  <span className="text-[9px] font-black px-1.5 py-0.5 rounded bg-white text-[#0066d6] border border-blue-200 shadow-2xs whitespace-nowrap">
                     Flight TB-Q4
                   </span>
                 </div>
@@ -258,21 +258,23 @@ export default function Slide2Milestones() {
                   {/* Kolom Kiri (4 Kolom): Informasi Inisiatif */}
                   <div className="col-span-12 md:col-span-4 pr-1">
                     <div className="flex items-start gap-2.5">
-                      <div className="w-8 h-8 rounded-lg bg-blue-50 border border-blue-200 text-[#0066d6] flex items-center justify-center shrink-0 mt-0.5 shadow-2xs font-black text-xs">
+                      <div className="w-8 h-8 rounded-lg bg-blue-50 border border-blue-200 text-[#0066d6] flex items-center justify-center shrink-0 mt-0.5 shadow-2xs font-black text-sm">
                         {m.num}
                       </div>
                       <div className="min-w-0">
                         <div className="flex items-center gap-1.5 flex-wrap">
-                          <h4 className="text-xs sm:text-sm font-black text-slate-900 leading-tight">
+                          <h4 className="text-sm sm:text-base font-black text-slate-900 leading-tight">
                             {m.title}
                           </h4>
-                          <span className="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-blue-50 text-[#0066d6] border border-blue-200">
+                          <span className="text-xs font-black px-2 py-0.5 rounded-full bg-blue-50 text-[#0066d6] border border-blue-200">
                             {m.targetBadge}
                           </span>
                         </div>
-                        <p className="text-[11px] text-slate-500 font-medium leading-snug mt-0.5 line-clamp-1 sm:line-clamp-none">
-                          {m.deliverable}
-                        </p>
+                        {m.deliverable && (
+                          <p className="text-xs sm:text-[13px] text-slate-600 font-semibold leading-snug mt-0.5 line-clamp-1 sm:line-clamp-none">
+                            {m.deliverable}
+                          </p>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -300,11 +302,11 @@ export default function Slide2Milestones() {
                         ) : (
                           <HeartHandshake className="w-3.5 h-3.5 text-white shrink-0" />
                         )}
-                        <span className="text-xs font-black tracking-wide truncate">
+                        <span className="text-xs sm:text-[13px] font-black tracking-wide truncate">
                           {m.barLabel}
                         </span>
                       </div>
-                      <span className="text-[9.5px] font-extrabold px-2 py-0.5 rounded bg-white/20 text-white shrink-0 hidden sm:inline">
+                      <span className="text-[11px] font-black px-2 py-0.5 rounded bg-white/20 text-white shrink-0 hidden sm:inline">
                         {m.tag}
                       </span>
                     </div>
@@ -316,7 +318,7 @@ export default function Slide2Milestones() {
         </div>
 
         {/* 4. Legend & Indikator Status Warna */}
-        <div className="pt-2 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2 text-[11px] text-slate-600 mt-2">
+        <div className="pt-2 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2 text-xs sm:text-[13px] text-slate-600 mt-2">
           <div className="flex items-center gap-3.5 flex-wrap font-bold">
             <span className="text-slate-400">Status Timeline:</span>
             <span className="flex items-center gap-1.5">
@@ -337,7 +339,7 @@ export default function Slide2Milestones() {
             </span>
           </div>
 
-          <span className="text-[#0066d6] font-extrabold hidden sm:inline">
+          <span className="text-[#0066d6] font-black hidden sm:inline">
             Klik baris untuk fokus inisiatif ✓
           </span>
         </div>

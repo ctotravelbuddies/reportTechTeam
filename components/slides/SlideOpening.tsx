@@ -36,7 +36,7 @@ export default function SlideOpening({ onNext, goToSlide }: SlideOpeningProps) {
               alt="Travel Buddies Logo"
               className="h-8 sm:h-11 md:h-13 w-auto object-contain drop-shadow-lg"
             />
-            <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-white/20 backdrop-blur-md text-white text-[10px] sm:text-xs md:text-sm font-extrabold tracking-wider uppercase border border-white/30 shadow-md">
+            <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-white text-xs sm:text-sm font-black tracking-wider uppercase border border-white/30 shadow-md">
               <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-white animate-pulse"></span>
               Travel Buddies Indonesia • Tech &amp; Product Team
             </div>
@@ -44,30 +44,30 @@ export default function SlideOpening({ onNext, goToSlide }: SlideOpeningProps) {
 
           {/* Upper-Center Title & Narrative (Aligned with the sky, right above Mount Bromo horizon) */}
           <div className="flex flex-col items-center text-center mx-auto max-w-3xl lg:max-w-4xl pt-1.5 sm:pt-4">
-            <span className="inline-flex items-center gap-1.5 px-3 py-0.5 sm:py-1 rounded-full bg-blue-900/40 backdrop-blur-md text-blue-100 text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-2 sm:mb-2.5 border border-white/20 shadow-xs">
-              <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-blue-200" />
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-900/40 backdrop-blur-md text-blue-100 text-xs sm:text-[13px] font-extrabold uppercase tracking-wider mb-2.5 border border-white/20 shadow-xs">
+              <Sparkles className="w-3.5 h-3.5 text-blue-200" />
               Executive Technology Report • Q3 2026
             </span>
 
-            <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight drop-shadow-lg mb-2 sm:mb-2.5">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[52px] font-black text-white leading-tight tracking-tight drop-shadow-lg mb-2.5 sm:mb-3">
               Laporan Capaian &amp; Inisiatif Tim Teknologi
             </h1>
 
-            <p className="text-[11px] sm:text-sm md:text-base text-white/95 font-medium leading-relaxed max-w-2xl drop-shadow-md mb-3 sm:mb-5 line-clamp-3 sm:line-clamp-none">
+            <p className="text-xs sm:text-base md:text-lg text-white/95 font-medium leading-relaxed max-w-2xl drop-shadow-md mb-4 sm:mb-6 line-clamp-3 sm:line-clamp-none">
               Penyelesaian Airline Ticketing B2B &amp; B2C, Distribusi Leads Termonitor, Ekspansi Modul CMS (RBAC), serta Sentralisasi Dashboard Reporting Bisnis.
             </p>
 
             {/* Meta Information Pills */}
-            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-[11px] sm:text-xs md:text-sm text-white">
-              <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-black/25 backdrop-blur-md px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-xl border border-white/25 shadow-sm font-semibold">
-                <Users className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white shrink-0" />
+            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3.5 text-xs sm:text-sm md:text-base text-white">
+              <div className="inline-flex items-center gap-2 bg-black/25 backdrop-blur-md px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl border border-white/25 shadow-sm font-semibold">
+                <Users className="w-4 h-4 text-white shrink-0" />
                 <span>
                   Divisi: <strong className="font-extrabold text-white">Technology &amp; Engineering</strong>
                 </span>
               </div>
 
-              <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-black/25 backdrop-blur-md px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-xl border border-white/25 shadow-sm font-semibold">
-                <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white shrink-0" />
+              <div className="inline-flex items-center gap-2 bg-black/25 backdrop-blur-md px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl border border-white/25 shadow-sm font-semibold">
+                <Calendar className="w-4 h-4 text-white shrink-0" />
                 <span>
                   Periode: <strong className="font-extrabold text-white">Kuartal 3 (Q3) 2026</strong>
                 </span>

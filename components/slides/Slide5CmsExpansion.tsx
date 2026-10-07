@@ -62,29 +62,29 @@ export default function Slide5CmsExpansion() {
       />
 
       {/* 1. Header Banner: Arsitektur Ekosistem CMS Terpadu */}
-      <div className="slide-card p-3 sm:p-3.5 mb-3 border-l-4 border-l-[#0066d6] shadow-xs shrink-0 flex items-center justify-between gap-3 flex-wrap">
+      <div className="slide-card p-3 sm:p-3.5 mb-2.5 border-l-4 border-l-[#0066d6] shadow-xs shrink-0 flex items-center justify-between gap-3 flex-wrap">
         <div className="flex items-center gap-2.5">
           <div className="w-8 h-8 rounded-lg bg-blue-50 border border-blue-200 text-[#0066d6] flex items-center justify-center shrink-0">
             <LayoutGrid className="w-4 h-4" />
           </div>
           <div>
-            <h4 className="text-xs sm:text-sm font-extrabold text-slate-900 leading-tight">
+            <h4 className="text-sm sm:text-base font-black text-slate-900 leading-tight">
               Satu Ekosistem CMS Terpusat untuk Seluruh Divisi Internal
             </h4>
-            <span className="text-[11px] text-slate-500 font-medium block mt-0.5">
+            <span className="text-xs sm:text-[13px] text-slate-600 font-medium block mt-0.5">
               Menggantikan pencatatan terpisah menjadi satu platform digital dengan proteksi keamanan Role-Based Access Control.
             </span>
           </div>
         </div>
 
-        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-extrabold bg-blue-50 text-[#0066d6] border border-blue-200 shrink-0 shadow-2xs">
+        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-blue-50 text-[#0066d6] border border-blue-200 shrink-0 shadow-2xs">
           <span className="w-2 h-2 rounded-full bg-[#0066d6]"></span>
           Rilis Bertahap (Aktif Digunakan)
         </span>
       </div>
 
       {/* 2. Grid 3 Modul Utama (1x3) */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 flex-1 min-h-0 mb-3 items-stretch">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 flex-1 min-h-0 mb-2.5 items-stretch">
         {modules.map((mod) => {
           const Icon = mod.icon;
           return (
@@ -100,25 +100,25 @@ export default function Slide5CmsExpansion() {
                       <Icon className="w-4 h-4" />
                     </div>
                     <div>
-                      <h3 className="text-xs sm:text-sm font-extrabold text-slate-900 leading-tight">
+                      <h3 className="text-sm sm:text-base font-black text-slate-900 leading-tight">
                         {mod.title}
                       </h3>
-                      <span className="text-[10px] font-semibold text-slate-400 block mt-0.5">
+                      <span className="text-xs font-bold text-slate-500 block mt-0.5">
                         {mod.category}
                       </span>
                     </div>
                   </div>
 
-                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-blue-50 text-[#0066d6] border border-blue-200 shrink-0 shadow-2xs">
+                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-50 text-[#0066d6] border border-blue-200 shrink-0 shadow-2xs">
                     {mod.badge}
                   </span>
                 </div>
 
                 {/* 2 Poin Summarize */}
-                <ul className="space-y-1.5 text-xs sm:text-[13px] text-slate-700 leading-relaxed">
+                <ul className="space-y-2 text-[13px] sm:text-[14.5px] text-slate-700 leading-snug">
                   {mod.points.map((pt, idx) => (
                     <li key={idx} className="flex items-start gap-2">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-[#0066d6] shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-[#0066d6] shrink-0 mt-0.5" />
                       <span>{pt}</span>
                     </li>
                   ))}
@@ -126,11 +126,11 @@ export default function Slide5CmsExpansion() {
               </div>
 
               {/* Dampak di Bawah */}
-              <div className="pt-2 mt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+              <div className="pt-2 mt-2.5 border-t border-slate-100 flex items-center justify-between text-xs sm:text-[13px] text-slate-500">
                 <span>
-                  Hasil: <strong className="text-slate-800">{mod.impact}</strong>
+                  Hasil: <strong className="text-slate-900 font-extrabold">{mod.impact}</strong>
                 </span>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#0066d6]"></span>
+                <span className="w-2 h-2 rounded-full bg-[#0066d6]"></span>
               </div>
             </div>
           );
@@ -138,15 +138,15 @@ export default function Slide5CmsExpansion() {
       </div>
 
       {/* 3. Kesimpulan di Footer */}
-      <div className="slide-subcard p-2.5 sm:p-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs shrink-0 border border-slate-200">
+      <div className="slide-subcard p-2.5 sm:p-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs sm:text-sm shrink-0 border border-slate-200">
         <div className="flex items-center gap-2 text-slate-700">
           <Sparkles className="w-4 h-4 text-[#0066d6] shrink-0" />
-          <span className="font-bold text-slate-900">Nilai Bisnis:</span>
+          <span className="font-extrabold text-slate-900">Nilai Bisnis:</span>
           <span>
             Setiap departemen memiliki modul kerja mandiri tanpa tumpang tindih wewenang, menjaga integritas data dan meningkatkan efisiensi harian.
           </span>
         </div>
-        <span className="text-[#0066d6] font-extrabold hidden sm:inline shrink-0">
+        <span className="text-[#0066d6] font-black hidden sm:inline shrink-0">
           Efisien &amp; Terproteksi ✓
         </span>
       </div>

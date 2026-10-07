@@ -64,29 +64,29 @@ export default function Slide6ReportingDashboard() {
       />
 
       {/* 1. Header Banner: Akses General di CMS */}
-      <div className="slide-card p-3 sm:p-3.5 mb-3 border-l-4 border-l-[#0066d6] shadow-xs shrink-0 flex items-center justify-between gap-3 flex-wrap">
+      <div className="slide-card p-3 sm:p-3.5 mb-2.5 border-l-4 border-l-[#0066d6] shadow-xs shrink-0 flex items-center justify-between gap-3 flex-wrap">
         <div className="flex items-center gap-2.5">
           <div className="w-8 h-8 rounded-lg bg-blue-50 border border-blue-200 text-[#0066d6] flex items-center justify-center shrink-0">
             <LayoutDashboard className="w-4 h-4" />
           </div>
           <div>
-            <h4 className="text-xs sm:text-sm font-extrabold text-slate-900 leading-tight">
+            <h4 className="text-sm sm:text-base font-black text-slate-900 leading-tight">
               Seluruh Reporting Dapat Diakses Secara General di CMS
             </h4>
-            <span className="text-[11px] text-slate-500 font-medium block mt-0.5">
+            <span className="text-xs sm:text-[13px] text-slate-600 font-medium block mt-0.5">
               Menghilangkan rekap data terpisah; manajemen dan divisi operasional memperoleh visibilitas data riil langsung dari satu antarmuka terpusat.
             </span>
           </div>
         </div>
 
-        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-extrabold bg-blue-50 text-[#0066d6] border border-blue-200 shrink-0 shadow-2xs">
+        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-blue-50 text-[#0066d6] border border-blue-200 shrink-0 shadow-2xs">
           <span className="w-2 h-2 rounded-full bg-[#0066d6]"></span>
           Akses General • Realtime Data
         </span>
       </div>
 
       {/* 2. Grid 3 Dashboard Utama (Desktop: 3 Kolom Sejajar, Mobile: Stack Rapi) */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 sm:gap-4 flex-1 min-h-0 mb-3 items-stretch">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 sm:gap-4 flex-1 min-h-0 mb-2.5 items-stretch">
         {dashboards.map((dash) => {
           const Icon = dash.icon;
           return (
@@ -96,28 +96,28 @@ export default function Slide6ReportingDashboard() {
             >
               <div>
                 {/* Header Kartu Dashboard */}
-                <div className="flex items-start justify-between pb-2.5 mb-2.5 border-b border-slate-100 gap-2">
+                <div className="flex items-start justify-between pb-2 mb-2 border-b border-slate-100 gap-2">
                   <div className="flex items-center gap-2.5">
-                    <div className="w-9 h-9 rounded-xl bg-blue-50 border border-blue-200 text-[#0066d6] flex items-center justify-center shrink-0 shadow-2xs">
+                    <div className="w-8 h-8 rounded-xl bg-blue-50 border border-blue-200 text-[#0066d6] flex items-center justify-center shrink-0 shadow-2xs">
                       <Icon className="w-4 h-4" />
                     </div>
                     <div>
-                      <h3 className="text-xs sm:text-sm font-extrabold text-slate-900 leading-tight">
+                      <h3 className="text-sm sm:text-base font-black text-slate-900 leading-tight">
                         {dash.title}
                       </h3>
-                      <span className="text-[10px] font-semibold text-slate-400 block mt-0.5">
+                      <span className="text-xs font-bold text-slate-500 block mt-0.5">
                         {dash.category}
                       </span>
                     </div>
                   </div>
 
-                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-blue-50 text-[#0066d6] border border-blue-200 shrink-0 shadow-2xs">
+                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-50 text-[#0066d6] border border-blue-200 shrink-0 shadow-2xs">
                     {dash.badge}
                   </span>
                 </div>
 
                 {/* 2 Poin Summarize */}
-                <ul className="space-y-2 text-xs sm:text-[13px] text-slate-700 leading-relaxed mb-3">
+                <ul className="space-y-2 text-[13px] sm:text-[14.5px] text-slate-700 leading-snug mb-2.5">
                   {dash.points.map((pt, idx) => (
                     <li key={idx} className="flex items-start gap-2">
                       <CheckCircle2 className="w-3.5 h-3.5 text-[#0066d6] shrink-0 mt-0.5" />
@@ -128,14 +128,14 @@ export default function Slide6ReportingDashboard() {
 
                 {/* Indikator Metrik Kunci */}
                 <div className="pt-2 border-t border-slate-100">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-1.5">
+                  <span className="text-[11px] font-black uppercase tracking-wider text-slate-500 block mb-1">
                     Fokus Metrik Utama:
                   </span>
                   <div className="flex flex-wrap gap-1.5">
                     {dash.metrics.map((m, idx) => (
                       <span
                         key={idx}
-                        className="text-[10px] font-semibold px-2 py-0.5 rounded-md bg-slate-50 border border-slate-200 text-slate-700"
+                        className="text-[11px] sm:text-xs font-bold px-2 py-0.5 rounded-md bg-slate-50 border border-slate-200 text-slate-700"
                       >
                         {m}
                       </span>
@@ -145,11 +145,11 @@ export default function Slide6ReportingDashboard() {
               </div>
 
               {/* Dampak Bisnis di Bawah */}
-              <div className="pt-2.5 mt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+              <div className="pt-2 mt-2.5 border-t border-slate-100 flex items-center justify-between text-xs sm:text-[13px] text-slate-500">
                 <span>
-                  Hasil: <strong className="text-slate-800">{dash.impact}</strong>
+                  Hasil: <strong className="text-slate-900 font-extrabold">{dash.impact}</strong>
                 </span>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#0066d6]"></span>
+                <span className="w-2 h-2 rounded-full bg-[#0066d6]"></span>
               </div>
             </div>
           );
@@ -157,15 +157,15 @@ export default function Slide6ReportingDashboard() {
       </div>
 
       {/* 3. Kesimpulan di Footer */}
-      <div className="slide-subcard p-2.5 sm:p-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs shrink-0 border border-slate-200">
+      <div className="slide-subcard p-2.5 sm:p-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs sm:text-sm shrink-0 border border-slate-200">
         <div className="flex items-center gap-2 text-slate-700">
           <Sparkles className="w-4 h-4 text-[#0066d6] shrink-0" />
-          <span className="font-bold text-slate-900">Nilai Strategis:</span>
+          <span className="font-extrabold text-slate-900">Nilai Strategis:</span>
           <span>
             Sentralisasi reporting di CMS menghadirkan Single Source of Truth bagi manajemen untuk mengevaluasi kesehatan operasional dan laju bisnis secara akurat dan transparan.
           </span>
         </div>
-        <span className="text-[#0066d6] font-extrabold hidden sm:inline shrink-0">
+        <span className="text-[#0066d6] font-black hidden sm:inline shrink-0">
           Akurat &amp; Siap Dipantau ✓
         </span>
       </div>
