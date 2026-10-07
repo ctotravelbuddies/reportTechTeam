@@ -98,16 +98,12 @@ export default function SlideSectionNextStrategy({ onNext }: SlideSectionProps) 
 
           {/* Center Stage: Logo, NEXT STRATEGY Headline, & Vision */}
           <div className="flex flex-col items-center text-center my-auto max-w-3xl mx-auto py-4 sm:py-6">
-            {/* Travel Buddies Logo in Original Colors with Crisp White Container */}
-            <div className="mb-5 sm:mb-6 px-6 py-3 rounded-2xl bg-white shadow-xl inline-flex items-center justify-center border border-white/80">
+            {/* Travel Buddies White Logo */}
+            <div className="mb-4 sm:mb-6">
               <img
-                src="https://travelbuddies.co.id/_next/image?url=%2Fimages%2Flogo%2Flogo.png&w=384&q=75"
+                src="/travelbuddies-logo.webp"
                 alt="Travel Buddies Logo"
-                className="h-9 sm:h-11 w-auto object-contain"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src =
-                    'https://placehold.co/240x60/ffffff/0066d6?text=Travel+Buddies';
-                }}
+                className="h-10 sm:h-14 md:h-16 w-auto object-contain drop-shadow-xl"
               />
             </div>
 

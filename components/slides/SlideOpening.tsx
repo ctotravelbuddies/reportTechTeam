@@ -29,8 +29,13 @@ export default function SlideOpening({ onNext, goToSlide }: SlideOpeningProps) {
 
         {/* Content Overlay: Centered in the open sky area between the travelers and above Mount Bromo */}
         <div className="relative z-10 w-full h-full flex flex-col justify-between p-3.5 sm:p-7 lg:p-10">
-          {/* Top Center: Brand Pill Badge */}
-          <div className="flex justify-center items-center">
+          {/* Top Center: Brand Logo & Pill Badge */}
+          <div className="flex flex-col justify-center items-center gap-2">
+            <img
+              src="/travelbuddies-logo.webp"
+              alt="Travel Buddies Logo"
+              className="h-8 sm:h-11 md:h-13 w-auto object-contain drop-shadow-lg"
+            />
             <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-white/20 backdrop-blur-md text-white text-[10px] sm:text-xs md:text-sm font-extrabold tracking-wider uppercase border border-white/30 shadow-md">
               <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-white animate-pulse"></span>
               Travel Buddies Indonesia • Tech &amp; Product Team

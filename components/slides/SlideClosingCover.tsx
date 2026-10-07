@@ -25,11 +25,16 @@ export default function SlideClosingCover({ goToSlide }: SlideClosingCoverProps)
           className="w-full h-full object-contain select-none pointer-events-none"
         />
 
-        {/* Top Floating Badge */}
+        {/* Top Floating Badge with Official Logo */}
         <div className="absolute top-3 left-3 sm:top-4 sm:left-6 z-20">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-white text-[10px] sm:text-xs font-extrabold tracking-wider uppercase border border-white/30 shadow-xs">
-            <CheckCircle2 className="w-3.5 h-3.5 text-white" />
-            <span>Presentasi Selesai • Sesi Diskusi &amp; Tanya Jawab</span>
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-white text-[10px] sm:text-xs font-extrabold tracking-wider uppercase border border-white/30 shadow-xs">
+            <img
+              src="/travelbuddies-logo.webp"
+              alt="Travel Buddies Logo"
+              className="h-3.5 sm:h-4 w-auto object-contain"
+            />
+            <span className="w-1 h-3 bg-white/40 rounded-full"></span>
+            <span>Presentasi Selesai • Sesi Tanya Jawab</span>
           </div>
         </div>
 
