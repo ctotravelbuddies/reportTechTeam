@@ -13,6 +13,7 @@ import Slide2Milestones from '../components/slides/Slide2Milestones';
 import Slide9CapacityAllocation from '../components/slides/Slide9CapacityAllocation';
 import Slide10QualityChallenges from '../components/slides/Slide10QualityChallenges';
 import SlideClosingCover from '../components/slides/SlideClosingCover';
+import ComingSoonPage from '../components/ComingSoonPage';
 
 export default function PresentationPage() {
   const slides = useMemo(
@@ -35,6 +36,20 @@ export default function PresentationPage() {
 
   const [currentSlideIndex, setCurrentSlideIndex] = useState<number>(0);
   const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
+  const [showSlides, setShowSlides] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      if (
+        params.get('view') === 'slides' ||
+        params.get('admin') === 'true' ||
+        params.get('secret') === 'travelbuddies'
+      ) {
+        setShowSlides(true);
+      }
+    }
+  }, []);
 
   const totalSlides = slides.length;
   const currentSlide = slides[currentSlideIndex];
@@ -89,8 +104,16 @@ export default function PresentationPage() {
 
   const progressPercent = ((currentSlideIndex + 1) / totalSlides) * 100;
 
+  if (!showSlides) {
+    return (
+      <main className="relative w-screen h-screen overflow-hidden">
+        <ComingSoonPage onUnlockSlides={() => setShowSlides(true)} />
+      </main>
+    );
+  }
+
   return (
-    <div className="flex flex-col h-screen w-screen overflow-hidden bg-slate-50 text-slate-900">
+    <div className="flex flex-col h-screen w-screen overflow-hidden bg-slate-50 text-slate-900 relative">
       {/* Top Presentation Navigation Bar (Normal Light Mode) */}
       <header className="h-13 border-b border-slate-200 bg-white px-4 sm:px-6 flex items-center justify-between shrink-0 z-30 shadow-xs">
         {/* Left: Branding */}
@@ -165,6 +188,15 @@ export default function PresentationPage() {
                 }
               />
             </svg>
+          </button>
+
+          <button
+            onClick={() => setShowSlides(false)}
+            title="Kunci Presentasi ke Halaman Coming Soon"
+            className="p-1.5 px-2.5 rounded-lg bg-amber-50 hover:bg-amber-100 border border-amber-200 text-amber-800 transition text-xs font-bold flex items-center gap-1.5 ml-1 shadow-xs cursor-pointer"
+          >
+            <span className="w-2 h-2 rounded-full bg-amber-500"></span>
+            <span className="hidden sm:inline">Kunci Slide</span>
           </button>
         </div>
       </header>
