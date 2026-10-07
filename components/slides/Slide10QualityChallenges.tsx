@@ -53,7 +53,7 @@ export default function Slide10QualityChallenges() {
 
       {/* 2. Grid 3 Pilar Analisis (Profesional, Ringkas, Mudah Dipahami) */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 flex-1 min-h-0 mb-2.5 items-stretch">
-        
+
         {/* PILAR 1: KONDISI TIM (Developer Menguji Mandiri) */}
         <div className="slide-card p-3.5 sm:p-4 flex flex-col justify-between border-t-4 border-t-rose-500 shadow-xs hover:shadow-md transition-all">
           <div>
@@ -243,21 +243,6 @@ export default function Slide10QualityChallenges() {
           </div>
         </div>
 
-      </div>
-
-      {/* 3. Strategic Action & Conclusion Footer (Profesional & Terarah) */}
-      <div className="slide-subcard p-2.5 sm:p-3 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs sm:text-[13px] shrink-0 border border-slate-200">
-        <div className="flex items-center gap-2.5 text-slate-700">
-          <Sparkles className="w-4 h-4 text-[#0066d6] shrink-0" />
-          <span className="font-black text-slate-900 shrink-0">Langkah Penyelesaian:</span>
-          <span className="leading-snug">
-            Mengoptimalkan <strong>AI Automation</strong> untuk menjaga alur utama + Menerapkan <strong>live error tracking</strong> untuk memantau error di perangkat user secara real-time + Merencanakan <strong>Dedicated QA</strong> saat volume transaksi terus bertambah.
-          </span>
-        </div>
-        <span className="inline-flex items-center gap-1.5 text-[#0066d6] font-black text-xs shrink-0">
-          <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-          Solusi Bertahap &amp; Terukur ✓
-        </span>
       </div>
     </div>
   );
