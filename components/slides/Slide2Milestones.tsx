@@ -96,7 +96,6 @@ export default function Slide2Milestones() {
       category: 'Dukungan Lintas Divisi',
       icon: HeartHandshake,
       targetBadge: 'Sepanjang Q4',
-      deliverable: 'Automasi harian, form promosi, dan pemeliharaan alat kerja internal tim.',
       barLeft: '0%',
       barWidth: '100%',
       barColor: 'bg-slate-800',
@@ -251,11 +250,10 @@ export default function Slide2Milestones() {
                 <div
                   key={m.id}
                   onClick={() => setActiveItem(isSelected ? null : m.id)}
-                  className={`p-2 sm:p-2.5 rounded-xl border transition-all cursor-pointer grid grid-cols-12 gap-2.5 items-center ${
-                    isSelected
+                  className={`p-2 sm:p-2.5 rounded-xl border transition-all cursor-pointer grid grid-cols-12 gap-2.5 items-center ${isSelected
                       ? 'bg-blue-50/70 border-[#0066d6] ring-2 ring-blue-200 shadow-sm'
                       : 'bg-white border-slate-200 hover:border-slate-300 hover:bg-slate-50/70'
-                  }`}
+                    }`}
                 >
                   {/* Kolom Kiri (4 Kolom): Informasi Inisiatif */}
                   <div className="col-span-12 md:col-span-4 pr-1">

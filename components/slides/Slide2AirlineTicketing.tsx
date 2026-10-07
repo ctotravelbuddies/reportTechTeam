@@ -178,12 +178,6 @@ export default function Slide2AirlineTicketing() {
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#0066d6] shrink-0 mt-0.5" />
                 <span>
-                  <strong>Interaktif Live:</strong> Anda dapat langsung mengklik, login, dan menguji alur tiket di frame demo di atas.
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle2 className="w-4 h-4 text-[#0066d6] shrink-0 mt-0.5" />
-                <span>
                   <strong>Core Ticketing Engine:</strong> Pencarian rute maskapai, issued e-ticket, dan kalkulasi komisi otomatis.
                 </span>
               </li>
@@ -274,7 +268,7 @@ export default function Slide2AirlineTicketing() {
                     <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-blue-50 border border-blue-200 text-[#0066d6] flex items-center justify-center mb-2 shadow-2xs">
                       <Smartphone className="w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
-                    
+
                     <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-100/60 text-[#0066d6] text-[10px] font-bold uppercase tracking-wider mb-1 border border-blue-200/60">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#0066d6] animate-pulse"></span>
                       Native Smartphone Application
@@ -306,12 +300,6 @@ export default function Slide2AirlineTicketing() {
 
             {/* Poin Kapabilitas */}
             <ul className="space-y-1.5 text-xs sm:text-sm text-slate-700 leading-relaxed mb-3">
-              <li className="flex items-start gap-2">
-                <CheckCircle2 className="w-4 h-4 text-[#0066d6] shrink-0 mt-0.5" />
-                <span>
-                  <strong>Pemesanan Instan 3 Langkah:</strong> Alur booking ramah pengguna khusus pelanggan individu (B2C).
-                </span>
-              </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#0066d6] shrink-0 mt-0.5" />
                 <span>
