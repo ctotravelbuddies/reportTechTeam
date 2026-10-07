@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel Buddies — Technology Project Planning (Sep 2026 – Jan 2027)</title>
+  <title>Travel Buddies — Laporan Kuartal Tech Team (Q2 – Q3)</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
@@ -41,17 +43,21 @@
       -webkit-user-select: none;
       overflow: hidden;
     }
+
     .slide-content-scroll {
       scrollbar-width: thin;
       scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
     }
+
     .slide-content-scroll::-webkit-scrollbar {
       width: 4px;
       height: 4px;
     }
+
     .slide-content-scroll::-webkit-scrollbar-track {
       background: transparent;
     }
+
     .slide-content-scroll::-webkit-scrollbar-thumb {
       background-color: rgba(255, 255, 255, 0.2);
       border-radius: 9999px;
@@ -62,28 +68,30 @@
       background-color: #080d1a;
       color: #f8fafc;
     }
+
     body.theme-dark header,
     body.theme-dark footer {
       background-color: #0a1120;
       border-color: #1c2b48;
     }
+
     body.theme-dark .clean-card {
       background-color: #0f182c;
       border: 1px solid #1c2b48;
       color: #f8fafc;
     }
+
     body.theme-dark .clean-subcard {
       background-color: #0a1120;
       border: 1px solid #1c2b48;
     }
+
     body.theme-dark .gantt-prep {
-      background-image: repeating-linear-gradient(
-        -45deg,
-        rgba(255, 255, 255, 0.1),
-        rgba(255, 255, 255, 0.1) 4px,
-        transparent 4px,
-        transparent 8px
-      );
+      background-image: repeating-linear-gradient(-45deg,
+          rgba(255, 255, 255, 0.1),
+          rgba(255, 255, 255, 0.1) 4px,
+          transparent 4px,
+          transparent 8px);
     }
 
     /* Bright / Light Mode Theme Tokens */
@@ -91,36 +99,43 @@
       background-color: #ffffff;
       color: #0f172a;
     }
+
     body.theme-bright header,
     body.theme-bright footer {
       background-color: #ffffff;
       border-color: #cbd5e1;
     }
+
     body.theme-bright .clean-card {
       background-color: #ffffff;
       border: 1px solid #cbd5e1;
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
       color: #0f172a;
     }
+
     body.theme-bright .clean-subcard {
       background-color: #f8fafc;
       border: 1px solid #e2e8f0;
       color: #0f172a;
     }
-    
+
     /* Typography Overrides for Bright Mode */
     body.theme-bright .text-white {
       color: #0f172a !important;
     }
+
     body.theme-bright .text-slate-300 {
       color: #334155 !important;
     }
+
     body.theme-bright .text-slate-400 {
       color: #475569 !important;
     }
+
     body.theme-bright .text-slate-500 {
       color: #64748b !important;
     }
+
     body.theme-bright .text-slate-600 {
       color: #94a3b8 !important;
     }
@@ -130,18 +145,23 @@
       color: #0052b3 !important;
       font-weight: 700;
     }
+
     body.theme-bright .border-\[\#1c2b48\] {
       border-color: #cbd5e1 !important;
     }
+
     body.theme-bright .bg-\[\#0a1120\] {
       background-color: #f8fafc !important;
     }
+
     body.theme-bright .bg-\[\#0f182c\] {
       background-color: #ffffff !important;
     }
+
     body.theme-bright .bg-\[\#0a1120\]\/40 {
       background-color: #e2e8f0 !important;
     }
+
     body.theme-bright .bg-slate-700 {
       background-color: #94a3b8 !important;
     }
@@ -155,6 +175,7 @@
     body.theme-bright #btnNext * {
       color: #ffffff !important;
     }
+
     body.theme-bright .bg-\[\#0066d6\] .text-slate-200 {
       color: #eff6ff !important;
     }
@@ -165,20 +186,26 @@
       background-color: #eff6ff !important;
       border-color: #bfdbfe !important;
     }
+
     body.theme-bright .bg-amber-500\/20 {
       background-color: #fef3c7 !important;
       border-color: #fde68a !important;
     }
+
     body.theme-bright .text-amber-300 {
-      color: #b45309 !important; /* High contrast amber on light card */
+      color: #b45309 !important;
+      /* High contrast amber on light card */
       font-weight: 700;
     }
+
     body.theme-bright .bg-red-500\/20 {
       background-color: #fee2e2 !important;
       border-color: #fecaca !important;
     }
+
     body.theme-bright .text-red-300 {
-      color: #b91c1c !important; /* High contrast dark red on light card */
+      color: #b91c1c !important;
+      /* High contrast dark red on light card */
       font-weight: 700;
     }
 
@@ -196,19 +223,18 @@
       border-color: #cbd5e1 !important;
       color: #334155 !important;
     }
+
     body.theme-bright .alloc-tab-btn:not(.bg-\[\#0066d6\]):hover {
       background-color: #f8fafc !important;
     }
 
     /* Gantt Preparation Striped Bar in Bright Mode */
     body.theme-bright .gantt-prep {
-      background-image: repeating-linear-gradient(
-        -45deg,
-        rgba(0, 102, 214, 0.16),
-        rgba(0, 102, 214, 0.16) 4px,
-        transparent 4px,
-        transparent 8px
-      ) !important;
+      background-image: repeating-linear-gradient(-45deg,
+          rgba(0, 102, 214, 0.16),
+          rgba(0, 102, 214, 0.16) 4px,
+          transparent 4px,
+          transparent 8px) !important;
       background-color: #eff6ff !important;
       border-color: #93c5fd !important;
       color: #0052b3 !important;
@@ -249,13 +275,13 @@
       border-radius: 12px;
     }
 
-    body.theme-bright .slide-page > div:first-child > div:first-child {
+    body.theme-bright .slide-page>div:first-child>div:first-child {
       position: relative;
       padding-bottom: 12px;
       border-bottom-color: #dbe5f0;
     }
 
-    body.theme-bright .slide-page > div:first-child > div:first-child::after {
+    body.theme-bright .slide-page>div:first-child>div:first-child::after {
       content: '';
       position: absolute;
       left: 0;
@@ -274,63 +300,191 @@
       letter-spacing: -0.01em;
     }
 
-    body.theme-bright .slide-page[data-slide="1"] > div:first-child {
+    body.theme-bright .slide-page>div:first-child {
+      max-width: 1500px;
+      padding-top: 0;
       justify-content: flex-start;
-      padding-top: clamp(1rem, 8vh, 4rem);
     }
 
-    .cover-travel-illustration {
-      position: relative;
-      width: min(100%, 560px);
-      height: 150px;
-      margin: clamp(2rem, 6vh, 4rem) auto 0;
-      color: #0066d6;
-      opacity: 0.88;
+    /* ========================================================
+       TRAVEL JOURNEY OVERVIEW STYLES (Q2 -> Q3)
+       ======================================================== */
+    /* Status Badges */
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      line-height: 1.15;
+      white-space: nowrap;
     }
 
-    .cover-travel-illustration .travel-route {
-      stroke-dasharray: 8 12;
-      animation: route-drift 8s linear infinite;
+    .status-testing {
+      background: rgba(245, 158, 11, 0.14);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.35);
     }
 
-    .cover-travel-illustration .travel-plane {
+    body.theme-bright .status-testing {
+      background: #fef3c7;
+      color: #b45309;
+      border-color: #fde68a;
+    }
+
+    .status-ops {
+      background: rgba(16, 185, 129, 0.14);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.35);
+    }
+
+    body.theme-bright .status-ops {
+      background: #dcfce7;
+      color: #15803d;
+      border-color: #bbf7d0;
+    }
+
+    .status-capability {
+      background: rgba(0, 102, 214, 0.14);
+      color: #60a5fa;
+      border: 1px solid rgba(0, 102, 214, 0.35);
+    }
+
+    body.theme-bright .status-capability {
+      background: #eff6ff;
+      color: #0052b3;
+      border-color: #bfdbfe;
+    }
+
+    .status-visibility {
+      background: rgba(139, 92, 246, 0.14);
+      color: #c084fc;
+      border: 1px solid rgba(139, 92, 246, 0.35);
+    }
+
+    body.theme-bright .status-visibility {
+      background: #f3e8ff;
+      color: #6b21a8;
+      border-color: #e9d5ff;
+    }
+
+    /* Subcard micro styling in Bright Mode */
+    body.theme-bright .journey-chip {
+      background: #f1f5f9 !important;
+      color: #334155 !important;
+      border-color: #cbd5e1 !important;
+    }
+
+    .journey-chip {
+      background: rgba(15, 24, 44, 0.6);
+      color: #94a3b8;
+      border: 1px solid rgba(28, 43, 72, 0.8);
+    }
+
+    /* Travel Route Line & Animations */
+    .flight-route-track {
+      stroke-dasharray: 6 8;
+      animation: flight-dash 22s linear infinite;
+    }
+
+    .flight-plane-icon {
       transform-origin: 50% 50%;
-      animation: plane-float 3.5s ease-in-out infinite;
+      animation: plane-gentle-fly 3.5s ease-in-out infinite;
     }
 
-    .cover-travel-illustration .travel-dot {
-      animation: destination-pulse 2.4s ease-in-out infinite;
+    .travel-destination-pulse {
+      animation: destination-glow 2.5s ease-in-out infinite;
     }
 
-    .cover-travel-illustration .travel-dot:nth-of-type(2) {
-      animation-delay: 0.8s;
+    .travel-cloud-float {
+      animation: cloud-gentle-drift 10s ease-in-out infinite alternate;
     }
 
-    .cover-travel-illustration .travel-dot:nth-of-type(3) {
-      animation-delay: 1.6s;
-    }
-
-    @keyframes route-drift {
-      to { stroke-dashoffset: -80; }
-    }
-
-    @keyframes plane-float {
-      0%, 100% { transform: translateY(0) rotate(-8deg); }
-      50% { transform: translateY(-7px) rotate(-3deg); }
-    }
-
-    @keyframes destination-pulse {
-      0%, 100% { opacity: 0.55; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.18); }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .cover-travel-illustration * {
-        animation: none !important;
+    @keyframes flight-dash {
+      to {
+        stroke-dashoffset: -140;
       }
     }
 
-    .slide-page:not([data-slide="1"])::after {
+    @keyframes plane-gentle-fly {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-4px) rotate(2deg);
+      }
+    }
+
+    @keyframes destination-glow {
+
+      0%,
+      100% {
+        opacity: 0.65;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.12);
+      }
+    }
+
+    @keyframes cloud-gentle-drift {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(12px);
+      }
+    }
+
+    /* Milestone Cards on Hover */
+    .journey-milestone-card {
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .journey-milestone-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(0, 102, 214, 0.14);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .flight-route-track,
+      .flight-plane-icon,
+      .travel-destination-pulse,
+      .travel-cloud-float,
+      .journey-milestone-card {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+
+    /* Ensure Overview slides 1, 2, and 3 fit viewport with zero vertical scroll */
+    .slide-page[data-slide="1"],
+    .slide-page[data-slide="2"],
+    .slide-page[data-slide="3"] {
+      overflow: hidden !important;
+    }
+
+    .slide-page[data-slide="1"]>div:first-child,
+    .slide-page[data-slide="2"]>div:first-child,
+    .slide-page[data-slide="3"]>div:first-child {
+      max-width: 1460px;
+      padding-top: 0;
+      height: calc(100% - 24px);
+      max-height: calc(100% - 24px);
+      justify-content: space-between;
+    }
+
+    .slide-page:not([data-slide="1"]):not([data-slide="2"]):not([data-slide="3"])::after {
       content: "";
       position: absolute;
       right: clamp(1rem, 4vw, 4rem);
@@ -339,29 +493,35 @@
       height: clamp(80px, 10vw, 130px);
       pointer-events: none;
       opacity: 0.34;
-      background: no-repeat center / contain
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 130' fill='none'%3E%3Cpath d='M18 96c28-46 63-51 91-20s56 37 76 9 35-39 57-44' stroke='%230066d6' stroke-width='2.5' stroke-linecap='round' stroke-dasharray='6 9'/%3E%3Ccircle cx='18' cy='96' r='7' fill='%23fff' stroke='%230066d6' stroke-width='2.5'/%3E%3Ccircle cx='185' cy='85' r='6' fill='%23fff' stroke='%230066d6' stroke-width='2.5'/%3E%3Cpath d='m218 39 22-8-8 10 8 7-22-4 6-3z' fill='%230066d6'/%3E%3Cpath d='M42 87V75h12v12M44 75v-5h8v5' stroke='%230066d6' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background: no-repeat center / contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 130' fill='none'%3E%3Cpath d='M18 96c28-46 63-51 91-20s56 37 76 9 35-39 57-44' stroke='%230066d6' stroke-width='2.5' stroke-linecap='round' stroke-dasharray='6 9'/%3E%3Ccircle cx='18' cy='96' r='7' fill='%23fff' stroke='%230066d6' stroke-width='2.5'/%3E%3Ccircle cx='185' cy='85' r='6' fill='%23fff' stroke='%230066d6' stroke-width='2.5'/%3E%3Cpath d='m218 39 22-8-8 10 8 7-22-4 6-3z' fill='%230066d6'/%3E%3Cpath d='M42 87V75h12v12M44 75v-5h8v5' stroke='%230066d6' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E");
       animation: ambient-travel-float 7s ease-in-out infinite;
     }
 
-    .slide-page[data-slide="2"]::after,
     .slide-page[data-slide="5"]::after,
-    .slide-page[data-slide="8"]::after {
+    .slide-page[data-slide="8"]::after,
+    .slide-page[data-slide="11"]::after {
       left: clamp(1rem, 4vw, 4rem);
       right: auto;
       transform: scaleX(-1);
     }
 
-    .slide-page[data-slide="3"]::after,
     .slide-page[data-slide="6"]::after,
-    .slide-page[data-slide="9"]::after {
+    .slide-page[data-slide="9"]::after,
+    .slide-page[data-slide="12"]::after {
       opacity: 0.24;
       filter: hue-rotate(18deg);
     }
 
     @keyframes ambient-travel-float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-5px);
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -379,33 +539,52 @@
     }
 
     @keyframes slide-enter-forward {
-      from { opacity: 0; transform: translateX(42px) scale(0.985); filter: blur(3px); }
-      to { opacity: 1; transform: translateX(0) scale(1); filter: blur(0); }
+      from {
+        opacity: 0;
+        transform: translateX(42px) scale(0.985);
+        filter: blur(3px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+        filter: blur(0);
+      }
     }
 
     @keyframes slide-enter-backward {
-      from { opacity: 0; transform: translateX(-42px) scale(0.985); filter: blur(3px); }
-      to { opacity: 1; transform: translateX(0) scale(1); filter: blur(0); }
+      from {
+        opacity: 0;
+        transform: translateX(-42px) scale(0.985);
+        filter: blur(3px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+        filter: blur(0);
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
+
       .slide-page.slide-enter-forward,
       .slide-page.slide-enter-backward {
         animation: none;
       }
     }
 
-    body.theme-bright .slide-page[data-title="Master Visual Roadmap (Gantt)"] > div:first-child {
+    body.theme-bright .slide-page[data-title="Master Visual Roadmap (Gantt)"]>div:first-child {
       max-width: 1500px;
       padding-top: 0;
     }
 
-    body.theme-bright .slide-page:not([data-slide="1"]) > div:first-child {
+    body.theme-bright .slide-page:not([data-slide="1"])>div:first-child {
       max-width: 1500px;
       padding-top: 0;
     }
 
-    body.theme-bright .slide-page:not([data-slide="1"]) > div:first-child > div:first-child {
+    body.theme-bright .slide-page:not([data-slide="1"])>div:first-child>div:first-child {
       margin-bottom: 1rem;
     }
 
@@ -417,7 +596,7 @@
       padding: 1rem;
     }
 
-    body.theme-bright .slide-page:not([data-slide="1"]) > div:first-child > div:last-child {
+    body.theme-bright .slide-page:not([data-slide="1"])>div:first-child>div:last-child {
       margin-top: 0.5rem;
     }
 
@@ -425,45 +604,45 @@
       font-size: clamp(1.45rem, 2.4vw, 2.2rem);
     }
 
-    body.theme-bright .slide-page[data-title="Master Visual Roadmap (Gantt)"] > div:first-child > div:nth-child(2) {
+    body.theme-bright .slide-page[data-title="Master Visual Roadmap (Gantt)"]>div:first-child>div:nth-child(2) {
       padding: 1rem;
       border-radius: 18px;
       border-color: #cbddec;
       box-shadow: 0 14px 32px rgba(30, 64, 110, 0.1);
     }
 
-    body.theme-bright .slide-page[data-title="Master Visual Roadmap (Gantt)"] > div:first-child > div:nth-child(2) > div {
+    body.theme-bright .slide-page[data-title="Master Visual Roadmap (Gantt)"]>div:first-child>div:nth-child(2)>div {
       min-height: 2.2rem;
     }
 
-    body.theme-bright .slide-page[data-title="Master Visual Roadmap (Gantt)"] > div:first-child > div:nth-child(2) > div:not(:first-child) {
+    body.theme-bright .slide-page[data-title="Master Visual Roadmap (Gantt)"]>div:first-child>div:nth-child(2)>div:not(:first-child) {
       min-height: 3.6rem;
     }
 
-    body.theme-bright .slide-page[data-title="Master Visual Roadmap (Gantt)"] > div:first-child > div:nth-child(2) > div > div:first-child {
+    body.theme-bright .slide-page[data-title="Master Visual Roadmap (Gantt)"]>div:first-child>div:nth-child(2)>div>div:first-child {
       padding-left: 0.5rem;
     }
 
-    body.theme-bright .slide-page[data-title="Master Visual Roadmap (Gantt)"] > div:first-child > div:nth-child(2) > div > div:first-child span:first-child {
+    body.theme-bright .slide-page[data-title="Master Visual Roadmap (Gantt)"]>div:first-child>div:nth-child(2)>div>div:first-child span:first-child {
       font-size: 0.82rem;
     }
 
-    body.theme-bright .slide-page[data-title="Master Visual Roadmap (Gantt)"] > div:first-child > div:nth-child(2) > div > div:first-child span:last-child {
+    body.theme-bright .slide-page[data-title="Master Visual Roadmap (Gantt)"]>div:first-child>div:nth-child(2)>div>div:first-child span:last-child {
       font-size: 0.7rem;
       margin-top: 0.2rem;
     }
 
-    body.theme-bright .slide-page[data-title="Master Visual Roadmap (Gantt)"] > div:first-child > div:nth-child(2) > div > div:not(:first-child) > div {
+    body.theme-bright .slide-page[data-title="Master Visual Roadmap (Gantt)"]>div:first-child>div:nth-child(2)>div>div:not(:first-child)>div {
       height: 1.8rem;
       font-size: 0.68rem;
     }
 
-    body.theme-bright .slide-page[data-title="Risk Assessment & Mitigation"] > div:first-child {
+    body.theme-bright .slide-page[data-title="Risk Assessment & Mitigation"]>div:first-child {
       max-width: 1500px;
       padding-top: 0;
     }
 
-    body.theme-bright .slide-page[data-title="Risk Assessment & Mitigation"] > div:first-child > div:nth-child(2) {
+    body.theme-bright .slide-page[data-title="Risk Assessment & Mitigation"]>div:first-child>div:nth-child(2) {
       max-height: none;
       overflow: visible;
       padding: 1rem;
@@ -472,42 +651,38 @@
       box-shadow: 0 14px 32px rgba(30, 64, 110, 0.1);
     }
 
-    body.theme-bright .slide-page[data-title="Risk Assessment & Mitigation"] > div:first-child > div:nth-child(2) > div {
+    body.theme-bright .slide-page[data-title="Risk Assessment & Mitigation"]>div:first-child>div:nth-child(2)>div {
       gap: 0.75rem;
     }
 
-    body.theme-bright .slide-page[data-title="Risk Assessment & Mitigation"] > div:first-child > div:nth-child(2) > div > div {
+    body.theme-bright .slide-page[data-title="Risk Assessment & Mitigation"]>div:first-child>div:nth-child(2)>div>div {
       min-height: 7.5rem;
       padding: 1rem;
       border-radius: 12px;
     }
 
-    body.theme-bright .slide-page[data-title="Risk Assessment & Mitigation"] > div:first-child > div:nth-child(2) > div > div > div > div:first-child {
+    body.theme-bright .slide-page[data-title="Risk Assessment & Mitigation"]>div:first-child>div:nth-child(2)>div>div>div>div:first-child {
       gap: 1rem;
       margin-bottom: 0.6rem;
     }
 
-    body.theme-bright .slide-page[data-title="Risk Assessment & Mitigation"] > div:first-child > div:nth-child(2) > div > div > div > div:first-child span:first-child {
+    body.theme-bright .slide-page[data-title="Risk Assessment & Mitigation"]>div:first-child>div:nth-child(2)>div>div>div>div:first-child span:first-child {
       font-size: 0.82rem;
     }
 
-    body.theme-bright .slide-page[data-title="Risk Assessment & Mitigation"] > div:first-child > div:nth-child(2) > div > div > div > p {
+    body.theme-bright .slide-page[data-title="Risk Assessment & Mitigation"]>div:first-child>div:nth-child(2)>div>div>div>p {
       font-size: 0.78rem;
       line-height: 1.55;
     }
 
     /* Keep slide geometry identical in dark and bright modes. */
-    .slide-page[data-slide="1"] > div:first-child {
-      justify-content: flex-start;
-      padding-top: clamp(1rem, 8vh, 4rem);
-    }
-
-    .slide-page:not([data-slide="1"]) > div:first-child {
+    .slide-page>div:first-child {
       max-width: 1500px;
       padding-top: 0;
+      justify-content: flex-start;
     }
 
-    .slide-page:not([data-slide="1"]) > div:first-child > div:first-child {
+    .slide-page:not([data-slide="1"])>div:first-child>div:first-child {
       margin-bottom: 1rem;
     }
 
@@ -519,77 +694,77 @@
       padding: 1rem;
     }
 
-    .slide-page:not([data-slide="1"]) > div:first-child > div:last-child {
+    .slide-page:not([data-slide="1"])>div:first-child>div:last-child {
       margin-top: 0.5rem;
     }
 
-    .slide-page[data-title="Master Visual Roadmap (Gantt)"] > div:first-child > div:nth-child(2) > div {
+    .slide-page[data-title="Master Visual Roadmap (Gantt)"]>div:first-child>div:nth-child(2)>div {
       min-height: 2.2rem;
     }
 
-    .slide-page[data-title="Master Visual Roadmap (Gantt)"] > div:first-child > div:nth-child(2) {
+    .slide-page[data-title="Master Visual Roadmap (Gantt)"]>div:first-child>div:nth-child(2) {
       padding: 1rem;
     }
 
-    .slide-page[data-title="Master Visual Roadmap (Gantt)"] > div:first-child > div:nth-child(2) > div:not(:first-child) {
+    .slide-page[data-title="Master Visual Roadmap (Gantt)"]>div:first-child>div:nth-child(2)>div:not(:first-child) {
       min-height: 3.6rem;
     }
 
-    .slide-page[data-title="Master Visual Roadmap (Gantt)"] > div:first-child > div:nth-child(2) > div > div:first-child {
+    .slide-page[data-title="Master Visual Roadmap (Gantt)"]>div:first-child>div:nth-child(2)>div>div:first-child {
       padding-left: 0.5rem;
     }
 
-    .slide-page[data-title="Master Visual Roadmap (Gantt)"] > div:first-child > div:nth-child(2) > div > div:first-child span:first-child {
+    .slide-page[data-title="Master Visual Roadmap (Gantt)"]>div:first-child>div:nth-child(2)>div>div:first-child span:first-child {
       font-size: 0.82rem;
     }
 
-    .slide-page[data-title="Master Visual Roadmap (Gantt)"] > div:first-child > div:nth-child(2) > div > div:first-child span:last-child {
+    .slide-page[data-title="Master Visual Roadmap (Gantt)"]>div:first-child>div:nth-child(2)>div>div:first-child span:last-child {
       font-size: 0.7rem;
       margin-top: 0.2rem;
     }
 
-    .slide-page[data-title="Master Visual Roadmap (Gantt)"] > div:first-child > div:nth-child(2) > div > div:not(:first-child) > div {
+    .slide-page[data-title="Master Visual Roadmap (Gantt)"]>div:first-child>div:nth-child(2)>div>div:not(:first-child)>div {
       height: 1.8rem;
       font-size: 0.68rem;
     }
 
-    .slide-page[data-title="Risk Assessment & Mitigation"] > div:first-child > div:nth-child(2) {
+    .slide-page[data-title="Risk Assessment & Mitigation"]>div:first-child>div:nth-child(2) {
       max-height: none;
       overflow: visible;
       padding: 1rem;
     }
 
-    .slide-page[data-title="Risk Assessment & Mitigation"] > div:first-child > div:nth-child(2) > div {
+    .slide-page[data-title="Risk Assessment & Mitigation"]>div:first-child>div:nth-child(2)>div {
       gap: 0.75rem;
     }
 
-    .slide-page[data-title="Risk Assessment & Mitigation"] > div:first-child > div:nth-child(2) > div > div {
+    .slide-page[data-title="Risk Assessment & Mitigation"]>div:first-child>div:nth-child(2)>div>div {
       min-height: 7.5rem;
       padding: 1rem;
       border-radius: 12px;
     }
 
-    .slide-page[data-title="Risk Assessment & Mitigation"] > div:first-child > div:nth-child(2) > div > div > div > div:first-child {
+    .slide-page[data-title="Risk Assessment & Mitigation"]>div:first-child>div:nth-child(2)>div>div>div>div:first-child {
       gap: 1rem;
       margin-bottom: 0.6rem;
     }
 
-    .slide-page[data-title="Risk Assessment & Mitigation"] > div:first-child > div:nth-child(2) > div > div > div > p {
+    .slide-page[data-title="Risk Assessment & Mitigation"]>div:first-child>div:nth-child(2)>div>div>div>p {
       line-height: 1.45;
     }
 
     /* Give every information-heavy slide the same visual weight as Risk Assessment. */
-    .slide-page[data-title="Team Structure & Capacity"] > div:first-child > div:nth-child(2) > div {
+    .slide-page[data-title="Team Structure & Capacity"]>div:first-child>div:nth-child(2)>div {
       min-height: 9rem;
       padding: 1rem;
     }
 
-    .slide-page[data-title="Monthly Execution Journey"] > div:first-child > div:nth-child(2) > div {
+    .slide-page[data-title="Monthly Execution Journey"]>div:first-child>div:nth-child(2)>div {
       min-height: 15rem;
       padding: 1rem;
     }
 
-    .slide-page[data-title="Ownership & Governance Matrix"] > div:first-child > div:nth-child(2) {
+    .slide-page[data-title="Ownership & Governance Matrix"]>div:first-child>div:nth-child(2) {
       margin-bottom: 1rem;
     }
 
@@ -599,7 +774,7 @@
       padding-bottom: 0.85rem;
     }
 
-    .slide-page[data-title="Ownership & Governance Matrix"] > div:first-child > div:last-child > div {
+    .slide-page[data-title="Ownership & Governance Matrix"]>div:first-child>div:last-child>div {
       min-height: 6rem;
       padding: 0.9rem;
     }
@@ -609,16 +784,16 @@
       padding: 1rem;
     }
 
-    .slide-page[data-title="Critical Path & Dependencies"] > div:first-child > div:nth-child(2) > div {
+    .slide-page[data-title="Critical Path & Dependencies"]>div:first-child>div:nth-child(2)>div {
       min-height: 7rem;
       padding: 1rem;
     }
 
-    .slide-page[data-title="Critical Path & Dependencies"] > div:first-child > div:nth-child(3) {
+    .slide-page[data-title="Critical Path & Dependencies"]>div:first-child>div:nth-child(3) {
       padding: 1rem;
     }
 
-    .slide-page[data-title="Critical Path & Dependencies"] > div:first-child > div:nth-child(3) > div {
+    .slide-page[data-title="Critical Path & Dependencies"]>div:first-child>div:nth-child(3)>div {
       min-height: 5rem;
       padding: 0.9rem;
     }
@@ -630,7 +805,7 @@
 
     body.theme-bright header select,
     body.theme-bright header button,
-    body.theme-bright header > div > div {
+    body.theme-bright header>div>div {
       box-shadow: 0 3px 10px rgba(30, 64, 110, 0.06);
     }
 
@@ -673,18 +848,18 @@
     }
   </style>
 </head>
-<body class="antialiased h-screen w-screen overflow-hidden flex flex-col justify-between bg-white theme-bright transition-colors duration-200">
+
+<body
+  class="antialiased h-screen w-screen overflow-hidden flex flex-col justify-between bg-white theme-bright transition-colors duration-200">
 
   <!-- Top Executive Header -->
-  <header class="h-12 sm:h-14 border-b border-[#1c2b48] bg-[#0a1120] px-4 md:px-8 flex items-center justify-between shrink-0 select-none z-20 transition-colors duration-200">
+  <header
+    class="h-12 sm:h-14 border-b border-[#1c2b48] bg-[#0a1120] px-4 md:px-8 flex items-center justify-between shrink-0 select-none z-20 transition-colors duration-200">
     <div class="flex items-center gap-3">
       <a href="https://travelbuddies.co.id/" target="_blank" rel="noopener noreferrer" class="flex items-center">
-        <img 
-          src="https://travelbuddies.co.id/_next/image?url=%2Fimages%2Flogo%2Flogo.png&w=384&q=75" 
-          alt="Travel Buddies" 
-          class="h-7 w-auto object-contain"
-          onerror="this.onerror=null; this.src='https://placehold.co/120x36/0066d6/ffffff?text=Travel+Buddies';"
-        />
+        <img src="https://travelbuddies.co.id/_next/image?url=%2Fimages%2Flogo%2Flogo.png&w=384&q=75"
+          alt="Travel Buddies" class="h-7 w-auto object-contain"
+          onerror="this.onerror=null; this.src='https://placehold.co/120x36/0066d6/ffffff?text=Travel+Buddies';" />
       </a>
       <span class="hidden md:inline-block text-xs font-semibold text-slate-400 pl-3 border-l border-[#1c2b48]">
         Technology Project Planning <span class="text-[#0066d6] font-bold">(Sep 2026 – Jan 2027)</span>
@@ -700,16 +875,19 @@
         <span id="slideIndicatorTotal" class="text-slate-400">10</span>
       </div>
 
-      <select id="slideSelect" class="bg-[#0f182c] border border-[#1c2b48] text-xs text-slate-200 rounded-lg px-2.5 py-1 focus:outline-none focus:border-[#0066d6] cursor-pointer max-w-[220px] truncate hidden sm:block">
+      <select id="slideSelect"
+        class="bg-[#0f182c] border border-[#1c2b48] text-xs text-slate-200 rounded-lg px-2.5 py-1 focus:outline-none focus:border-[#0066d6] cursor-pointer max-w-[220px] truncate hidden sm:block">
         <!-- Dynamically filled -->
       </select>
 
       <!-- Zoom Level Selector Dropdown -->
       <div class="flex items-center gap-1.5 bg-[#0f182c] border border-[#1c2b48] px-2 py-0.5 rounded-lg text-xs">
         <svg class="w-3.5 h-3.5 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"></path>
         </svg>
-        <select id="zoomSelect" title="Sesuaikan Ukuran Tampilan (Zoom)" class="bg-transparent text-slate-200 text-xs focus:outline-none cursor-pointer pr-1">
+        <select id="zoomSelect" title="Sesuaikan Ukuran Tampilan (Zoom)"
+          class="bg-transparent text-slate-200 text-xs focus:outline-none cursor-pointer pr-1">
           <option value="0.8" class="bg-[#0f182c] text-slate-200">80%</option>
           <option value="0.9" class="bg-[#0f182c] text-slate-200">90%</option>
           <option value="1" selected class="bg-[#0f182c] text-slate-200">100%</option>
@@ -719,30 +897,45 @@
       </div>
 
       <!-- Bright / Dark Mode Toggle Button -->
-      <button id="btnThemeToggle" title="Ganti Mode Warna (Dark / Bright)" class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#0f182c] hover:bg-[#162442] border border-[#1c2b48] text-slate-300 transition text-xs font-semibold">
-        <svg id="themeDarkIcon" class="w-3.5 h-3.5 text-amber-400 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+      <button id="btnThemeToggle" title="Ganti Mode Warna (Dark / Bright)"
+        class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#0f182c] hover:bg-[#162442] border border-[#1c2b48] text-slate-300 transition text-xs font-semibold">
+        <svg id="themeDarkIcon" class="w-3.5 h-3.5 text-amber-400 hidden" fill="none" stroke="currentColor"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+          </path>
         </svg>
-        <svg id="themeBrightIcon" class="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        <svg id="themeBrightIcon" class="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
         </svg>
         <span id="themeModeText" class="hidden md:inline">Dark</span>
       </button>
 
       <div class="flex items-center gap-1 ml-1">
-        <button id="btnPrev" title="Sebelumnya (←)" class="p-1.5 rounded-lg bg-[#0f182c] hover:bg-[#162442] border border-[#1c2b48] text-slate-300 transition">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+        <button id="btnPrev" title="Sebelumnya (←)"
+          class="p-1.5 rounded-lg bg-[#0f182c] hover:bg-[#162442] border border-[#1c2b48] text-slate-300 transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
         </button>
-        <button id="btnNext" title="Berikutnya (→)" class="px-3 py-1.5 rounded-lg bg-[#0066d6] hover:bg-[#0052b3] text-white text-xs font-semibold flex items-center gap-1 transition shadow-sm">
+        <button id="btnNext" title="Berikutnya (→)"
+          class="px-3 py-1.5 rounded-lg bg-[#0066d6] hover:bg-[#0052b3] text-white text-xs font-semibold flex items-center gap-1 transition shadow-sm">
           <span>Next</span>
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
         </button>
-        <button id="btnFullscreen" title="Fullscreen (F)" class="p-1.5 rounded-lg bg-[#0f182c] hover:bg-[#162442] border border-[#1c2b48] text-slate-300 hover:text-white transition ml-1 flex items-center justify-center">
+        <button id="btnFullscreen" title="Fullscreen (F)"
+          class="p-1.5 rounded-lg bg-[#0f182c] hover:bg-[#162442] border border-[#1c2b48] text-slate-300 hover:text-white transition ml-1 flex items-center justify-center">
           <svg id="fsEnterIcon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-5h-4m4 0v4m0-4l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 8V4m0 0h4M4 4l5 5m11-5h-4m4 0v4m0-4l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path>
           </svg>
           <svg id="fsExitIcon" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 9L4 4m0 0v4m0-4h4m6 5l5-5m0 0v4m0-4h-4M9 15l-5 5m0 0v-4m0 4h-4m6-5l5 5m0 0v-4m0 4h-4"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 9L4 4m0 0v4m0-4h4m6 5l5-5m0 0v4m0-4h-4M9 15l-5 5m0 0v-4m0 4h-4m6-5l5 5m0 0v-4m0 4h-4"></path>
           </svg>
         </button>
       </div>
@@ -756,62 +949,822 @@
 
   <!-- Main Slide Container: Balanced 70% Viewport Width for High Readability -->
   <main class="flex-1 relative overflow-hidden flex flex-col w-full min-h-0">
-    <div id="slidesContainer" class="flex-1 relative w-full h-full min-h-0 transition-transform duration-200 origin-top">
+    <div id="slidesContainer"
+      class="flex-1 relative w-full h-full min-h-0 transition-transform duration-200 origin-top">
 
-      <!-- SLIDE 1: COVER & EXECUTIVE OVERVIEW -->
-      <section class="slide-page absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-between overflow-y-auto slide-content-scroll" data-slide="1" data-title="Executive Overview & Target">
-        <div class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto flex-1 flex flex-col justify-center py-2">
-          
-          <div class="mb-4 flex items-center justify-between">
-            <img 
-              src="https://travelbuddies.co.id/_next/image?url=%2Fimages%2Flogo%2Flogo.png&w=384&q=75" 
-              alt="Travel Buddies Logo" 
-              class="h-10 sm:h-12 w-auto object-contain"
-              onerror="this.onerror=null; this.src='https://placehold.co/180x48/0066d6/ffffff?text=Travel+Buddies';"
-            />
-            <span class="text-xs px-3 py-1 rounded bg-[#0066d6]/20 border border-[#0066d6]/40 text-[#60a5fa] font-bold">
-              MANAGEMENT ROADMAP DECK
-            </span>
+      <!-- SLIDE 1: OVERVIEW EKSEKUTIF (Q2 → Q3) -->
+      <section class="slide-page absolute inset-0 p-3 sm:p-5 md:p-6 flex flex-col justify-between overflow-hidden"
+        data-slide="1" data-title="Executive Overview (Q2 → Q3)">
+        <div class="w-[96%] sm:w-[94%] max-w-[1460px] mx-auto flex-1 flex flex-col justify-between py-1 min-h-0">
+
+          <!-- Top Header: Brand, Badge & Period -->
+          <div class="mb-2 pb-2 border-b border-[#1c2b48] flex flex-wrap justify-between items-end gap-2 shrink-0">
+            <div>
+              <div class="flex items-center gap-2 mb-1 flex-wrap">
+                <img src="https://travelbuddies.co.id/_next/image?url=%2Fimages%2Flogo%2Flogo.png&w=384&q=75"
+                  alt="Travel Buddies Logo" class="h-6 sm:h-7 w-auto object-contain mr-1"
+                  onerror="this.onerror=null; this.src='https://placehold.co/130x32/0066d6/ffffff?text=Travel+Buddies';" />
+                <span
+                  class="text-[10px] font-extrabold px-2.5 py-0.5 rounded-full bg-[#0066d6]/20 border border-[#0066d6]/40 text-[#60a5fa] uppercase tracking-wider flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#0066d6] animate-pulse"></span>
+                  Laporan Kuartal Tech Team
+                </span>
+                <span
+                  class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#0f182c] border border-[#1c2b48] text-slate-300">
+                  Q2 – Q3 (Berakhir Oktober)
+                </span>
+              </div>
+              <h1 class="text-lg sm:text-xl lg:text-2xl font-extrabold text-white tracking-tight leading-snug">
+                Q2 → Q3: Penguatan Kapabilitas, Operasional, dan Visibilitas Bisnis
+              </h1>
+              <p class="text-[11px] sm:text-xs text-slate-300 mt-0.5 max-w-4xl leading-relaxed">
+                Sepanjang Q2 hingga Q3, Tech Team berfokus pada pengembangan kapabilitas inti, penguatan proses
+                operasional, serta peningkatan visibilitas bisnis melalui sistem, workflow, dan dashboard yang lebih
+                terintegrasi.
+              </p>
+            </div>
+            <div class="flex items-center gap-2 shrink-0">
+              <div class="text-right hidden sm:block">
+                <div class="text-[9.5px] text-slate-400 font-medium uppercase tracking-wider">Fokus Strategis</div>
+                <div class="text-xs font-bold text-[#60a5fa]">Development → Testing & Enablement</div>
+              </div>
+            </div>
           </div>
 
-          <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-snug mb-2">
-            Technology Project Planning<br>
-            <span class="text-[#0066d6]">September 2026 – January 2027</span>
-          </h1>
+          <!-- Middle Section: 2 Balanced Cards (Narrative Highlights + 4-Step Shift) -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-3 my-auto flex-1 min-h-0 items-stretch">
 
-          <div class="cover-travel-illustration" aria-label="Ilustrasi perjalanan Travel Buddies">
-            <svg viewBox="0 0 560 150" role="img" aria-hidden="true" class="w-full h-full">
-              <path class="travel-route" d="M58 108 C150 28, 246 126, 338 58 S458 28, 514 78" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-              <circle class="travel-dot" cx="58" cy="108" r="7" fill="#ffffff" stroke="currentColor" stroke-width="3"/>
-              <circle class="travel-dot" cx="338" cy="58" r="7" fill="#ffffff" stroke="currentColor" stroke-width="3"/>
-              <circle class="travel-dot" cx="514" cy="78" r="7" fill="#ffffff" stroke="currentColor" stroke-width="3"/>
-              <g class="travel-plane" transform="translate(250 66)">
-                <path d="M0 10L38 0L27 14L38 22L0 16L10 12Z" fill="currentColor"/>
-                <path d="M14 11L24 7L20 13Z" fill="#ffffff" opacity="0.85"/>
-              </g>
-              <g transform="translate(28 104)" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round">
-                <rect x="0" y="7" width="22" height="22" rx="4"/>
-                <path d="M6 7V3a5 5 0 0 1 10 0v4M5 29v5M17 29v5"/>
-              </g>
-              <path d="M506 66h18v12h-18zM510 66v-5h10v5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
-            </svg>
+            <!-- Left: Intisari Narasi & Pencapaian Kuartal -->
+            <div
+              class="lg:col-span-7 clean-card rounded-xl p-3 sm:p-3.5 border border-[#1c2b48] flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-2 pb-1.5 border-b border-[#1c2b48]">
+                  <span class="text-[10px] uppercase font-bold tracking-wider text-[#60a5fa] flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-[#0066d6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    Intisari Perjalanan Kuartal
+                  </span>
+                  <span class="text-[10px] text-slate-400">Ringkasan Eksekutif</span>
+                </div>
+
+                <!-- 4 Crisp Bullet Highlights (Not Text-Heavy) -->
+                <div class="space-y-1.5 text-xs text-slate-300">
+                  <div class="flex items-start gap-2 p-1.5 rounded-lg bg-[#0a1120]/60 border border-[#1c2b48]/60">
+                    <span
+                      class="w-5 h-5 rounded-md bg-amber-500/15 text-amber-400 flex items-center justify-center shrink-0 text-xs font-bold">✈️</span>
+                    <div class="text-[11px] leading-snug">
+                      <strong class="text-white">Airline Ticketing:</strong> Bergerak dari tahap pengembangan menuju
+                      tahap <em>testing & reconciliation</em> untuk channel B2B Agent dan B2C Apps.
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-2 p-1.5 rounded-lg bg-[#0a1120]/60 border border-[#1c2b48]/60">
+                    <span
+                      class="w-5 h-5 rounded-md bg-emerald-500/15 text-emerald-400 flex items-center justify-center shrink-0 text-xs font-bold">🧳</span>
+                    <div class="text-[11px] leading-snug">
+                      <strong class="text-white">Private Trip Leads Assignment:</strong> Membangun proses assignment
+                      leads yang lebih terstruktur dan responsif antara Travel Consultant dan tim Operasional.
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-2 p-1.5 rounded-lg bg-[#0a1120]/60 border border-[#1c2b48]/60">
+                    <span
+                      class="w-5 h-5 rounded-md bg-[#0066d6]/15 text-[#60a5fa] flex items-center justify-center shrink-0 text-xs font-bold">🗺</span>
+                    <div class="text-[11px] leading-snug">
+                      <strong class="text-white">Internal CMS Expansion:</strong> Perluasan modul Content Production,
+                      Open Trip, Business Trip, agent workflow, participant completeness, hingga RBAC.
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-2 p-1.5 rounded-lg bg-[#0a1120]/60 border border-[#1c2b48]/60">
+                    <span
+                      class="w-5 h-5 rounded-md bg-purple-500/15 text-purple-400 flex items-center justify-center shrink-0 text-xs font-bold">📊</span>
+                    <div class="text-[11px] leading-snug">
+                      <strong class="text-white">Partner Portal & Dashboards:</strong> Peningkatan visibilitas aktivitas
+                      bisnis, kategori trip, efektivitas promo, dan portal koordinasi mitra.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Strategic Key Message Quote -->
+              <div
+                class="mt-2 p-2 rounded-lg bg-[#0a1120] border-l-2 border-[#0066d6] text-[10.5px] text-slate-300 italic leading-snug">
+                "Q2–Q3 merupakan periode penguatan kapabilitas inti, peningkatan efisiensi operasional, serta perluasan
+                visibilitas bisnis. Beberapa inisiatif utama telah bergerak dari tahap pengembangan menuju testing,
+                reconciliation, dan operational enablement."
+              </div>
+            </div>
+
+            <!-- Right: 4-Step Strategic Progression Flow -->
+            <div
+              class="lg:col-span-5 clean-card rounded-xl p-3 sm:p-3.5 border border-[#1c2b48] flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-2 pb-1.5 border-b border-[#1c2b48]">
+                  <span class="text-[10px] uppercase font-bold tracking-wider text-[#60a5fa] flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-[#0066d6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                    Pergeseran Fokus Kuartal
+                  </span>
+                  <span class="text-[10px] text-emerald-400 font-semibold">5–10 Detik Review</span>
+                </div>
+
+                <!-- 4 Step Cards Progression -->
+                <div class="space-y-1.5 text-xs">
+                  <div class="flex items-center gap-2 p-1.5 rounded-lg bg-[#0a1120] border border-[#1c2b48]">
+                    <span
+                      class="w-5 h-5 rounded-full bg-[#0066d6]/20 text-[#60a5fa] flex items-center justify-center font-bold text-[10px] shrink-0">Q2</span>
+                    <div class="text-[11px] leading-tight">
+                      <div class="font-bold text-white">Development & Capability Expansion</div>
+                      <div class="text-[9.5px] text-slate-400">Pondasi arsitektur sistem, modul konten & alur inti</div>
+                    </div>
+                  </div>
+
+                  <div class="flex justify-center text-slate-500 py-0">
+                    <svg class="w-3 h-3 text-[#60a5fa]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
+                  </div>
+
+                  <div class="flex items-center gap-2 p-1.5 rounded-lg bg-amber-500/10 border border-amber-500/30">
+                    <span
+                      class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-[10px] shrink-0">Q3</span>
+                    <div class="text-[11px] leading-tight">
+                      <div class="font-bold text-white">Testing & Reconciliation (Oktober)</div>
+                      <div class="text-[9.5px] text-amber-300">Validasi sistem penerbitan & rekonsiliasi harga tiket
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex justify-center text-slate-500 py-0">
+                    <svg class="w-3 h-3 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
+                  </div>
+
+                  <div class="flex items-center gap-2 p-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/30">
+                    <span
+                      class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-[10px] shrink-0">Ops</span>
+                    <div class="text-[11px] leading-tight">
+                      <div class="font-bold text-white">Operational Enablement</div>
+                      <div class="text-[9.5px] text-emerald-300">Assignment leads Private Trip & workflow mitra</div>
+                    </div>
+                  </div>
+
+                  <div class="flex justify-center text-slate-500 py-0">
+                    <svg class="w-3 h-3 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
+                  </div>
+
+                  <div class="flex items-center gap-2 p-1.5 rounded-lg bg-purple-500/10 border border-purple-500/30">
+                    <span
+                      class="w-5 h-5 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold text-[10px] shrink-0">Vis</span>
+                    <div class="text-[11px] leading-tight">
+                      <div class="font-bold text-white">Improved Business Visibility</div>
+                      <div class="text-[9.5px] text-purple-300">Dashboard Business Trip, kategori trip & promo</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Strategic Closing Note -->
+              <div
+                class="mt-2 p-1.5 rounded-lg bg-[#0a1120] text-center text-[10px] text-slate-400 border border-[#1c2b48]">
+                Pergeseran dari <em>fitur baru</em> menuju <strong>validasi, efisiensi & visibilitas data</strong>.
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom: 4 Capability Focus Summary Cards (Executive Summary Visual) -->
+          <div class="pt-2 shrink-0">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+
+              <!-- 01 Core Ticketing -->
+              <div
+                class="clean-card rounded-lg p-2 border-t-2 border-t-amber-500 flex items-center justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <span
+                    class="w-7 h-7 rounded-md bg-amber-500/15 text-amber-400 flex items-center justify-center font-extrabold text-[10px] shrink-0">01</span>
+                  <div>
+                    <h4 class="text-[11px] font-bold text-white leading-tight">Core Ticketing</h4>
+                    <p class="text-[9.5px] text-slate-400">B2B Agent + B2C Apps</p>
+                  </div>
+                </div>
+                <span class="status-pill status-testing text-[9px] px-1.5 py-0.5">Testing & Reconcile</span>
+              </div>
+
+              <!-- 02 Operational Workflow -->
+              <div
+                class="clean-card rounded-lg p-2 border-t-2 border-t-emerald-500 flex items-center justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <span
+                    class="w-7 h-7 rounded-md bg-emerald-500/15 text-emerald-400 flex items-center justify-center font-extrabold text-[10px] shrink-0">02</span>
+                  <div>
+                    <h4 class="text-[11px] font-bold text-white leading-tight">Operational Workflow</h4>
+                    <p class="text-[9.5px] text-slate-400">Private Trip Leads Assignment</p>
+                  </div>
+                </div>
+                <span class="status-pill status-ops text-[9px] px-1.5 py-0.5">Ops Enablement</span>
+              </div>
+
+              <!-- 03 System Capability -->
+              <div
+                class="clean-card rounded-lg p-2 border-t-2 border-t-[#0066d6] flex items-center justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <span
+                    class="w-7 h-7 rounded-md bg-[#0066d6]/15 text-[#60a5fa] flex items-center justify-center font-extrabold text-[10px] shrink-0">03</span>
+                  <div>
+                    <h4 class="text-[11px] font-bold text-white leading-tight">System Capability</h4>
+                    <p class="text-[9.5px] text-slate-400">CMS + Agent + Open Trip + RBAC</p>
+                  </div>
+                </div>
+                <span class="status-pill status-capability text-[9px] px-1.5 py-0.5">Capability Expand</span>
+              </div>
+
+              <!-- 04 Business Visibility -->
+              <div
+                class="clean-card rounded-lg p-2 border-t-2 border-t-purple-500 flex items-center justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <span
+                    class="w-7 h-7 rounded-md bg-purple-500/15 text-purple-400 flex items-center justify-center font-extrabold text-[10px] shrink-0">04</span>
+                  <div>
+                    <h4 class="text-[11px] font-bold text-white leading-tight">Business Visibility</h4>
+                    <p class="text-[9.5px] text-slate-400">Partner Leads & Reporting</p>
+                  </div>
+                </div>
+                <span class="status-pill status-visibility text-[9px] px-1.5 py-0.5">Visibility Ready</span>
+              </div>
+
+            </div>
           </div>
 
         </div>
 
-        <div class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-2 flex justify-between items-center shrink-0">
-          <span>Travel Buddies — Technology Project Planning | Sep 2026 – Jan 2027</span>
-          <span>Slide 1 / 10</span>
+        <!-- Slide Footer -->
+        <div
+          class="w-[96%] sm:w-[94%] max-w-[1460px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-1.5 flex justify-between items-center shrink-0">
+          <span>Travel Buddies — Laporan Kuartal Tech Team | Q2 – Q3 (Oktober)</span>
+          <span class="slide-footer-counter">Slide 1 / 12</span>
+        </div>
+      </section>
+
+      <!-- SLIDE 2: TRAVEL JOURNEY MILESTONE -->
+      <section
+        class="slide-page absolute inset-0 p-3 sm:p-5 md:p-6 flex flex-col justify-between overflow-hidden hidden"
+        data-slide="2" data-title="Travel Journey: 5 Milestone Utama">
+        <div class="w-[96%] sm:w-[94%] max-w-[1460px] mx-auto flex-1 flex flex-col justify-between py-1 min-h-0">
+
+          <!-- Top Header: Title, Subtitle & Legend -->
+          <div class="mb-2 pb-2 border-b border-[#1c2b48] flex flex-wrap justify-between items-end gap-2 shrink-0">
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <span
+                  class="text-[10px] font-extrabold px-2.5 py-0.5 rounded-full bg-[#0066d6]/20 border border-[#0066d6]/40 text-[#60a5fa] uppercase tracking-wider flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#0066d6]"></span>
+                  Perjalanan Kuartal Teknologi • Travel Journey
+                </span>
+                <span class="text-[10px] text-slate-400 hidden sm:inline">• 5 Stop Destinasi Utama</span>
+              </div>
+              <h2 class="text-lg sm:text-xl lg:text-2xl font-extrabold text-white tracking-tight leading-snug">
+                Travel Journey: 5 Milestone Utama (Q2 → Q3)
+              </h2>
+              <p class="text-[11px] sm:text-xs text-slate-300 mt-0.5 leading-relaxed">
+                Visualisasi rute inisiatif teknologi dari awal keberangkatan Q2 hingga destinasi akhir Q3 di bulan
+                Oktober.
+              </p>
+            </div>
+
+            <!-- Status Guide Legend -->
+            <div class="flex items-center gap-1.5 flex-wrap shrink-0">
+              <span class="status-pill status-testing text-[9.5px]">Testing & Reconcile</span>
+              <span class="status-pill status-ops text-[9.5px]">Ops Enablement</span>
+              <span class="status-pill status-capability text-[9.5px]">Capability Expand</span>
+              <span class="status-pill status-visibility text-[9.5px]">Business Visibility</span>
+            </div>
+          </div>
+
+          <!-- Compact Flight Route Banner -->
+          <div class="clean-card rounded-xl p-2.5 sm:p-3 border border-[#1c2b48] mb-2 shrink-0">
+            <div class="flex items-center justify-between gap-3">
+              <!-- Start Point -->
+              <div class="flex items-center gap-2 shrink-0">
+                <div
+                  class="w-7 h-7 rounded-lg bg-[#0066d6]/20 border border-[#0066d6]/40 flex items-center justify-center text-[#60a5fa]">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-[9.5px] uppercase font-extrabold text-[#60a5fa] tracking-wider">Start Point • Q2
+                  </div>
+                  <div class="text-[11px] font-bold text-white">Mulai Perjalanan: Pengembangan & Ekspansi</div>
+                </div>
+              </div>
+
+              <!-- Animated Mid-Flight Curve -->
+              <div class="hidden sm:flex flex-1 items-center justify-center px-4">
+                <div class="relative w-full max-w-sm h-6 flex items-center justify-center">
+                  <svg class="w-full h-full" viewBox="0 0 360 24" fill="none">
+                    <path class="flight-route-track" d="M10 12 Q 90 2, 180 12 T 350 12" stroke="#0066d6"
+                      stroke-width="2" stroke-linecap="round" opacity="0.7" />
+                    <g class="travel-cloud-float" opacity="0.45" fill="#60a5fa">
+                      <path d="M70 10a4 4 0 0 1 7-2 5 5 0 0 1 8 1 4 4 0 0 1 1 5h-16a4 4 0 0 1 0-4z" />
+                      <path d="M260 6a3 3 0 0 1 6-2 4 4 0 0 1 7 1 3 3 0 0 1 1 4h-14a3 3 0 0 1 0-3z" />
+                    </g>
+                  </svg>
+                  <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div
+                      class="flight-plane-icon flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#0066d6] text-white shadow-md text-[9.5px] font-bold">
+                      <svg class="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" />
+                      </svg>
+                      <span>TB Flight Q2 → Q3</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- End Point -->
+              <div class="flex items-center gap-2 shrink-0 text-right">
+                <div>
+                  <div class="text-[9.5px] uppercase font-extrabold text-emerald-400 tracking-wider">Destinasi • Q3
+                    (Oktober)</div>
+                  <div class="text-[11px] font-bold text-white">Testing, Rekonsiliasi & Operasional</div>
+                </div>
+                <div
+                  class="w-7 h-7 rounded-lg bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 travel-destination-pulse">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V18" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5 Destination Milestone Stop Cards (Horizontal 5 Columns, Strictly Non-Scrollable) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-2.5 flex-1 min-h-0 items-stretch">
+
+            <!-- Stop 01: Airline Ticketing -->
+            <div
+              class="journey-milestone-card clean-subcard rounded-xl p-2.5 flex flex-col justify-between border border-[#1c2b48] relative group">
+              <div>
+                <div class="flex items-center justify-between mb-1.5">
+                  <span
+                    class="text-[9.5px] font-extrabold text-[#60a5fa] px-1.5 py-0.2 rounded bg-[#0066d6]/20 border border-[#0066d6]/30">Stop
+                    01</span>
+                  <span class="status-pill status-testing text-[8.5px]">Testing & Reconcile</span>
+                </div>
+
+                <!-- Custom Vector Illustration: Airplane + Boarding Pass -->
+                <div
+                  class="w-full h-16 rounded-lg bg-[#0f182c]/80 border border-[#1c2b48] flex items-center justify-center p-1 mb-2 overflow-hidden group-hover:border-[#0066d6]/60 transition-colors">
+                  <svg viewBox="0 0 160 70" class="w-full h-full" fill="none">
+                    <rect x="16" y="16" width="128" height="42" rx="5" fill="#0a1120" stroke="#1c2b48"
+                      stroke-width="1.5" />
+                    <line x1="104" y1="16" x2="104" y2="58" stroke="#0066d6" stroke-width="1.5"
+                      stroke-dasharray="3 3" />
+                    <rect x="24" y="24" width="32" height="5" rx="1.5" fill="#0066d6" opacity="0.8" />
+                    <rect x="24" y="32" width="45" height="3" rx="1" fill="#64748b" opacity="0.5" />
+                    <text x="24" y="49" fill="#60a5fa" font-size="6.5" font-weight="bold" font-family="sans-serif">B2B
+                      AGENT + B2C</text>
+                    <g transform="translate(68, 6) rotate(-10)" class="flight-plane-icon">
+                      <path d="M12 2L2 16l10-3 10 3L12 2z" fill="#0066d6" />
+                      <path d="M12 2L10 13l2-1 2 1L12 2z" fill="#ffffff" opacity="0.85" />
+                    </g>
+                  </svg>
+                </div>
+
+                <h3 class="text-xs font-bold text-white mb-0.5 leading-snug">Airline Ticketing</h3>
+                <p class="text-[10.5px] text-slate-300 leading-snug mb-1.5">
+                  Pengembangan kapabilitas ticketing untuk B2B Agent dan B2C Apps.
+                </p>
+              </div>
+
+              <div class="pt-1.5 border-t border-[#1c2b48]">
+                <div
+                  class="text-[9.5px] font-semibold text-amber-400 bg-amber-500/10 p-1 rounded border border-amber-500/20 leading-tight">
+                  <strong class="font-bold">Highlight:</strong> Validasi alur issued & rekonsiliasi harga.
+                </div>
+              </div>
+            </div>
+
+            <!-- Stop 02: Private Trip Leads Assignment -->
+            <div
+              class="journey-milestone-card clean-subcard rounded-xl p-2.5 flex flex-col justify-between border border-[#1c2b48] relative group">
+              <div>
+                <div class="flex items-center justify-between mb-1.5">
+                  <span
+                    class="text-[9.5px] font-extrabold text-[#60a5fa] px-1.5 py-0.2 rounded bg-[#0066d6]/20 border border-[#0066d6]/30">Stop
+                    02</span>
+                  <span class="status-pill status-ops text-[8.5px]">Ops Enablement</span>
+                </div>
+
+                <!-- Custom Vector Illustration: Consultant + Leads Route -->
+                <div
+                  class="w-full h-16 rounded-lg bg-[#0f182c]/80 border border-[#1c2b48] flex items-center justify-center p-1 mb-2 overflow-hidden group-hover:border-[#0066d6]/60 transition-colors">
+                  <svg viewBox="0 0 160 70" class="w-full h-full" fill="none">
+                    <rect x="20" y="20" width="30" height="30" rx="15" fill="#0a1120" stroke="#0066d6"
+                      stroke-width="1.5" />
+                    <circle cx="35" cy="30" r="5" fill="#60a5fa" />
+                    <path d="M26 43c0-4 4-6 9-6s9 2 9 6" fill="#60a5fa" opacity="0.8" />
+                    <path d="M50 35 C 70 20, 80 50, 100 35" stroke="#0066d6" stroke-width="2" stroke-linecap="round"
+                      stroke-dasharray="3 3" />
+                    <g transform="translate(104, 18)">
+                      <path d="M14 2C8 2 4 6.5 4 12c0 8 10 16 10 16s10-8 10-16c0-5.5-4-10-10-10z" fill="#0066d6"
+                        opacity="0.9" />
+                      <circle cx="14" cy="12" r="4" fill="#ffffff" />
+                    </g>
+                  </svg>
+                </div>
+
+                <h3 class="text-xs font-bold text-white mb-0.5 leading-snug">Private Trip Leads</h3>
+                <p class="text-[10.5px] text-slate-300 leading-snug mb-1.5">
+                  Sistem assignment leads koordinasi Travel Consultant dan Operasional.
+                </p>
+              </div>
+
+              <div class="pt-1.5 border-t border-[#1c2b48]">
+                <div
+                  class="text-[9.5px] font-semibold text-emerald-400 bg-emerald-500/10 p-1 rounded border border-emerald-500/20 leading-tight">
+                  <strong class="font-bold">Highlight:</strong> Distribusi leads cepat & SLA respon terukur.
+                </div>
+              </div>
+            </div>
+
+            <!-- Stop 03: Travel Buddies CMS Expansion -->
+            <div
+              class="journey-milestone-card clean-subcard rounded-xl p-2.5 flex flex-col justify-between border border-[#1c2b48] relative group">
+              <div>
+                <div class="flex items-center justify-between mb-1.5">
+                  <span
+                    class="text-[9.5px] font-extrabold text-[#60a5fa] px-1.5 py-0.2 rounded bg-[#0066d6]/20 border border-[#0066d6]/30">Stop
+                    03</span>
+                  <span class="status-pill status-capability text-[8.5px]">Capability Expand</span>
+                </div>
+
+                <!-- Custom Vector Illustration: CMS Dashboard + Suitcase -->
+                <div
+                  class="w-full h-16 rounded-lg bg-[#0f182c]/80 border border-[#1c2b48] flex items-center justify-center p-1 mb-2 overflow-hidden group-hover:border-[#0066d6]/60 transition-colors">
+                  <svg viewBox="0 0 160 70" class="w-full h-full" fill="none">
+                    <rect x="18" y="12" width="76" height="46" rx="4" fill="#0a1120" stroke="#1c2b48"
+                      stroke-width="1.5" />
+                    <rect x="18" y="12" width="76" height="10" rx="3" fill="#0f182c" />
+                    <circle cx="24" cy="17" r="1.5" fill="#ef4444" />
+                    <circle cx="29" cy="17" r="1.5" fill="#f59e0b" />
+                    <circle cx="34" cy="17" r="1.5" fill="#10b981" />
+                    <rect x="24" y="27" width="18" height="12" rx="1.5" fill="#0066d6" opacity="0.6" />
+                    <rect x="46" y="27" width="18" height="12" rx="1.5" fill="#1e2c4a" />
+                    <g transform="translate(100, 20)">
+                      <rect x="2" y="8" width="30" height="22" rx="3" fill="#0066d6" stroke="#bfdbfe"
+                        stroke-width="1" />
+                      <path d="M10 8V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3" stroke="#bfdbfe" stroke-width="1.2"
+                        fill="none" />
+                    </g>
+                  </svg>
+                </div>
+
+                <h3 class="text-xs font-bold text-white mb-0.5 leading-snug">CMS Expansion</h3>
+                <p class="text-[10.5px] text-slate-300 leading-snug mb-1">
+                  Perluasan modul konten, trip, agent workflow, peserta, & akses kontrol.
+                </p>
+              </div>
+
+              <!-- 8 Modul Chips in compact layout -->
+              <div class="pt-1.5 border-t border-[#1c2b48]">
+                <div class="flex flex-wrap gap-0.5">
+                  <span class="journey-chip px-1 py-0.2 rounded text-[8.5px]">Content Production</span>
+                  <span class="journey-chip px-1 py-0.2 rounded text-[8.5px]">Business Trip</span>
+                  <span class="journey-chip px-1 py-0.2 rounded text-[8.5px]">Open Trip</span>
+                  <span class="journey-chip px-1 py-0.2 rounded text-[8.5px]">DP Follow-up</span>
+                  <span class="journey-chip px-1 py-0.2 rounded text-[8.5px]">Data Peserta</span>
+                  <span class="journey-chip px-1 py-0.2 rounded text-[8.5px] font-bold text-[#60a5fa]">RBAC</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stop 04: Partner Leads Portal -->
+            <div
+              class="journey-milestone-card clean-subcard rounded-xl p-2.5 flex flex-col justify-between border border-[#1c2b48] relative group">
+              <div>
+                <div class="flex items-center justify-between mb-1.5">
+                  <span
+                    class="text-[9.5px] font-extrabold text-[#60a5fa] px-1.5 py-0.2 rounded bg-[#0066d6]/20 border border-[#0066d6]/30">Stop
+                    04</span>
+                  <span class="status-pill status-ops text-[8.5px]">Ops Enablement</span>
+                </div>
+
+                <!-- Custom Vector Illustration: Handshake + Partner Portal -->
+                <div
+                  class="w-full h-16 rounded-lg bg-[#0f182c]/80 border border-[#1c2b48] flex items-center justify-center p-1 mb-2 overflow-hidden group-hover:border-[#0066d6]/60 transition-colors">
+                  <svg viewBox="0 0 160 70" class="w-full h-full" fill="none">
+                    <rect x="22" y="14" width="116" height="44" rx="5" fill="#0a1120" stroke="#1c2b48"
+                      stroke-width="1.5" />
+                    <g transform="translate(50, 26)">
+                      <path d="M4 12l10-6 8 3-3 6-8-2z" fill="#0066d6" opacity="0.9" />
+                      <path d="M40 12l-10-6-8 3 3 6 8-2z" fill="#10b981" opacity="0.9" />
+                      <circle cx="22" cy="10" r="4" fill="#ffffff" />
+                    </g>
+                    <circle cx="32" cy="34" r="3" fill="#0066d6" />
+                    <circle cx="128" cy="34" r="3" fill="#10b981" />
+                  </svg>
+                </div>
+
+                <h3 class="text-xs font-bold text-white mb-0.5 leading-snug">Partner Leads Portal</h3>
+                <p class="text-[10.5px] text-slate-300 leading-snug mb-1.5">
+                  Portal manajemen leads dan proses follow-up bersama partner.
+                </p>
+              </div>
+
+              <div class="pt-1.5 border-t border-[#1c2b48]">
+                <div
+                  class="text-[9.5px] font-semibold text-emerald-400 bg-emerald-500/10 p-1 rounded border border-emerald-500/20 leading-tight">
+                  <strong class="font-bold">Highlight:</strong> Integrasi pipeline mitra & follow-up terkoordinasi.
+                </div>
+              </div>
+            </div>
+
+            <!-- Stop 05: Business Reporting & Dashboard -->
+            <div
+              class="journey-milestone-card clean-subcard rounded-xl p-2.5 flex flex-col justify-between border border-[#1c2b48] relative group">
+              <div>
+                <div class="flex items-center justify-between mb-1.5">
+                  <span
+                    class="text-[9.5px] font-extrabold text-[#60a5fa] px-1.5 py-0.2 rounded bg-[#0066d6]/20 border border-[#0066d6]/30">Stop
+                    05</span>
+                  <span class="status-pill status-visibility text-[8.5px]">Business Visibility</span>
+                </div>
+
+                <!-- Custom Vector Illustration: Dashboard Chart + Compass -->
+                <div
+                  class="w-full h-16 rounded-lg bg-[#0f182c]/80 border border-[#1c2b48] flex items-center justify-center p-1 mb-2 overflow-hidden group-hover:border-[#0066d6]/60 transition-colors">
+                  <svg viewBox="0 0 160 70" class="w-full h-full" fill="none">
+                    <rect x="20" y="12" width="120" height="48" rx="5" fill="#0a1120" stroke="#1c2b48"
+                      stroke-width="1.5" />
+                    <rect x="30" y="38" width="8" height="14" rx="1.5" fill="#0066d6" opacity="0.6" />
+                    <rect x="42" y="30" width="8" height="22" rx="1.5" fill="#0066d6" opacity="0.8" />
+                    <rect x="54" y="22" width="8" height="30" rx="1.5" fill="#0066d6" />
+                    <rect x="66" y="26" width="8" height="26" rx="1.5" fill="#8b5cf6" />
+                    <path d="M34 36 L 46 28 L 58 20 L 70 24" stroke="#10b981" stroke-width="1.8"
+                      stroke-linecap="round" />
+                    <g transform="translate(96, 18)">
+                      <circle cx="14" cy="14" r="12" fill="#0f182c" stroke="#8b5cf6" stroke-width="1.2" />
+                      <polygon points="14,6 17,14 14,13 11,14" fill="#ef4444" />
+                    </g>
+                  </svg>
+                </div>
+
+                <h3 class="text-xs font-bold text-white mb-0.5 leading-snug">Business Reporting</h3>
+                <p class="text-[10.5px] text-slate-300 leading-snug mb-1">
+                  Peningkatan visibilitas performa bisnis untuk pengambilan keputusan.
+                </p>
+              </div>
+
+              <!-- 3 Dashboard Chips -->
+              <div class="pt-1.5 border-t border-[#1c2b48] space-y-0.5">
+                <div class="journey-chip px-1.5 py-0.2 rounded flex items-center justify-between text-[8.5px]">
+                  <span>Business Trip</span>
+                  <span class="text-purple-400 font-bold">Aktif</span>
+                </div>
+                <div class="journey-chip px-1.5 py-0.2 rounded flex items-center justify-between text-[8.5px]">
+                  <span>Trip Category</span>
+                  <span class="text-purple-400 font-bold">Aktif</span>
+                </div>
+                <div class="journey-chip px-1.5 py-0.2 rounded flex items-center justify-between text-[8.5px]">
+                  <span>Promo Usage</span>
+                  <span class="text-purple-400 font-bold">Aktif</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Slide Footer -->
+        <div
+          class="w-[96%] sm:w-[94%] max-w-[1460px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-1.5 flex justify-between items-center shrink-0">
+          <span>Travel Buddies — Laporan Kuartal Tech Team | Q2 – Q3 (Oktober)</span>
+          <span class="slide-footer-counter">Slide 2 / 12</span>
+        </div>
+      </section>
+
+      <!-- SLIDE 3: KEY TAKEAWAY & DAMPAK BISNIS -->
+      <section
+        class="slide-page absolute inset-0 p-3 sm:p-5 md:p-6 flex flex-col justify-between overflow-hidden hidden"
+        data-slide="3" data-title="Key Takeaways & Dampak Bisnis">
+        <div class="w-[96%] sm:w-[94%] max-w-[1460px] mx-auto flex-1 flex flex-col justify-between py-1 min-h-0">
+
+          <!-- Top Header: Title, Subtitle -->
+          <div class="mb-2 pb-2 border-b border-[#1c2b48] flex flex-wrap justify-between items-end gap-2 shrink-0">
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <span
+                  class="text-[10px] font-extrabold px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 uppercase tracking-wider flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                  Titik Kedatangan • Arrival Destination
+                </span>
+                <span
+                  class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#0f182c] border border-[#1c2b48] text-slate-300">
+                  Target Kuartal Tercapai
+                </span>
+              </div>
+              <h2 class="text-lg sm:text-xl lg:text-2xl font-extrabold text-white tracking-tight leading-snug">
+                Key Takeaways: Titik Kedatangan & Dampak Bisnis (Q2 → Q3)
+              </h2>
+              <p class="text-[11px] sm:text-xs text-slate-300 mt-0.5 leading-relaxed">
+                Refleksi strategis pencapaian Q2–Q3 sebagai landasan efisiensi operasional dan skalabilitas periode
+                berikutnya.
+              </p>
+            </div>
+
+            <div class="text-right hidden sm:block shrink-0">
+              <span class="text-[9.5px] uppercase font-bold text-slate-400 tracking-wider block">Fase Selanjutnya</span>
+              <span class="text-xs font-bold text-emerald-400">Scalability & Operational Excellence</span>
+            </div>
+          </div>
+
+          <!-- Middle: Arrival Destination Boarding Pass Card (Clean, Non Text-Heavy) -->
+          <div
+            class="clean-card rounded-xl p-3 sm:p-4 border-2 border-[#0066d6]/40 bg-gradient-to-r from-[#0066d6]/10 via-[#0a1120] to-[#0066d6]/10 relative overflow-hidden mb-2.5 shrink-0">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-3 relative z-10">
+              <div class="flex items-start gap-3">
+                <div
+                  class="w-9 h-9 rounded-xl bg-[#0066d6] text-white flex items-center justify-center shrink-0 shadow-md travel-destination-pulse">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="flex items-center gap-2 mb-0.5">
+                    <span class="text-[10px] font-extrabold uppercase tracking-wider text-[#60a5fa]">Pernyataan
+                      Manajemen</span>
+                    <span
+                      class="text-[9.5px] px-2 py-0.2 rounded-full bg-emerald-500/20 text-emerald-400 font-bold border border-emerald-500/30">Target
+                      Tercapai</span>
+                  </div>
+                  <h3 class="text-sm font-extrabold text-white">Key Takeaway</h3>
+                  <p class="text-xs sm:text-[13px] text-slate-200 mt-0.5 leading-relaxed italic">
+                    "Q2–Q3 menjadi fase penting dalam memperluas kapabilitas teknologi Travel Buddies sekaligus
+                    memperkuat proses operasional. Fokus pengembangan mulai bergeser dari sekadar membangun fitur menuju
+                    validasi, reconciliation, operational enablement, dan peningkatan business visibility."
+                  </p>
+                </div>
+              </div>
+
+              <!-- Quick Status Badges -->
+              <div class="flex md:flex-col gap-1.5 shrink-0 w-full md:w-auto">
+                <div
+                  class="flex items-center gap-1.5 px-2 py-0.5 rounded-lg bg-[#0f182c] border border-[#1c2b48] text-[10px] text-slate-300">
+                  <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                  <span>Validasi & Rekonsiliasi</span>
+                </div>
+                <div
+                  class="flex items-center gap-1.5 px-2 py-0.5 rounded-lg bg-[#0f182c] border border-[#1c2b48] text-[10px] text-slate-300">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                  <span>Operational Enablement</span>
+                </div>
+                <div
+                  class="flex items-center gap-1.5 px-2 py-0.5 rounded-lg bg-[#0f182c] border border-[#1c2b48] text-[10px] text-slate-300">
+                  <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+                  <span>Business Visibility</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom: 4 Strategic Outcome Pillars (Grid 4 Kolom, Elegan & Ringkas) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 flex-1 min-h-0 items-stretch">
+
+            <!-- Pillar 01 -->
+            <div class="clean-card rounded-xl p-3 border-t-2 border-t-amber-500 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-1.5">
+                  <span
+                    class="text-[9.5px] font-extrabold text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20">01</span>
+                  <span class="status-pill status-testing text-[8.5px]">Validasi Selesai</span>
+                </div>
+                <h4 class="text-xs font-bold text-white mb-0.5">Validasi & Rekonsiliasi</h4>
+                <p class="text-[9.5px] text-[#60a5fa] font-semibold mb-1">Airline Ticketing (B2B + B2C)</p>
+                <p class="text-[10.5px] text-slate-300 leading-snug">
+                  Memastikan integritas harga tiket dan eliminasi selisih sistem sebelum peluncuran volume tinggi ke
+                  publik.
+                </p>
+              </div>
+              <div class="pt-1.5 border-t border-[#1c2b48] mt-1 text-[9.5px] text-amber-400 font-medium">
+                ✓ Akurasi finansial terjamin
+              </div>
+            </div>
+
+            <!-- Pillar 02 -->
+            <div class="clean-card rounded-xl p-3 border-t-2 border-t-emerald-500 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-1.5">
+                  <span
+                    class="text-[9.5px] font-extrabold text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">02</span>
+                  <span class="status-pill status-ops text-[8.5px]">SLA Efisien</span>
+                </div>
+                <h4 class="text-xs font-bold text-white mb-0.5">Efisiensi Alur Operasional</h4>
+                <p class="text-[9.5px] text-emerald-400 font-semibold mb-1">Private Trip Leads Assignment</p>
+                <p class="text-[10.5px] text-slate-300 leading-snug">
+                  Distribusi leads terstandarisasi antara TC dan Operasional, memangkas jeda respon dan menaikkan
+                  konversi.
+                </p>
+              </div>
+              <div class="pt-1.5 border-t border-[#1c2b48] mt-1 text-[9.5px] text-emerald-400 font-medium">
+                ✓ Respon leads lebih cepat
+              </div>
+            </div>
+
+            <!-- Pillar 03 -->
+            <div class="clean-card rounded-xl p-3 border-t-2 border-t-[#0066d6] flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-1.5">
+                  <span
+                    class="text-[9.5px] font-extrabold text-[#60a5fa] bg-[#0066d6]/10 px-1.5 py-0.5 rounded border border-[#0066d6]/20">03</span>
+                  <span class="status-pill status-capability text-[8.5px]">Sistem Terpusat</span>
+                </div>
+                <h4 class="text-xs font-bold text-white mb-0.5">Skalabilitas Tata Kelola</h4>
+                <p class="text-[9.5px] text-[#60a5fa] font-semibold mb-1">CMS Travel Buddies + RBAC</p>
+                <p class="text-[10.5px] text-slate-300 leading-snug">
+                  Tata kelola konten, verifikasi kelengkapan peserta, dan manajemen akses berjenjang terpusat dalam satu
+                  CMS.
+                </p>
+              </div>
+              <div class="pt-1.5 border-t border-[#1c2b48] mt-1 text-[9.5px] text-[#60a5fa] font-medium">
+                ✓ Fondasi modul siap skala
+              </div>
+            </div>
+
+            <!-- Pillar 04 -->
+            <div class="clean-card rounded-xl p-3 border-t-2 border-t-purple-500 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-1.5">
+                  <span
+                    class="text-[9.5px] font-extrabold text-purple-400 bg-purple-500/10 px-1.5 py-0.5 rounded border border-purple-500/20">04</span>
+                  <span class="status-pill status-visibility text-[8.5px]">Data Real-time</span>
+                </div>
+                <h4 class="text-xs font-bold text-white mb-0.5">Transparansi & Visibilitas</h4>
+                <p class="text-[9.5px] text-purple-400 font-semibold mb-1">Partner Portal & Dashboards</p>
+                <p class="text-[10.5px] text-slate-300 leading-snug">
+                  Dashboard interaktif untuk monitoring Business Trip, kategori trip, serta efektivitas penggunaan promo
+                  secara live.
+                </p>
+              </div>
+              <div class="pt-1.5 border-t border-[#1c2b48] mt-1 text-[9.5px] text-purple-400 font-medium">
+                ✓ Keputusan berbasis data
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom Summary Takeaway Bar -->
+          <div
+            class="mt-2 p-2 rounded-lg bg-[#0a1120] border border-[#1c2b48] flex items-center justify-between text-xs shrink-0">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[#0066d6] animate-pulse"></span>
+              <span class="text-slate-300 font-semibold">Fondasi Pertumbuhan:</span>
+              <span class="text-white">Q2 membangun & memperluas kapabilitas. Q3 memvalidasi, mengoperasionalkan, dan
+                meningkatkan visibilitas bisnis.</span>
+            </div>
+            <span class="text-emerald-400 font-bold hidden sm:inline">Siap Melangkah ke Kuartal Berikutnya →</span>
+          </div>
+
+        </div>
+
+        <!-- Slide Footer -->
+        <div
+          class="w-[96%] sm:w-[94%] max-w-[1460px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-1.5 flex justify-between items-center shrink-0">
+          <span>Travel Buddies — Laporan Kuartal Tech Team | Q2 – Q3 (Oktober)</span>
+          <span class="slide-footer-counter">Slide 3 / 12</span>
         </div>
       </section>
 
       <!-- SLIDE 2: TEAM STRUCTURE & CAPACITY MATH -->
-      <section class="slide-page absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-between overflow-y-auto slide-content-scroll hidden" data-slide="2" data-title="Team Structure & Capacity">
-        <div class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto flex-1 flex flex-col justify-center py-2">
-          
+      <section
+        class="slide-page absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-between overflow-y-auto slide-content-scroll hidden"
+        data-slide="2" data-title="Team Structure & Capacity">
+        <div
+          class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto flex-1 flex flex-col justify-center py-2">
+
           <div class="mb-3.5 pb-2 border-b border-[#1c2b48] flex justify-between items-end">
             <div>
-              <span class="text-xs font-bold text-[#60a5fa] uppercase tracking-wider">Sumber Daya & Realitas Kerja</span>
+              <span class="text-xs font-bold text-[#60a5fa] uppercase tracking-wider">Sumber Daya & Realitas
+                Kerja</span>
               <h2 class="text-xl sm:text-2xl font-bold text-white mt-0.5">Technology Team Structure & Real Capacity</h2>
             </div>
             <span class="text-xs text-slate-400 font-medium hidden sm:inline">Total 4 Orang (Zero Redundancy)</span>
@@ -829,7 +1782,8 @@
                 <span class="text-[9px] px-1.5 py-0.5 rounded bg-[#0066d6]/20 text-[#60a5fa] font-bold">LEAD</span>
               </div>
               <p class="text-[11px] text-slate-300 leading-relaxed">
-                <strong>Peran:</strong> Architecture, strategi teknis, evaluasi vendor, approval rilis, & incident handling.<br>
+                <strong>Peran:</strong> Architecture, strategi teknis, evaluasi vendor, approval rilis, & incident
+                handling.<br>
                 <span class="text-slate-400 italic font-semibold">*Bukan dedicated coder harian.</span>
               </p>
             </div>
@@ -841,10 +1795,12 @@
                   <h3 class="font-bold text-white text-xs">ADRIAN RIVALDY</h3>
                   <span class="text-[11px] text-slate-400 font-medium block">Sr. Fullstack Dev</span>
                 </div>
-                <span class="text-[9px] px-1.5 py-0.5 rounded bg-[#0a1120] text-slate-300 font-bold border border-[#1c2b48]">BACKEND</span>
+                <span
+                  class="text-[9px] px-1.5 py-0.5 rounded bg-[#0a1120] text-slate-300 font-bold border border-[#1c2b48]">BACKEND</span>
               </div>
               <p class="text-[11px] text-slate-300 leading-relaxed">
-                <strong>Peran:</strong> Lead Hotel WebBeds, backend arsitektur kompleks, mentoring teknis, & Lead modul KAI bersama Setra.
+                <strong>Peran:</strong> Lead Hotel WebBeds, backend arsitektur kompleks, mentoring teknis, & Lead modul
+                KAI bersama Setra.
               </p>
             </div>
 
@@ -855,10 +1811,12 @@
                   <h3 class="font-bold text-white text-xs">SETRA NUGRAHA</h3>
                   <span class="text-[11px] text-slate-400 font-medium block">Fullstack Dev</span>
                 </div>
-                <span class="text-[9px] px-1.5 py-0.5 rounded bg-[#0a1120] text-slate-300 font-bold border border-[#1c2b48]">PAYMENT</span>
+                <span
+                  class="text-[9px] px-1.5 py-0.5 rounded bg-[#0a1120] text-slate-300 font-bold border border-[#1c2b48]">PAYMENT</span>
               </div>
               <p class="text-[11px] text-slate-300 leading-relaxed">
-                <strong>Peran:</strong> Lead Payment DOKU, backend Flight B2C, CMS integration, & Lead modul KAI bersama Adrian.
+                <strong>Peran:</strong> Lead Payment DOKU, backend Flight B2C, CMS integration, & Lead modul KAI bersama
+                Adrian.
               </p>
             </div>
 
@@ -869,7 +1827,8 @@
                   <h3 class="font-bold text-white text-xs">LUTHFY</h3>
                   <span class="text-[11px] text-slate-400 font-medium block">Mobile Engineer</span>
                 </div>
-                <span class="text-[9px] px-1.5 py-0.5 rounded bg-[#0a1120] text-slate-300 font-bold border border-[#1c2b48]">MOBILE</span>
+                <span
+                  class="text-[9px] px-1.5 py-0.5 rounded bg-[#0a1120] text-slate-300 font-bold border border-[#1c2b48]">MOBILE</span>
               </div>
               <p class="text-[11px] text-slate-300 leading-relaxed">
                 <strong>Peran:</strong> Flutter Android/iOS seluruh produk (Flight, Hotel, Payment, KAI).<br>
@@ -885,8 +1844,10 @@
               <div class="flex justify-between items-center mb-2 text-xs">
                 <span class="font-bold text-white">Visual Breakdown Alokasi Kapasitas</span>
                 <div class="flex items-center gap-3 text-[10px] text-slate-400">
-                  <span class="flex items-center gap-1"><span class="w-2.5 h-2 rounded bg-[#0066d6]"></span> Project Baru</span>
-                  <span class="flex items-center gap-1"><span class="w-2.5 h-2 rounded bg-slate-700"></span> Maintenance & Incident (20%)</span>
+                  <span class="flex items-center gap-1"><span class="w-2.5 h-2 rounded bg-[#0066d6]"></span> Project
+                    Baru</span>
+                  <span class="flex items-center gap-1"><span class="w-2.5 h-2 rounded bg-slate-700"></span> Maintenance
+                    & Incident (20%)</span>
                 </div>
               </div>
 
@@ -943,42 +1904,52 @@
                 <span class="text-[10px] font-bold text-[#60a5fa] uppercase block">Output Bersih Tim</span>
                 <span class="text-2xl sm:text-3xl font-extrabold text-white mt-0.5 block">~3 orang efektif</span>
                 <p class="text-[11px] text-slate-300 mt-1 leading-relaxed">
-                  Dari 4 orang tim, hanya <strong>~3 developer efektif</strong> yang dapat fokus murni pada fitur baru. Sekitar 1 orang dialokasikan untuk menjaga sistem live harian (BAU).
+                  Dari 4 orang tim, hanya <strong>~3 developer efektif</strong> yang dapat fokus murni pada fitur baru.
+                  Sekitar 1 orang dialokasikan untuk menjaga sistem live harian (BAU).
                 </p>
               </div>
 
               <div class="p-2 rounded bg-[#0a1120] border border-[#1c2b48] text-[11px] text-slate-300 mt-2">
-                💡 <strong>Pesan Manajemen:</strong> Hindari berasumsi memiliki 4 full-time developer tanpa menyisakan waktu untuk bug fixing dan operasional.
+                💡 <strong>Pesan Manajemen:</strong> Hindari berasumsi memiliki 4 full-time developer tanpa menyisakan
+                waktu untuk bug fixing dan operasional.
               </div>
             </div>
           </div>
         </div>
 
-        <div class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-2 flex justify-between items-center shrink-0">
+        <div
+          class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-2 flex justify-between items-center shrink-0">
           <span>Travel Buddies — Technology Project Planning | Sep 2026 – Jan 2027</span>
           <span>Slide 3 / 10</span>
         </div>
       </section>
 
       <!-- SLIDE 3: MASTER ROADMAP (GANTT CHART) -->
-      <section class="slide-page absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-between overflow-y-auto slide-content-scroll hidden" data-slide="3" data-title="Master Visual Roadmap (Gantt)">
-        <div class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto flex-1 flex flex-col justify-center py-2">
-          
+      <section
+        class="slide-page absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-between overflow-y-auto slide-content-scroll hidden"
+        data-slide="3" data-title="Master Visual Roadmap (Gantt)">
+        <div
+          class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto flex-1 flex flex-col justify-center py-2">
+
           <div class="mb-3 pb-2 border-b border-[#1c2b48] flex justify-between items-end">
             <div>
               <span class="text-xs font-bold text-[#60a5fa] uppercase tracking-wider">Visual Master Schedule</span>
-              <h2 class="text-xl sm:text-2xl font-bold text-white mt-0.5">Project Gantt Roadmap (Sep 2026 – Jan 2027)</h2>
+              <h2 class="text-xl sm:text-2xl font-bold text-white mt-0.5">Project Gantt Roadmap (Sep 2026 – Jan 2027)
+              </h2>
             </div>
             <div class="flex items-center gap-3 text-[11px] text-slate-400">
-              <span class="flex items-center gap-1.5"><span class="w-3 h-2.5 rounded-sm bg-[#0066d6]"></span> Dev / UAT / Rilis</span>
-              <span class="flex items-center gap-1.5"><span class="w-3 h-2.5 rounded-sm gantt-prep border border-slate-600"></span> Persiapan / Vendor</span>
+              <span class="flex items-center gap-1.5"><span class="w-3 h-2.5 rounded-sm bg-[#0066d6]"></span> Dev / UAT
+                / Rilis</span>
+              <span class="flex items-center gap-1.5"><span
+                  class="w-3 h-2.5 rounded-sm gantt-prep border border-slate-600"></span> Persiapan / Vendor</span>
             </div>
           </div>
 
           <!-- Gantt Table Container -->
           <div class="clean-card rounded-xl p-3 mb-2.5 overflow-x-auto">
             <!-- Header Bulan -->
-            <div class="grid grid-cols-12 gap-1 text-[11px] font-bold text-slate-400 uppercase pb-2 border-b border-[#1c2b48] text-center">
+            <div
+              class="grid grid-cols-12 gap-1 text-[11px] font-bold text-slate-400 uppercase pb-2 border-b border-[#1c2b48] text-center">
               <div class="col-span-3 text-left pl-1">Inisiatif</div>
               <div class="col-span-2">SEP 2026</div>
               <div class="col-span-2">OCT 2026</div>
@@ -994,7 +1965,9 @@
                 <span class="text-[10px] text-slate-400">Testing live price ATA</span>
               </div>
               <div class="col-span-2 relative h-6 flex items-center">
-                <div class="w-1/2 h-4 bg-[#0066d6] rounded flex items-center justify-center text-[9px] font-bold text-white shadow">Mid-Sep</div>
+                <div
+                  class="w-1/2 h-4 bg-[#0066d6] rounded flex items-center justify-center text-[9px] font-bold text-white shadow">
+                  Mid-Sep</div>
               </div>
               <div class="col-span-7 bg-[#0a1120]/40 h-6 rounded"></div>
             </div>
@@ -1006,7 +1979,9 @@
                 <span class="text-[10px] text-slate-400">Pricing logic & mobile</span>
               </div>
               <div class="col-span-2 relative h-6 flex items-center">
-                <div class="w-full h-4 bg-[#0066d6] rounded flex items-center justify-center text-[9px] font-bold text-white shadow">End-Sep</div>
+                <div
+                  class="w-full h-4 bg-[#0066d6] rounded flex items-center justify-center text-[9px] font-bold text-white shadow">
+                  End-Sep</div>
               </div>
               <div class="col-span-7 bg-[#0a1120]/40 h-6 rounded"></div>
             </div>
@@ -1018,13 +1993,19 @@
                 <span class="text-[10px] text-slate-400">Preliminary (~1.5 Bln)</span>
               </div>
               <div class="col-span-2 flex items-center justify-end pr-0.5">
-                <div class="w-1/2 h-4 rounded gantt-prep border border-slate-600 flex items-center justify-center text-[8px] text-slate-300 font-semibold">Prep</div>
+                <div
+                  class="w-1/2 h-4 rounded gantt-prep border border-slate-600 flex items-center justify-center text-[8px] text-slate-300 font-semibold">
+                  Prep</div>
               </div>
               <div class="col-span-2 flex items-center">
-                <div class="w-full h-4 bg-[#0052b3] rounded flex items-center justify-center text-[9px] font-bold text-white">Discovery & Dev</div>
+                <div
+                  class="w-full h-4 bg-[#0052b3] rounded flex items-center justify-center text-[9px] font-bold text-white">
+                  Discovery & Dev</div>
               </div>
               <div class="col-span-2 flex items-center">
-                <div class="w-3/4 h-4 bg-[#0066d6] rounded flex items-center justify-center text-[9px] font-bold text-white shadow">UAT Mid/End Nov</div>
+                <div
+                  class="w-3/4 h-4 bg-[#0066d6] rounded flex items-center justify-center text-[9px] font-bold text-white shadow">
+                  UAT Mid/End Nov</div>
               </div>
               <div class="col-span-3 bg-[#0a1120]/40 h-6 rounded"></div>
             </div>
@@ -1036,13 +2017,19 @@
                 <span class="text-[10px] text-slate-400">Secondary PG Backup</span>
               </div>
               <div class="col-span-2 flex items-center justify-end pr-0.5">
-                <div class="w-1/3 h-4 rounded gantt-prep border border-slate-600 flex items-center justify-center text-[8px] text-slate-300 font-semibold">Prep</div>
+                <div
+                  class="w-1/3 h-4 rounded gantt-prep border border-slate-600 flex items-center justify-center text-[8px] text-slate-300 font-semibold">
+                  Prep</div>
               </div>
               <div class="col-span-2 flex items-center">
-                <div class="w-full h-4 bg-[#0052b3] rounded flex items-center justify-center text-[9px] font-bold text-white">Integration Dev</div>
+                <div
+                  class="w-full h-4 bg-[#0052b3] rounded flex items-center justify-center text-[9px] font-bold text-white">
+                  Integration Dev</div>
               </div>
               <div class="col-span-2 flex items-center">
-                <div class="w-2/3 h-4 bg-[#0066d6] rounded flex items-center justify-center text-[9px] font-bold text-white shadow">Target Nov</div>
+                <div
+                  class="w-2/3 h-4 bg-[#0066d6] rounded flex items-center justify-center text-[9px] font-bold text-white shadow">
+                  Target Nov</div>
               </div>
               <div class="col-span-3 bg-[#0a1120]/40 h-6 rounded"></div>
             </div>
@@ -1054,19 +2041,29 @@
                 <span class="text-[10px] text-[#60a5fa] font-semibold">Pilih Mitra Maks Okt</span>
               </div>
               <div class="col-span-2 flex items-center">
-                <div class="w-full h-4 rounded gantt-prep border border-slate-600 flex items-center justify-center text-[8px] text-slate-300">Riset Mitra</div>
+                <div
+                  class="w-full h-4 rounded gantt-prep border border-slate-600 flex items-center justify-center text-[8px] text-slate-300">
+                  Riset Mitra</div>
               </div>
               <div class="col-span-2 flex items-center">
-                <div class="w-full h-4 rounded gantt-prep border border-[#0066d6]/60 flex items-center justify-center text-[8px] text-[#60a5fa] font-bold">Seleksi Maks Okt</div>
+                <div
+                  class="w-full h-4 rounded gantt-prep border border-[#0066d6]/60 flex items-center justify-center text-[8px] text-[#60a5fa] font-bold">
+                  Seleksi Maks Okt</div>
               </div>
               <div class="col-span-2 flex items-center justify-end">
-                <div class="w-1/2 h-4 bg-[#0052b3] rounded flex items-center justify-center text-[8px] font-bold text-white">Start Dev</div>
+                <div
+                  class="w-1/2 h-4 bg-[#0052b3] rounded flex items-center justify-center text-[8px] font-bold text-white">
+                  Start Dev</div>
               </div>
               <div class="col-span-2 flex items-center">
-                <div class="w-full h-4 bg-[#0066d6] rounded flex items-center justify-center text-[9px] font-bold text-white">Full Dev</div>
+                <div
+                  class="w-full h-4 bg-[#0066d6] rounded flex items-center justify-center text-[9px] font-bold text-white">
+                  Full Dev</div>
               </div>
               <div class="col-span-1 flex items-center">
-                <div class="w-full h-4 bg-[#0066d6] rounded flex items-center justify-center text-[9px] font-bold text-white shadow">Prod Jan</div>
+                <div
+                  class="w-full h-4 bg-[#0066d6] rounded flex items-center justify-center text-[9px] font-bold text-white shadow">
+                  Prod Jan</div>
               </div>
             </div>
 
@@ -1077,7 +2074,8 @@
                 <span class="text-[10px] text-slate-400">Reserve 20% Kapasitas</span>
               </div>
               <div class="col-span-9 flex items-center">
-                <div class="w-full h-4 bg-[#0a1120] border border-[#1c2b48] rounded flex items-center justify-center text-[9px] text-slate-400">
+                <div
+                  class="w-full h-4 bg-[#0a1120] border border-[#1c2b48] rounded flex items-center justify-center text-[9px] text-slate-400">
                   Pemeliharaan Sistem Live, Bug Fixing, Monitoring & Rilis Rutin Sep 2026 – Jan 2027
                 </div>
               </div>
@@ -1085,20 +2083,25 @@
           </div>
 
           <div class="text-[11px] text-slate-400 px-1">
-            * <em>Catatan Eksekutif:</em> Durasi WebBeds & KAI (±1.5 bulan) bersifat <strong>preliminary</strong> dan akan disesuaikan kembali setelah review dokumen API selesai.
+            * <em>Catatan Eksekutif:</em> Durasi WebBeds & KAI (±1.5 bulan) bersifat <strong>preliminary</strong> dan
+            akan disesuaikan kembali setelah review dokumen API selesai.
           </div>
         </div>
 
-        <div class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-2 flex justify-between items-center shrink-0">
+        <div
+          class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-2 flex justify-between items-center shrink-0">
           <span>Travel Buddies — Technology Project Planning | Sep 2026 – Jan 2027</span>
           <span>Slide 2 / 10</span>
         </div>
       </section>
 
       <!-- SLIDE 4: MONTHLY MILESTONE JOURNEY (INFOGRAPHIC) -->
-      <section class="slide-page absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-between overflow-y-auto slide-content-scroll hidden" data-slide="4" data-title="Monthly Execution Journey">
-        <div class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto flex-1 flex flex-col justify-center py-2">
-          
+      <section
+        class="slide-page absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-between overflow-y-auto slide-content-scroll hidden"
+        data-slide="4" data-title="Monthly Execution Journey">
+        <div
+          class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto flex-1 flex flex-col justify-center py-2">
+
           <div class="mb-3.5 pb-2 border-b border-[#1c2b48] flex justify-between items-end">
             <div>
               <span class="text-xs font-bold text-[#60a5fa] uppercase tracking-wider">Perjalanan Eksekusi</span>
@@ -1114,7 +2117,8 @@
               <div>
                 <div class="flex justify-between items-center mb-1">
                   <span class="text-[10px] font-bold text-[#60a5fa] uppercase">Bulan 1 • Sep 2026</span>
-                  <span class="text-[9px] px-1.5 py-0.5 rounded bg-[#0066d6]/20 text-[#60a5fa] font-bold">DELIVERY</span>
+                  <span
+                    class="text-[9px] px-1.5 py-0.5 rounded bg-[#0066d6]/20 text-[#60a5fa] font-bold">DELIVERY</span>
                 </div>
                 <h3 class="font-bold text-white text-xs mb-1.5">Finish Flight & Secure Dependencies</h3>
                 <ul class="text-[11px] text-slate-300 space-y-1 list-disc list-inside">
@@ -1134,7 +2138,8 @@
               <div>
                 <div class="flex justify-between items-center mb-1">
                   <span class="text-[10px] font-bold text-[#60a5fa] uppercase">Bulan 2 • Okt 2026</span>
-                  <span class="text-[9px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 font-bold">PEAK LOAD</span>
+                  <span class="text-[9px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 font-bold">PEAK
+                    LOAD</span>
                 </div>
                 <h3 class="font-bold text-white text-xs mb-1.5">Parallel Hotel & Payment Integration</h3>
                 <ul class="text-[11px] text-slate-300 space-y-1 list-disc list-inside">
@@ -1154,7 +2159,8 @@
               <div>
                 <div class="flex justify-between items-center mb-1">
                   <span class="text-[10px] font-bold text-[#60a5fa] uppercase">Bulan 3 • Nov 2026</span>
-                  <span class="text-[9px] px-1.5 py-0.5 rounded bg-[#0a1120] text-slate-300 font-bold border border-[#1c2b48]">TRANSISI</span>
+                  <span
+                    class="text-[9px] px-1.5 py-0.5 rounded bg-[#0a1120] text-slate-300 font-bold border border-[#1c2b48]">TRANSISI</span>
                 </div>
                 <h3 class="font-bold text-white text-xs mb-1.5">Stabilisasi & Kick-Off KAI</h3>
                 <ul class="text-[11px] text-slate-300 space-y-1 list-disc list-inside">
@@ -1190,24 +2196,31 @@
           </div>
 
           <div class="clean-card rounded-xl p-2.5 text-xs text-slate-300">
-            💡 <strong>Prinsip Kunci:</strong> Beban kerja puncak terjadi di Oktober (paralel WebBeds & DOKU). Dengan membagi Adrian memegang Hotel dan Setra memegang Payment, pengerjaan dapat berjalan mandiri tanpa bentrok resource.
+            💡 <strong>Prinsip Kunci:</strong> Beban kerja puncak terjadi di Oktober (paralel WebBeds & DOKU). Dengan
+            membagi Adrian memegang Hotel dan Setra memegang Payment, pengerjaan dapat berjalan mandiri tanpa bentrok
+            resource.
           </div>
         </div>
 
-        <div class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-2 flex justify-between items-center shrink-0">
+        <div
+          class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-2 flex justify-between items-center shrink-0">
           <span>Travel Buddies — Technology Project Planning | Sep 2026 – Jan 2027</span>
           <span>Slide 4 / 10</span>
         </div>
       </section>
 
       <!-- SLIDE 5: PROJECT OWNERSHIP & PRINCIPLES -->
-      <section class="slide-page absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-between overflow-y-auto slide-content-scroll hidden" data-slide="5" data-title="Ownership & Governance Matrix">
-        <div class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto flex-1 flex flex-col justify-center py-2">
-          
+      <section
+        class="slide-page absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-between overflow-y-auto slide-content-scroll hidden"
+        data-slide="5" data-title="Ownership & Governance Matrix">
+        <div
+          class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto flex-1 flex flex-col justify-center py-2">
+
           <div class="mb-3 pb-2 border-b border-[#1c2b48] flex justify-between items-end">
             <div>
               <span class="text-xs font-bold text-[#60a5fa] uppercase tracking-wider">Akuntabilitas & Tata Kelola</span>
-              <h2 class="text-xl sm:text-2xl font-bold text-white mt-0.5">Project Ownership Matrix & Planning Principles</h2>
+              <h2 class="text-xl sm:text-2xl font-bold text-white mt-0.5">Project Ownership Matrix & Planning Principles
+              </h2>
             </div>
             <span class="text-xs text-slate-400">Siapa Bertanggung Jawab Apa</span>
           </div>
@@ -1272,11 +2285,13 @@
             </div>
             <div class="p-2 rounded bg-[#0a1120] border border-[#1c2b48]">
               <strong class="text-white block text-[11px]">2. Pisahkan Lead Fullstack</strong>
-              <span class="text-slate-400 text-[10px]">Adrian (Hotel) & Setra (Payment) kerja paralel tanpa rebutan.</span>
+              <span class="text-slate-400 text-[10px]">Adrian (Hotel) & Setra (Payment) kerja paralel tanpa
+                rebutan.</span>
             </div>
             <div class="p-2 rounded bg-[#0a1120] border border-[#1c2b48]">
               <strong class="text-white block text-[11px]">3. Stabilkan API Contract</strong>
-              <span class="text-slate-400 text-[10px]">Format data API matang dulu agar Luthfy (Mobile) tidak idle.</span>
+              <span class="text-slate-400 text-[10px]">Format data API matang dulu agar Luthfy (Mobile) tidak
+                idle.</span>
             </div>
             <div class="p-2 rounded bg-[#0a1120] border border-[#1c2b48]">
               <strong class="text-white block text-[11px]">4. Kunci Mitra KAI Lebih Awal</strong>
@@ -1285,16 +2300,20 @@
           </div>
         </div>
 
-        <div class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-2 flex justify-between items-center shrink-0">
+        <div
+          class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-2 flex justify-between items-center shrink-0">
           <span>Travel Buddies — Technology Project Planning | Sep 2026 – Jan 2027</span>
           <span>Slide 5 / 10</span>
         </div>
       </section>
 
       <!-- SLIDE 6: INDICATIVE MANPOWER ALLOCATION -->
-      <section class="slide-page absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-between overflow-y-auto slide-content-scroll hidden" data-slide="6" data-title="Monthly Manpower Allocation">
-        <div class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto flex-1 flex flex-col justify-center py-2">
-          
+      <section
+        class="slide-page absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-between overflow-y-auto slide-content-scroll hidden"
+        data-slide="6" data-title="Monthly Manpower Allocation">
+        <div
+          class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto flex-1 flex flex-col justify-center py-2">
+
           <div class="mb-3 pb-2 border-b border-[#1c2b48] flex justify-between items-end">
             <div>
               <span class="text-xs font-bold text-[#60a5fa] uppercase tracking-wider">Perencanaan Alokasi Bulanan</span>
@@ -1305,11 +2324,20 @@
 
           <!-- Month Selector Tabs -->
           <div class="flex items-center gap-1.5 mb-2.5" id="allocMonthTabs">
-            <button data-month="sep" onclick="switchAllocMonth('sep')" class="alloc-tab-btn px-3 py-1 rounded bg-[#0066d6] text-white text-xs font-bold">SEP 2026</button>
-            <button data-month="oct" onclick="switchAllocMonth('oct')" class="alloc-tab-btn px-3 py-1 rounded bg-[#0f182c] hover:bg-[#162442] border border-[#1c2b48] text-slate-300 text-xs font-bold">OCT 2026</button>
-            <button data-month="nov" onclick="switchAllocMonth('nov')" class="alloc-tab-btn px-3 py-1 rounded bg-[#0f182c] hover:bg-[#162442] border border-[#1c2b48] text-slate-300 text-xs font-bold">NOV 2026</button>
-            <button data-month="dec" onclick="switchAllocMonth('dec')" class="alloc-tab-btn px-3 py-1 rounded bg-[#0f182c] hover:bg-[#162442] border border-[#1c2b48] text-slate-300 text-xs font-bold">DEC 2026</button>
-            <button data-month="jan" onclick="switchAllocMonth('jan')" class="alloc-tab-btn px-3 py-1 rounded bg-[#0f182c] hover:bg-[#162442] border border-[#1c2b48] text-slate-300 text-xs font-bold">JAN 2027</button>
+            <button data-month="sep" onclick="switchAllocMonth('sep')"
+              class="alloc-tab-btn px-3 py-1 rounded bg-[#0066d6] text-white text-xs font-bold">SEP 2026</button>
+            <button data-month="oct" onclick="switchAllocMonth('oct')"
+              class="alloc-tab-btn px-3 py-1 rounded bg-[#0f182c] hover:bg-[#162442] border border-[#1c2b48] text-slate-300 text-xs font-bold">OCT
+              2026</button>
+            <button data-month="nov" onclick="switchAllocMonth('nov')"
+              class="alloc-tab-btn px-3 py-1 rounded bg-[#0f182c] hover:bg-[#162442] border border-[#1c2b48] text-slate-300 text-xs font-bold">NOV
+              2026</button>
+            <button data-month="dec" onclick="switchAllocMonth('dec')"
+              class="alloc-tab-btn px-3 py-1 rounded bg-[#0f182c] hover:bg-[#162442] border border-[#1c2b48] text-slate-300 text-xs font-bold">DEC
+              2026</button>
+            <button data-month="jan" onclick="switchAllocMonth('jan')"
+              class="alloc-tab-btn px-3 py-1 rounded bg-[#0f182c] hover:bg-[#162442] border border-[#1c2b48] text-slate-300 text-xs font-bold">JAN
+              2027</button>
           </div>
 
           <!-- Table Container -->
@@ -1318,20 +2346,25 @@
           </div>
 
           <div class="text-[11px] text-slate-400 px-1">
-            * <em>Catatan:</em> Persentase di atas adalah <strong>indicative planning baseline</strong>, bukan timesheet aktual. Sisa persentase otomatis dialokasikan untuk maintenance sistem live, arsitektur, dan BAU.
+            * <em>Catatan:</em> Persentase di atas adalah <strong>indicative planning baseline</strong>, bukan timesheet
+            aktual. Sisa persentase otomatis dialokasikan untuk maintenance sistem live, arsitektur, dan BAU.
           </div>
         </div>
 
-        <div class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-2 flex justify-between items-center shrink-0">
+        <div
+          class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-2 flex justify-between items-center shrink-0">
           <span>Travel Buddies — Technology Project Planning | Sep 2026 – Jan 2027</span>
           <span>Slide 6 / 10</span>
         </div>
       </section>
 
       <!-- SLIDE 7: CRITICAL PATH & DEPENDENCIES -->
-      <section class="slide-page absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-between overflow-y-auto slide-content-scroll hidden" data-slide="7" data-title="Critical Path & Dependencies">
-        <div class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto flex-1 flex flex-col justify-center py-2">
-          
+      <section
+        class="slide-page absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-between overflow-y-auto slide-content-scroll hidden"
+        data-slide="7" data-title="Critical Path & Dependencies">
+        <div
+          class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto flex-1 flex flex-col justify-center py-2">
+
           <div class="mb-3 pb-2 border-b border-[#1c2b48] flex justify-between items-end">
             <div>
               <span class="text-xs font-bold text-[#60a5fa] uppercase tracking-wider">Ketergantungan Eksternal</span>
@@ -1369,17 +2402,20 @@
 
           <!-- Visual Linear Critical Flow -->
           <div class="clean-card rounded-xl p-3 mb-2.5">
-            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wide block mb-2">Alur Pipa Jalur Kritis (Pipeline Dependency):</span>
+            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wide block mb-2">Alur Pipa Jalur Kritis
+              (Pipeline Dependency):</span>
             <div class="grid grid-cols-2 sm:grid-cols-7 gap-1.5 text-center text-xs font-semibold">
               <div class="p-2 rounded bg-[#0a1120] border border-[#1c2b48] text-white flex flex-col justify-center">
                 <span>ATA Live</span>
                 <span class="text-[9px] text-slate-400 font-normal">Credential</span>
               </div>
-              <div class="p-2 rounded bg-[#0066d6]/20 text-[#60a5fa] border border-[#0066d6]/40 flex flex-col justify-center">
+              <div
+                class="p-2 rounded bg-[#0066d6]/20 text-[#60a5fa] border border-[#0066d6]/40 flex flex-col justify-center">
                 <span>Flight Agent</span>
                 <span class="text-[9px] text-slate-300 font-normal">Mid-Sep</span>
               </div>
-              <div class="p-2 rounded bg-[#0066d6]/20 text-[#60a5fa] border border-[#0066d6]/40 flex flex-col justify-center">
+              <div
+                class="p-2 rounded bg-[#0066d6]/20 text-[#60a5fa] border border-[#0066d6]/40 flex flex-col justify-center">
                 <span>Flight B2C</span>
                 <span class="text-[9px] text-slate-300 font-normal">End-Sep</span>
               </div>
@@ -1395,7 +2431,8 @@
                 <span>Dev KAI</span>
                 <span class="text-[9px] text-slate-400 font-normal">Desember</span>
               </div>
-              <div class="p-2 rounded bg-[#0066d6] text-white flex flex-col justify-center col-span-2 sm:col-span-1 shadow">
+              <div
+                class="p-2 rounded bg-[#0066d6] text-white flex flex-col justify-center col-span-2 sm:col-span-1 shadow">
                 <span>Prod Live</span>
                 <span class="text-[9px] text-slate-200 font-normal">Jan 2027</span>
               </div>
@@ -1403,20 +2440,26 @@
           </div>
 
           <div class="clean-card rounded-xl p-2.5 text-xs text-slate-300">
-            📌 <em>Catatan Eksekutif:</em> Kesiapan API eksternal adalah penentu utama ketepatan jadwal. Tim Tech dapat siap coding, tetapi bila credential atau akses sandbox dari vendor terlambat, timeline otomatis ikut tergeser.
+            📌 <em>Catatan Eksekutif:</em> Kesiapan API eksternal adalah penentu utama ketepatan jadwal. Tim Tech dapat
+            siap coding, tetapi bila credential atau akses sandbox dari vendor terlambat, timeline otomatis ikut
+            tergeser.
           </div>
         </div>
 
-        <div class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-2 flex justify-between items-center shrink-0">
+        <div
+          class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-2 flex justify-between items-center shrink-0">
           <span>Travel Buddies — Technology Project Planning | Sep 2026 – Jan 2027</span>
           <span>Slide 7 / 10</span>
         </div>
       </section>
 
       <!-- SLIDE 8: RISK ASSESSMENT & MITIGATION -->
-      <section class="slide-page absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-between overflow-y-auto slide-content-scroll hidden" data-slide="8" data-title="Risk Assessment & Mitigation">
-        <div class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto flex-1 flex flex-col justify-center py-2">
-          
+      <section
+        class="slide-page absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-between overflow-y-auto slide-content-scroll hidden"
+        data-slide="8" data-title="Risk Assessment & Mitigation">
+        <div
+          class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto flex-1 flex flex-col justify-center py-2">
+
           <div class="mb-3 pb-2 border-b border-[#1c2b48] flex justify-between items-end">
             <div>
               <span class="text-xs font-bold text-[#60a5fa] uppercase tracking-wider">Manajemen Risiko Proyek</span>
@@ -1428,26 +2471,31 @@
           <!-- Risk Cards Compact Grid -->
           <div class="clean-card rounded-xl p-3 mb-2.5 overflow-y-auto max-h-[310px] slide-content-scroll">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs">
-              
+
               <!-- R1 -->
               <div class="p-2 rounded bg-[#0a1120] border border-[#1c2b48] flex flex-col justify-between">
                 <div>
                   <div class="flex justify-between items-center mb-1">
                     <span class="font-bold text-white">R1. Akun ATA Produksi Terlambat</span>
-                    <span class="text-[9px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 font-bold">HIGH / MED</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 font-bold">HIGH /
+                      MED</span>
                   </div>
-                  <p class="text-slate-300 text-[11px]">Dampak: Tertundanya rilis Flight Agent. Mitigasi: Follow up aktif ATA; siapkan konfigurasi agar siap uji harga riil segera.</p>
+                  <p class="text-slate-300 text-[11px]">Dampak: Tertundanya rilis Flight Agent. Mitigasi: Follow up
+                    aktif ATA; siapkan konfigurasi agar siap uji harga riil segera.</p>
                 </div>
               </div>
 
               <!-- R2 -->
-              <div class="p-2 rounded bg-[#0a1120] border border-[#1c2b48] flex flex-col justify-between border-l-2 border-l-red-500">
+              <div
+                class="p-2 rounded bg-[#0a1120] border border-[#1c2b48] flex flex-col justify-between border-l-2 border-l-red-500">
                 <div>
                   <div class="flex justify-between items-center mb-1">
                     <span class="font-bold text-white">R2. Kompleksitas API WebBeds Tinggi</span>
-                    <span class="text-[9px] px-1.5 py-0.5 rounded bg-red-500/20 text-red-300 font-bold">HIGH / HIGH</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded bg-red-500/20 text-red-300 font-bold">HIGH /
+                      HIGH</span>
                   </div>
-                  <p class="text-slate-300 text-[11px]">Dampak: Timeline hotel molor. Mitigasi: Review dokumen seawal mungkin di Sep; jangan jadikan 1.5 bulan sebagai komitmen kaku sebelum discovery tuntas.</p>
+                  <p class="text-slate-300 text-[11px]">Dampak: Timeline hotel molor. Mitigasi: Review dokumen seawal
+                    mungkin di Sep; jangan jadikan 1.5 bulan sebagai komitmen kaku sebelum discovery tuntas.</p>
                 </div>
               </div>
 
@@ -1456,31 +2504,40 @@
                 <div>
                   <div class="flex justify-between items-center mb-1">
                     <span class="font-bold text-white">R3. Alur DOKU Beda dengan Xendit</span>
-                    <span class="text-[9px] px-1.5 py-0.5 rounded bg-[#0f182c] text-slate-300 font-bold border border-[#1c2b48]">MED / MED</span>
+                    <span
+                      class="text-[9px] px-1.5 py-0.5 rounded bg-[#0f182c] text-slate-300 font-bold border border-[#1c2b48]">MED
+                      / MED</span>
                   </div>
-                  <p class="text-slate-300 text-[11px]">Dampak: Penyesuaian webhook/callback. Mitigasi: Buat payment abstraction layer agar logika order tidak bergantung pada satu provider saja.</p>
+                  <p class="text-slate-300 text-[11px]">Dampak: Penyesuaian webhook/callback. Mitigasi: Buat payment
+                    abstraction layer agar logika order tidak bergantung pada satu provider saja.</p>
                 </div>
               </div>
 
               <!-- R4 -->
-              <div class="p-2 rounded bg-[#0a1120] border border-[#1c2b48] flex flex-col justify-between border-l-2 border-l-red-500">
+              <div
+                class="p-2 rounded bg-[#0a1120] border border-[#1c2b48] flex flex-col justify-between border-l-2 border-l-red-500">
                 <div>
                   <div class="flex justify-between items-center mb-1">
                     <span class="font-bold text-white">R4. Mitra KAI Telat Dipilih</span>
-                    <span class="text-[9px] px-1.5 py-0.5 rounded bg-red-500/20 text-red-300 font-bold">HIGH / HIGH</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded bg-red-500/20 text-red-300 font-bold">HIGH /
+                      HIGH</span>
                   </div>
-                  <p class="text-slate-300 text-[11px]">Dampak: Target live Januari gagal. Mitigasi: Kunci keputusan vendor maksimal akhir Oktober; pastikan sandbox & SLA usable.</p>
+                  <p class="text-slate-300 text-[11px]">Dampak: Target live Januari gagal. Mitigasi: Kunci keputusan
+                    vendor maksimal akhir Oktober; pastikan sandbox & SLA usable.</p>
                 </div>
               </div>
 
               <!-- R5 -->
-              <div class="p-2 rounded bg-[#0a1120] border border-[#1c2b48] flex flex-col justify-between border-l-2 border-l-red-500">
+              <div
+                class="p-2 rounded bg-[#0a1120] border border-[#1c2b48] flex flex-col justify-between border-l-2 border-l-red-500">
                 <div>
                   <div class="flex justify-between items-center mb-1">
                     <span class="font-bold text-white">R5. Kapasitas Terbatas Hanya 4 Orang</span>
-                    <span class="text-[9px] px-1.5 py-0.5 rounded bg-red-500/20 text-red-300 font-bold">HIGH / HIGH</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded bg-red-500/20 text-red-300 font-bold">HIGH /
+                      HIGH</span>
                   </div>
-                  <p class="text-slate-300 text-[11px]">Dampak: Bottleneck jika scope bertambah. Mitigasi: Pisahkan lead (Adrian Hotel, Setra DOKU), kunci 20% maintenance, stop scope creep.</p>
+                  <p class="text-slate-300 text-[11px]">Dampak: Bottleneck jika scope bertambah. Mitigasi: Pisahkan lead
+                    (Adrian Hotel, Setra DOKU), kunci 20% maintenance, stop scope creep.</p>
                 </div>
               </div>
 
@@ -1489,20 +2546,26 @@
                 <div>
                   <div class="flex justify-between items-center mb-1">
                     <span class="font-bold text-white">R6. Incident Server Live / Bug Serius</span>
-                    <span class="text-[9px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 font-bold">MED / HIGH</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 font-bold">MED /
+                      HIGH</span>
                   </div>
-                  <p class="text-slate-300 text-[11px]">Dampak: Kapasitas dev terganggu. Mitigasi: Cadangkan kapasitas 20% harian; CTO turun langsung mengawal eskalasi cepat.</p>
+                  <p class="text-slate-300 text-[11px]">Dampak: Kapasitas dev terganggu. Mitigasi: Cadangkan kapasitas
+                    20% harian; CTO turun langsung mengawal eskalasi cepat.</p>
                 </div>
               </div>
 
               <!-- R7 -->
-              <div class="p-2 rounded bg-[#0a1120] border border-[#1c2b48] flex flex-col justify-between col-span-1 md:col-span-2">
+              <div
+                class="p-2 rounded bg-[#0a1120] border border-[#1c2b48] flex flex-col justify-between col-span-1 md:col-span-2">
                 <div>
                   <div class="flex justify-between items-center mb-1">
                     <span class="font-bold text-white">R7. Bottleneck di Mobile Engineer (Luthfy Tunggal)</span>
-                    <span class="text-[9px] px-1.5 py-0.5 rounded bg-[#0f182c] text-slate-300 font-bold border border-[#1c2b48]">MED / MED</span>
+                    <span
+                      class="text-[9px] px-1.5 py-0.5 rounded bg-[#0f182c] text-slate-300 font-bold border border-[#1c2b48]">MED
+                      / MED</span>
                   </div>
-                  <p class="text-slate-300 text-[11px]">Dampak: Rilis app store tertahan. Mitigasi: Backend harus menstabilkan format API contract duluan sebelum Luthfy mulai merancang layar Flutter.</p>
+                  <p class="text-slate-300 text-[11px]">Dampak: Rilis app store tertahan. Mitigasi: Backend harus
+                    menstabilkan format API contract duluan sebelum Luthfy mulai merancang layar Flutter.</p>
                 </div>
               </div>
 
@@ -1510,26 +2573,34 @@
           </div>
 
           <div class="text-[11px] text-slate-400 px-1">
-            * <strong>Perhatian Utama Manajemen:</strong> R2 (WebBeds API), R4 (Mitra KAI), dan R5 (Kapasitas 4 orang) adalah 3 risiko berstatus <em>High Impact / High Probability</em>.
+            * <strong>Perhatian Utama Manajemen:</strong> R2 (WebBeds API), R4 (Mitra KAI), dan R5 (Kapasitas 4 orang)
+            adalah 3 risiko berstatus <em>High Impact / High Probability</em>.
           </div>
         </div>
 
-        <div class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-2 flex justify-between items-center shrink-0">
+        <div
+          class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-2 flex justify-between items-center shrink-0">
           <span>Travel Buddies — Technology Project Planning | Sep 2026 – Jan 2027</span>
           <span>Slide 8 / 10</span>
         </div>
       </section>
 
       <!-- SLIDE 9: MANAGEMENT ACTION & FINAL VERDICT -->
-      <section class="slide-page absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-between overflow-y-auto slide-content-scroll hidden" data-slide="9" data-title="Management Action & Verdict">
-        <div class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto flex-1 flex flex-col justify-center py-2">
-          
+      <section
+        class="slide-page absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-between overflow-y-auto slide-content-scroll hidden"
+        data-slide="9" data-title="Management Action & Verdict">
+        <div
+          class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto flex-1 flex flex-col justify-center py-2">
+
           <div class="mb-3 pb-2 border-b border-[#1c2b48] flex justify-between items-end">
             <div>
-              <span class="text-xs font-bold text-[#0066d6] uppercase tracking-wider">Aksi Manajemen & Kesimpulan Akhir</span>
-              <h2 class="text-xl sm:text-2xl font-bold text-white mt-0.5">Management Action Required & Final Verdict</h2>
+              <span class="text-xs font-bold text-[#0066d6] uppercase tracking-wider">Aksi Manajemen & Kesimpulan
+                Akhir</span>
+              <h2 class="text-xl sm:text-2xl font-bold text-white mt-0.5">Management Action Required & Final Verdict
+              </h2>
             </div>
-            <img src="https://travelbuddies.co.id/_next/image?url=%2Fimages%2Flogo%2Flogo.png&w=384&q=75" alt="TB Logo" class="h-6 w-auto" />
+            <img src="https://travelbuddies.co.id/_next/image?url=%2Fimages%2Flogo%2Flogo.png&w=384&q=75" alt="TB Logo"
+              class="h-6 w-auto" />
           </div>
 
           <!-- 4 Immediate Actions Required -->
@@ -1537,7 +2608,8 @@
             <div class="clean-card rounded-xl p-2.5">
               <span class="text-[10px] font-bold text-[#0066d6] block uppercase">1. ATA (Pesawat)</span>
               <span class="text-xs font-bold text-white block mt-0.5">Percepat Akses Live</span>
-              <span class="text-[10px] text-slate-400 block mt-0.5">Dorong rilis credential live di awal September.</span>
+              <span class="text-[10px] text-slate-400 block mt-0.5">Dorong rilis credential live di awal
+                September.</span>
             </div>
 
             <div class="clean-card rounded-xl p-2.5">
@@ -1555,15 +2627,19 @@
             <div class="clean-card rounded-xl p-2.5 border-t-2 border-t-[#0066d6]">
               <span class="text-[10px] font-bold text-[#0066d6] block uppercase">4. Mitra KAI</span>
               <span class="text-xs font-bold text-white block mt-0.5">Pilih Maks Okt 2026</span>
-              <span class="text-[10px] text-slate-400 block mt-0.5">Kunci pilihan vendor sebelum Oktober berakhir.</span>
+              <span class="text-[10px] text-slate-400 block mt-0.5">Kunci pilihan vendor sebelum Oktober
+                berakhir.</span>
             </div>
           </div>
 
           <!-- Prominent Statement Box -->
           <div class="clean-card rounded-xl p-3 mb-2.5 border-l-4 border-l-[#0066d6]">
-            <span class="text-[10px] font-bold text-[#0066d6] uppercase tracking-wider block">Kesimpulan Akhir Tim Teknologi</span>
+            <span class="text-[10px] font-bold text-[#0066d6] uppercase tracking-wider block">Kesimpulan Akhir Tim
+              Teknologi</span>
             <p class="text-sm sm:text-base font-bold text-white mt-0.5 leading-snug">
-              "Dengan 4 personil Tech, roadmap September 2026 – January 2027 ini <span class="text-[#0066d6]">FEASIBLE</span> melalui eksekusi paralel terencana, asalkan kebutuhan API vendor eksternal diamankan tepat waktu dan tidak ada penambahan scope mendadak."
+              "Dengan 4 personil Tech, roadmap September 2026 – January 2027 ini <span
+                class="text-[#0066d6]">FEASIBLE</span> melalui eksekusi paralel terencana, asalkan kebutuhan API vendor
+              eksternal diamankan tepat waktu dan tidak ada penambahan scope mendadak."
             </p>
           </div>
 
@@ -1588,26 +2664,28 @@
           </div>
         </div>
 
-        <div class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-2 flex justify-between items-center shrink-0">
+        <div
+          class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-2 flex justify-between items-center shrink-0">
           <span>Travel Buddies — Technology Project Planning | Sep 2026 – Jan 2027</span>
           <span>Slide 9 / 10</span>
         </div>
       </section>
 
       <!-- SLIDE 10: SIMPLE THANK YOU & Q&A CLOSING -->
-      <section class="slide-page absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-between overflow-y-auto slide-content-scroll hidden" data-slide="10" data-title="Thank You & Discussion">
-        <div class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto flex-1 flex flex-col justify-center items-center text-center py-4">
-          
+      <section
+        class="slide-page absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-between overflow-y-auto slide-content-scroll hidden"
+        data-slide="10" data-title="Thank You & Discussion">
+        <div
+          class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto flex-1 flex flex-col justify-center items-center text-center py-4">
+
           <div class="mb-4">
-            <img 
-              src="https://travelbuddies.co.id/_next/image?url=%2Fimages%2Flogo%2Flogo.png&w=384&q=75" 
-              alt="Travel Buddies Logo" 
-              class="h-12 sm:h-14 w-auto object-contain mx-auto"
-              onerror="this.onerror=null; this.src='https://placehold.co/200x52/0066d6/ffffff?text=Travel+Buddies';"
-            />
+            <img src="https://travelbuddies.co.id/_next/image?url=%2Fimages%2Flogo%2Flogo.png&w=384&q=75"
+              alt="Travel Buddies Logo" class="h-12 sm:h-14 w-auto object-contain mx-auto"
+              onerror="this.onerror=null; this.src='https://placehold.co/200x52/0066d6/ffffff?text=Travel+Buddies';" />
           </div>
 
-          <span class="text-xs px-3 py-1 rounded-full bg-[#0066d6]/10 border border-[#0066d6]/30 text-[#0066d6] font-bold uppercase tracking-wider mb-3">
+          <span
+            class="text-xs px-3 py-1 rounded-full bg-[#0066d6]/10 border border-[#0066d6]/30 text-[#0066d6] font-bold uppercase tracking-wider mb-3">
             Q&A • Discussion & Next Actions
           </span>
 
@@ -1617,7 +2695,8 @@
 
           <!-- Simple 4 Team Credits Card -->
           <div class="clean-card rounded-2xl p-4 sm:p-5 max-w-2xl w-full border-t-4 border-t-[#0066d6]">
-            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-3">Travel Buddies Technology Team</span>
+            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-3">Travel Buddies
+              Technology Team</span>
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
               <div class="p-2 rounded clean-subcard">
                 <span class="font-bold text-white text-xs block truncate">Anggara Jeinar M</span>
@@ -1640,7 +2719,8 @@
 
         </div>
 
-        <div class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-2 flex justify-between items-center shrink-0">
+        <div
+          class="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[85%] max-w-[1400px] mx-auto text-[11px] text-slate-500 border-t border-[#1c2b48] pt-2 flex justify-between items-center shrink-0">
           <span>Travel Buddies — Technology Project Planning | Sep 2026 – Jan 2027</span>
           <span>Slide 10 / 10</span>
         </div>
@@ -1652,7 +2732,8 @@
   <div class="brand-watermark" aria-hidden="true"></div>
 
   <!-- Bottom Bar -->
-  <footer class="h-8 sm:h-9 border-t border-[#1c2b48] bg-[#0a1120] px-4 md:px-8 flex items-center justify-between text-[11px] text-slate-400 shrink-0 z-20">
+  <footer
+    class="h-8 sm:h-9 border-t border-[#1c2b48] bg-[#0a1120] px-4 md:px-8 flex items-center justify-between text-[11px] text-slate-400 shrink-0 z-20">
     <div class="flex items-center gap-2">
       <span class="w-2 h-2 rounded-full bg-[#0066d6]"></span>
       <span class="text-slate-300 font-semibold">Travel Buddies Technology Team</span>
@@ -1836,13 +2917,13 @@
     function toggleFullscreen() {
       if (!document.fullscreenElement && !document.webkitFullscreenElement) {
         if (document.documentElement.requestFullscreen) {
-          document.documentElement.requestFullscreen().catch(() => {});
+          document.documentElement.requestFullscreen().catch(() => { });
         } else if (document.documentElement.webkitRequestFullscreen) {
           document.documentElement.webkitRequestFullscreen();
         }
       } else {
         if (document.exitFullscreen) {
-          document.exitFullscreen().catch(() => {});
+          document.exitFullscreen().catch(() => { });
         } else if (document.webkitExitFullscreen) {
           document.webkitExitFullscreen();
         }
@@ -1875,6 +2956,11 @@
         opt.value = idx + 1;
         opt.textContent = `${idx + 1}. ${slide.getAttribute('data-title') || 'Slide ' + (idx + 1)}`;
         slideSelect.appendChild(opt);
+
+        const footerCounter = slide.querySelector('.slide-footer-counter') || slide.querySelector('div:last-child > span:last-child');
+        if (footerCounter && (footerCounter.textContent.includes('Slide') || footerCounter.classList.contains('slide-footer-counter'))) {
+          footerCounter.textContent = `Slide ${idx + 1} / ${totalSlides}`;
+        }
       });
 
       slideSelect.addEventListener('change', (e) => {
@@ -1978,4 +3064,5 @@
     window.addEventListener('load', initSlideDeck);
   </script>
 </body>
+
 </html>
